@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/shop.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}"/>
+    <div th:remove="tag" th:replace="fragments/head :: head"></div>
+    <title>Categories</title>
+</head>
+<body>
+    <div th:replace="fragments/header :: header"></div>
+    <main role="main">
+
+        <section id="title">
+            <h4>Find Products</h4>
+        </section>
+
+        <div class="input-group">
+            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+            aria-describedby="search-addon" />
+            <button type="button" class="btn btn-outline-primary">search</button>
+        </div>
+        
+        <section id="text-columns-3" class="text-columns">
+            <div class="container2">
+                <div class="row">
+                    <div class="mb-4 mt-4 card-category card box-shadow fruits">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <a href=""><img class="card-img" th:src="@{/images/fruits.png}" alt="Card image cap" style="height: 200px; width: 250px;"></a>
+                            <a class="category-title" href=""><p>Fruits & Vegetables</p></a>
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-4 card-category card box-shadow fruits">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <a href=""><img class="card-img" th:src="@{/images/fruits.png}" alt="Card image cap" style="height: 200px; width: 250px;"></a>
+                            <a class="category-title" href=""><p>Fruits & Vegetables</p></a>
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-4 card-category card box-shadow fruits">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <a href=""><img class="card-img" th:src="@{/images/fruits.png}" alt="Card image cap" style="height: 200px; width: 250px;"></a>
+                            <a class="category-title" href=""><p>Fruits & Vegetables</p></a>
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-4 card-category card box-shadow fruits">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <a href=""><img class="card-img" th:src="@{/images/fruits.png}" alt="Card image cap" style="height: 200px; width: 250px;"></a>
+                            <a class="category-title" href=""><p>Fruits & Vegetables</p></a>
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-4 card-category card box-shadow fruits">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <a href=""><img class="card-img" th:src="@{/images/fruits.png}" alt="Card image cap" style="height: 200px; width: 250px;"></a>
+                            <a class="category-title" href=""><p>Fruits & Vegetables</p></a>
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-4 card-category card box-shadow fruits">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <a href=""><img class="card-img" th:src="@{/images/fruits.png}" alt="Card image cap" style="height: 200px; width: 250px;"></a>
+                            <a class="category-title" href=""><p>Fruits & Vegetables</p></a>
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-4 card-category card box-shadow fruits">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <a href=""><img class="card-img" th:src="@{/images/fruits.png}" alt="Card image cap" style="height: 200px; width: 250px;"></a>
+                            <a class="category-title" href=""><p>Fruits & Vegetables</p></a>
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-4 card-category card box-shadow fruits">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <a href=""><img class="card-img" th:src="@{/images/fruits.png}" alt="Card image cap" style="height: 200px; width: 250px;"></a>
+                        <a class="category-title" href=""><p>Fruits & Vegetables</p></a>
+                    </div>
+                    </div>
+                </div>
+        </section>
+
+        <nav id="shop-nav">
+            <a href=""><img class="icon-shop" th:src="@{/images/explore.png}" alt="Categories"><br>Explore</a>
+            <a href=""><img class="icon-shop" th:src="@{/images/cart.png}" alt="Cart"><br>Cart</a>
+        </nav>
+    </main>
+</body>
+
+</html>

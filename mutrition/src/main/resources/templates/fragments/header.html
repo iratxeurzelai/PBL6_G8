@@ -1,0 +1,28 @@
+<header th:fragment="header">
+
+    <nav class="navegation">
+        <ul class="menu">
+            <li><a href="https://mondragon.edu">HOME</a></li>
+            <li><a href="https://mondragon.edu">ACTIVITIES</a>
+                <ul class="submenu">
+                    <li><a th:href="@{/user/activities/myActivities}">My activities</a></li>
+                    <li><a th:href="@{/user/activities/futureActivities}">Sign up for activities</a></li>
+                </ul>
+            </li>
+            <li><a href="https://mondragon.edu">SERVICES</a>
+                <ul class="submenu">
+                    <li><a th:href="@{/user/menu/menu}">Bar</a></li>
+                    <li><a th:href="@{/user/shop/categories}">Supermarket</a>
+                </ul>
+            </li>
+            <li><a href="https://mondragon.edu">HEALTH</a></li>
+            <li><a href="https://mondragon.edu">PROFILE</a>
+                <ul class="submenu">
+                    <li><a th:href="@{/user/profile/profile}">View profile</a></li>
+                    <li><a href="https://mondragon.edu">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </nav>
+</header>

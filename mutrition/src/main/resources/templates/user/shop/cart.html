@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/shop.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}"/>
+    <div th:remove="tag" th:replace="fragments/head :: head"></div>
+    <title>Cart</title>
+</head>
+<body>
+    <div th:replace="fragments/header :: header"></div>
+    <main role="main">
+        <nav id="title">
+            <h4 class="cart">My Cart</h4>
+            <hr class="solid">
+        </nav>
+        
+        <div class="row no-overflow">
+            <div class="col-12 cart-product">
+                <img class="product-image" th:src="@{/images/cocaCola.png}" alt="Coca Cola">
+                <div class="product-info">
+                    <div class="product-top">
+                        <h5 class="product-name">Coca Cola</h5>
+                        <img class="icon-product right" th:src="@{/images/delete.png}" alt="Delete">
+                    </div>
+                    <p class="product-quantity">1pcs</p>
+                    <p class="product-price-add-delete">
+                        <a><img class="icon-minus" th:src="@{/images/minus.png}" alt="minus"> 1 <img class="icon-product" th:src="@{/images/plus.png}" alt="plus"></a>
+                        <a class="product-price right">1.50€</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr class="solid">
+        <nav id="shop-nav">
+            <a href=""><img class="icon-product" th:src="@{/images/explore.png}" alt="Categories"><br>Explore</a>
+            <a href=""><img class="icon-product" th:src="@{/images/cart.png}" alt="Cart"><br>Cart</a>
+        </nav>
+    </main>
+</body>

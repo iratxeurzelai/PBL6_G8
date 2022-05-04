@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/menu.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}"/>
+    <div th:remove="tag" th:replace="fragments/head :: head"></div>
+    <title>Menu</title>
+</head>
+<body>
+    <div th:replace="fragments/header :: header"></div>
+    <main role="main">
+
+        <section id="title">
+            <div class="container">
+                <p>Lorem ipsum</p>
+                <h1>Our Menu!</h1>
+            </div>
+        </section>
+        
+        <section id="text-columns-2" class="text-columns">
+            <div class="container2 menu">
+                <h2>Today's menu</h2>
+                <div class="row">
+                    <div class="col-6 align-items-center d-flex flex-column">
+                        <h3 class="menu-title">Menu 1</h3>
+                        <h4 class="plates">Starters</h4>
+                        <p>Cesar salad</p>
+                        <h4 class="plates">First course</h4>
+                        <p>Spaguetti</p>
+                        <h4 class="plates">Second course</h4>
+                        <p>Meat</p>
+                    </div>
+                    <div class="col-6 align-items-center d-flex flex-column">
+                        <h3 class="menu-title">Menu 2</h3>
+                        <h4 class="plates">Starters</h4>
+                        <p>Cesar salad</p>
+                        <h4 class="plates">First course</h4>
+                        <p>Spaguetti</p>
+                        <h4 class="plates">Second course</h4>
+                        <p>Meat</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container2 food-menu">
+                <h2>Food and Aperitives</h2>
+                <div class="row">
+                    <div class="col">
+                        <h3 class="plate-name">Pizza Mexicana</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure natus, provident, corrupti veniam
+                        tempora impedit aliquid, deserunt expedita sed quos ratione. Dignissimos veritatis eius tenetur quia facilis
+                        illum quis corrupti!</p>
+                        <span class="price">15€</span>
+                    </div>
+                    <div class="col">
+                        <h3 class="plate-name">Pizza Mexicana</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure natus, provident, corrupti veniam
+                        tempora impedit aliquid, deserunt expedita sed quos ratione. Dignissimos veritatis eius tenetur quia facilis
+                        illum quis corrupti!</p>
+                        <span class="price">15€</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
