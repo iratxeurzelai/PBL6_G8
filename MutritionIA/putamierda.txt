@@ -1,0 +1,30 @@
+title,calories,protein,fat,sodium,
+chicken,drink,drinks,
+  
+
+
+
+
+#FRUIT
+apple,apple juice,banana,cherry,coconut,fruit,fruit juice,grapefruit,kiwi,cranberry,cranberry sauce,
+
+#LECHE
+blue cheese, buttermilk,cheddar,cheese,cottage cheese,feta,goat cheese,cream cheese,custard,
+
+#VEGETAL
+broccoli,broccoli rabe,carrot,celery,leek,
+
+#FRUTOSECO
+butternut squash,chestnut,dried fruit,hazelnut,cashew,
+
+#MARISCO
+caviar,crab,clam,
+
+#EGGS
+egg,egg nog,eggplant,
+
+#LEGUMBRE
+chickpea,legume
+
+#FISH
+fish,
