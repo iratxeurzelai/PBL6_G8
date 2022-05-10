@@ -63,6 +63,27 @@
                     </div>
                 </div>
 
+                <p>Peso</p>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <input type="text" th:field="*{peso}" placeholder="Peso"
+                               class="form-control"/> <label
+                            th:if="${#fields.hasErrors('peso')}" th:errors="*{peso}"
+                            class="validation-message"></label>
+                    </div>
+                </div>
+                <p>Altura</p>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <input type="text" th:field="*{altura}" placeholder="Altura"
+                               class="form-control"/> <label
+                            th:if="${#fields.hasErrors('altura')}" th:errors="*{altura}"
+                            class="validation-message"></label>
+                    </div>
+                </div>
+                
+                <input type="checkbox" th:each="a : ${alergias}" th:field="*{alergias}" th:value="${a.id}" th:text="${a.descripcion}">
+
                 <div class="form-group">
                     <div class="col-sm-9">
                         <button type="submit" class="btn btn-primary btn-block">Register User</button>

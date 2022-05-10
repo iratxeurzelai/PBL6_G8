@@ -42,10 +42,19 @@ public class User {
     @Email(message = "*Please provide a valid Email")
     @NotEmpty(message = "*Please provide an email")
     private String email;
+    @Column(name = "peso")
+    //@NotEmpty(message = "*Por favor inserte el peso")
+    private float peso;
+    @Column(name = "altura")
+    //@NotEmpty(message = "*Por favor inserte la altura")
+    private float altura;
     @Column(name = "active")
     private Boolean active;
     @ManyToMany(cascade = CascadeType.MERGE)
     @JoinTable(name = "RoleID", joinColumns = @JoinColumn(name = "UserID"), inverseJoinColumns = @JoinColumn(name = "RoleID"))
     private Set<Role> roles;
+    @ManyToMany(cascade = CascadeType.MERGE)
+    @JoinTable(name = "AlergiaID", joinColumns = @JoinColumn(name = "UserID"), inverseJoinColumns = @JoinColumn(name = "AlergiaID"))
+    private Set<Alergia> alergias;
 
 }
