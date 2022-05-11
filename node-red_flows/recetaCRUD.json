@@ -1,0 +1,324 @@
+[
+    {
+        "id": "e693015a019eb5b7",
+        "type": "tab",
+        "label": "recetaCRUD",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f8f7cb89882ef8a4",
+        "type": "http request",
+        "z": "e693015a019eb5b7",
+        "name": "getReceta",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "localhost:8080/getReceta",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "credentials": {
+            "user": "",
+            "password": ""
+        },
+        "x": 410,
+        "y": 120,
+        "wires": [
+            [
+                "07bd66c3e97bb504"
+            ]
+        ]
+    },
+    {
+        "id": "5d094daa0a83eb70",
+        "type": "debug",
+        "z": "e693015a019eb5b7",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "07bd66c3e97bb504",
+        "type": "json",
+        "z": "e693015a019eb5b7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 630,
+        "y": 120,
+        "wires": [
+            [
+                "bd82a2aac5e5620e"
+            ]
+        ]
+    },
+    {
+        "id": "9c80257ecdd6e1d1",
+        "type": "http in",
+        "z": "e693015a019eb5b7",
+        "name": "",
+        "url": "getReceta",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "f8f7cb89882ef8a4"
+            ]
+        ]
+    },
+    {
+        "id": "643d18273a10443c",
+        "type": "change",
+        "z": "e693015a019eb5b7",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 200,
+        "wires": [
+            [
+                "e83ea453307590ed"
+            ]
+        ]
+    },
+    {
+        "id": "bd82a2aac5e5620e",
+        "type": "json-schema-validator",
+        "z": "e693015a019eb5b7",
+        "name": "",
+        "func": "",
+        "x": 870,
+        "y": 120,
+        "wires": [
+            [
+                "5d094daa0a83eb70",
+                "643d18273a10443c"
+            ]
+        ]
+    },
+    {
+        "id": "042b5a62bec1764e",
+        "type": "http request",
+        "z": "e693015a019eb5b7",
+        "name": "getReceta[id]",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8080/getReceta/{{req.params.id}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "credentials": {
+            "user": "",
+            "password": ""
+        },
+        "x": 490,
+        "y": 260,
+        "wires": [
+            [
+                "d906d17b68fea7af"
+            ]
+        ]
+    },
+    {
+        "id": "d98e34c4bcad57c3",
+        "type": "debug",
+        "z": "e693015a019eb5b7",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d906d17b68fea7af",
+        "type": "json",
+        "z": "e693015a019eb5b7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 680,
+        "y": 260,
+        "wires": [
+            [
+                "d98e34c4bcad57c3",
+                "5b53c574b2ea6d86"
+            ]
+        ]
+    },
+    {
+        "id": "19b6294e5dc6de5c",
+        "type": "http in",
+        "z": "e693015a019eb5b7",
+        "name": "",
+        "url": "/getReceta/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 340,
+        "wires": [
+            [
+                "042b5a62bec1764e"
+            ]
+        ]
+    },
+    {
+        "id": "ca64b65dc208398d",
+        "type": "inject",
+        "z": "e693015a019eb5b7",
+        "name": "inject",
+        "props": [
+            {
+                "p": "req.params.id",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payloadType": "str",
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "042b5a62bec1764e"
+            ]
+        ]
+    },
+    {
+        "id": "5b53c574b2ea6d86",
+        "type": "change",
+        "z": "e693015a019eb5b7",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 340,
+        "wires": [
+            [
+                "e7a15272f94c9882"
+            ]
+        ]
+    },
+    {
+        "id": "e7a15272f94c9882",
+        "type": "http response",
+        "z": "e693015a019eb5b7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 930,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "8d1d1914690c3a71",
+        "type": "catch",
+        "z": "e693015a019eb5b7",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 140,
+        "y": 460,
+        "wires": [
+            [
+                "2622fe5880e93aa1"
+            ]
+        ]
+    },
+    {
+        "id": "2622fe5880e93aa1",
+        "type": "debug",
+        "z": "e693015a019eb5b7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e83ea453307590ed",
+        "type": "http response",
+        "z": "e693015a019eb5b7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1310,
+        "y": 200,
+        "wires": []
+    }
+]

@@ -1,0 +1,470 @@
+[
+    {
+        "id": "5f98c47bc6ebdce2",
+        "type": "tab",
+        "label": "dietaCRUD",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "09a786314505772a",
+        "type": "http request",
+        "z": "5f98c47bc6ebdce2",
+        "name": "getDieta",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "localhost:8080/getDieta",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "credentials": {
+            "user": "",
+            "password": ""
+        },
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "574f968e95857602"
+            ]
+        ]
+    },
+    {
+        "id": "ca9d83f256edce46",
+        "type": "debug",
+        "z": "5f98c47bc6ebdce2",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "574f968e95857602",
+        "type": "json",
+        "z": "5f98c47bc6ebdce2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 610,
+        "y": 80,
+        "wires": [
+            [
+                "b609b8daed861f25"
+            ]
+        ]
+    },
+    {
+        "id": "db6fd7aea68a3af6",
+        "type": "http in",
+        "z": "5f98c47bc6ebdce2",
+        "name": "",
+        "url": "getDieta",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "09a786314505772a"
+            ]
+        ]
+    },
+    {
+        "id": "74ad37119c0e4e5b",
+        "type": "change",
+        "z": "5f98c47bc6ebdce2",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 160,
+        "wires": [
+            [
+                "7fd0ce2311cbeea8"
+            ]
+        ]
+    },
+    {
+        "id": "b609b8daed861f25",
+        "type": "json-schema-validator",
+        "z": "5f98c47bc6ebdce2",
+        "name": "",
+        "func": "",
+        "x": 850,
+        "y": 80,
+        "wires": [
+            [
+                "ca9d83f256edce46",
+                "74ad37119c0e4e5b"
+            ]
+        ]
+    },
+    {
+        "id": "7fd0ce2311cbeea8",
+        "type": "http response",
+        "z": "5f98c47bc6ebdce2",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1290,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "9d79eb92eaec4b3f",
+        "type": "http request",
+        "z": "5f98c47bc6ebdce2",
+        "name": "getDieta[id]",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8080/getDieta/{{req.params.id}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "credentials": {
+            "user": "",
+            "password": ""
+        },
+        "x": 470,
+        "y": 220,
+        "wires": [
+            [
+                "80bb5830489b1a9d"
+            ]
+        ]
+    },
+    {
+        "id": "f46867717679735a",
+        "type": "debug",
+        "z": "5f98c47bc6ebdce2",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "80bb5830489b1a9d",
+        "type": "json",
+        "z": "5f98c47bc6ebdce2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 660,
+        "y": 220,
+        "wires": [
+            [
+                "f46867717679735a",
+                "3a63637040083094"
+            ]
+        ]
+    },
+    {
+        "id": "e9ef7f3eb5c36adf",
+        "type": "http in",
+        "z": "5f98c47bc6ebdce2",
+        "name": "",
+        "url": "/getDieta/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 300,
+        "wires": [
+            [
+                "9d79eb92eaec4b3f"
+            ]
+        ]
+    },
+    {
+        "id": "5c1732fe4efe0b80",
+        "type": "inject",
+        "z": "5f98c47bc6ebdce2",
+        "name": "inject",
+        "props": [
+            {
+                "p": "req.params.id",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "9d79eb92eaec4b3f"
+            ]
+        ]
+    },
+    {
+        "id": "3a63637040083094",
+        "type": "change",
+        "z": "5f98c47bc6ebdce2",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 300,
+        "wires": [
+            [
+                "57c9408935c7e895"
+            ]
+        ]
+    },
+    {
+        "id": "57c9408935c7e895",
+        "type": "http response",
+        "z": "5f98c47bc6ebdce2",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1bb6347d29dc4ff2",
+        "type": "catch",
+        "z": "5f98c47bc6ebdce2",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 120,
+        "y": 640,
+        "wires": [
+            [
+                "01a9f97317ab12e6"
+            ]
+        ]
+    },
+    {
+        "id": "01a9f97317ab12e6",
+        "type": "debug",
+        "z": "5f98c47bc6ebdce2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "d111078b14f2c0ee",
+        "type": "http request",
+        "z": "5f98c47bc6ebdce2",
+        "name": "getDietaReceta[receta]",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8080/getDietaReceta/{{req.params.receta}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "credentials": {
+            "user": "",
+            "password": ""
+        },
+        "x": 360,
+        "y": 440,
+        "wires": [
+            [
+                "984149ba3d3d8643"
+            ]
+        ]
+    },
+    {
+        "id": "7ff47f69a893feea",
+        "type": "debug",
+        "z": "5f98c47bc6ebdce2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "984149ba3d3d8643",
+        "type": "json",
+        "z": "5f98c47bc6ebdce2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 610,
+        "y": 440,
+        "wires": [
+            [
+                "7ff47f69a893feea",
+                "ef184a0979837fda"
+            ]
+        ]
+    },
+    {
+        "id": "f937d4f7ed8f3f64",
+        "type": "http in",
+        "z": "5f98c47bc6ebdce2",
+        "name": "",
+        "url": "/getDietaReceta/:receta",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 500,
+        "wires": [
+            [
+                "d111078b14f2c0ee"
+            ]
+        ]
+    },
+    {
+        "id": "9c17882bd6a61e93",
+        "type": "inject",
+        "z": "5f98c47bc6ebdce2",
+        "name": "inject",
+        "props": [
+            {
+                "p": "req.params.hospital",
+                "v": "miHospital",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "x": 110,
+        "y": 440,
+        "wires": [
+            [
+                "d111078b14f2c0ee"
+            ]
+        ]
+    },
+    {
+        "id": "ef184a0979837fda",
+        "type": "change",
+        "z": "5f98c47bc6ebdce2",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 500,
+        "wires": [
+            [
+                "42c914b1d3c2aa8e"
+            ]
+        ]
+    },
+    {
+        "id": "42c914b1d3c2aa8e",
+        "type": "http response",
+        "z": "5f98c47bc6ebdce2",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 990,
+        "y": 500,
+        "wires": []
+    }
+]

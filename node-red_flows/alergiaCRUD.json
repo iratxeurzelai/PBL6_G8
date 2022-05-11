@@ -1,0 +1,346 @@
+[
+    {
+        "id": "79a1da780d499a14",
+        "type": "tab",
+        "label": "alergiaCRUD",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7f15f801ba5688c1",
+        "type": "http request",
+        "z": "79a1da780d499a14",
+        "name": "getAlergia",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "localhost:8080/getAlergia",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "credentials": {
+            "user": "",
+            "password": ""
+        },
+        "x": 320,
+        "y": 80,
+        "wires": [
+            [
+                "f7028368329c2f46"
+            ]
+        ]
+    },
+    {
+        "id": "3f98c10710dd098f",
+        "type": "inject",
+        "z": "79a1da780d499a14",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "7f15f801ba5688c1"
+            ]
+        ]
+    },
+    {
+        "id": "03c62bdbe73ecdcb",
+        "type": "debug",
+        "z": "79a1da780d499a14",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f7028368329c2f46",
+        "type": "json",
+        "z": "79a1da780d499a14",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 490,
+        "y": 80,
+        "wires": [
+            [
+                "03c62bdbe73ecdcb",
+                "9390c401b94b12dc"
+            ]
+        ]
+    },
+    {
+        "id": "51d4918fdde91f38",
+        "type": "http in",
+        "z": "79a1da780d499a14",
+        "name": "",
+        "url": "getAlergia",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "7f15f801ba5688c1"
+            ]
+        ]
+    },
+    {
+        "id": "11afc2d20a4b1f7b",
+        "type": "http request",
+        "z": "79a1da780d499a14",
+        "name": "getAlergia[id]",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8080/getAlergia/{{req.params.id}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "credentials": {
+            "user": "",
+            "password": ""
+        },
+        "x": 330,
+        "y": 260,
+        "wires": [
+            [
+                "b5c8c28e295d9de4"
+            ]
+        ]
+    },
+    {
+        "id": "6c877048d7d0f8dd",
+        "type": "debug",
+        "z": "79a1da780d499a14",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b5c8c28e295d9de4",
+        "type": "json",
+        "z": "79a1da780d499a14",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 490,
+        "y": 260,
+        "wires": [
+            [
+                "6c877048d7d0f8dd",
+                "4b6af92e6ed48da6"
+            ]
+        ]
+    },
+    {
+        "id": "f815a49ccd19a677",
+        "type": "http in",
+        "z": "79a1da780d499a14",
+        "name": "",
+        "url": "/getAlergia/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 320,
+        "wires": [
+            [
+                "11afc2d20a4b1f7b",
+                "0ac68b21a6b2b033"
+            ]
+        ]
+    },
+    {
+        "id": "f9b8aec57734e706",
+        "type": "inject",
+        "z": "79a1da780d499a14",
+        "name": "inject",
+        "props": [
+            {
+                "p": "req.params.id",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "11afc2d20a4b1f7b"
+            ]
+        ]
+    },
+    {
+        "id": "9390c401b94b12dc",
+        "type": "change",
+        "z": "79a1da780d499a14",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 160,
+        "wires": [
+            [
+                "535600cfa082b463"
+            ]
+        ]
+    },
+    {
+        "id": "535600cfa082b463",
+        "type": "http response",
+        "z": "79a1da780d499a14",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 810,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "4b6af92e6ed48da6",
+        "type": "change",
+        "z": "79a1da780d499a14",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 340,
+        "wires": [
+            [
+                "cb0f6231d1122689"
+            ]
+        ]
+    },
+    {
+        "id": "cb0f6231d1122689",
+        "type": "http response",
+        "z": "79a1da780d499a14",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 810,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "0ac68b21a6b2b033",
+        "type": "debug",
+        "z": "79a1da780d499a14",
+        "name": "msg",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b1e1cc84ec3f4831",
+        "type": "catch",
+        "z": "79a1da780d499a14",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "3e618b2415c93a2a"
+            ]
+        ]
+    },
+    {
+        "id": "3e618b2415c93a2a",
+        "type": "debug",
+        "z": "79a1da780d499a14",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 460,
+        "wires": []
+    }
+]
