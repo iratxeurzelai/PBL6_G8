@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/homeUser.css}">
+    <div th:remove="tag" th:replace="fragments/head :: head"></div>
+</head>
+
+<body>
+    <div th:replace="fragments/headerUser :: headerUser"></div>
+    
+    <section class="content">
+        <h1>Ha entrado en el home del user normal</h1>
+    </section>
+</body>
+
+</html>

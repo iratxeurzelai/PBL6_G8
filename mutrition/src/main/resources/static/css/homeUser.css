@@ -1,0 +1,93 @@
+:root{
+    --grape: #564787;
+    --lavender: #DBCBD8;
+    --dark-lavender: #a16a97;
+    --white: #F2FDFF;
+    --grayligth: #f9f9f9;
+    --blue: #9AD4D6;
+    --green:#3DD538;
+    --greenligth: #53E34F;
+    --black:#000000;
+    --oxford-blue: #101935;
+    --selected:  steelblue;
+    --columns: 1;
+    --gray:#C9D3C9;
+    
+}
+
+body{
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    height: 5rem;
+}
+
+/*configuracion desplegable*/
+
+.botonConfi{
+    background-color: var(--gray);
+    color:var(--black);
+    border:none;
+    padding: 16px;
+    font-size: 18.5px;
+    margin-right: 4px;
+}
+
+.links a{
+    text-decoration: none;
+    background-color: var(--gray);
+    color:var(--black);
+    display: block;
+    padding:16px;
+    border:none;
+    font-size: 18.5px;
+}
+
+.links{
+    background-color: var(--grayligth);
+    width: 185px;
+    display: none;
+}
+
+.links a:hover{
+    background-color:var(--greenligth);
+    text-decoration: none;
+}
+
+.desplegable:hover .links{
+    display: block;
+}
+
+/*.desplegable{
+    position:absolute;
+}*/
+
+/* navegador */
+nav{
+    display: flex !important;
+    background-color: var(--green);
+    gap:2em;
+    align-items: center;
+}
+
+#menu{
+    justify-content: space-between;
+}
+
+#navMe a{
+    padding: 16px;
+    text-decoration: none;
+    font-size: 18.5px;
+    color:var(--black);
+}
+
+.navMe a:hover{
+    background-color: var(--greenligth);
+}
+
+

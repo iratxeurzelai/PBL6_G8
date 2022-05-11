@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/shop.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}"/>
+    <div th:remove="tag" th:replace="fragments/head :: head"></div>
+    <title>Product-list</title>
+</head>
+<body>
+    <header>
+        <div th:replace="fragments/header :: header"></div>
+    <main role="main">
+        <nav id="title-list">
+            <img class="back add" src="@{/images/back.png}" alt="Back">
+            <h4 class="category">Category name</h4>
+        </nav>
+        
+        <section id="text-columns-3" class="text-columns">
+            <div class="container2">
+                <div class="row">
+                    <div class="mb-4 mt-4 card-item card box-shadow">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <img class="card-imagen" th:src="@{/images/cocaCola.png}" alt="Coca Cola">
+                            <p class="product">Diet coke Price</p>
+                            <p class="product">1.50€ <img class="add" th:src="@{/images/add.png}" alt="Add"></p>                          
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-4 card-item card box-shadow">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <img class="card-imagen" th:src="@{/images/cocaCola.png}" alt="Coca Cola">
+                            <p class="product">Diet coke Price</p>
+                            <p class="product">1.50€ <img class="add" th:src="@{/images/add.png}" alt="Add"></p>                          
+                        </div>
+                    </div>
+
+                    <div class="mb-4 mt-4 card-item card box-shadow">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <img class="card-imagen" th:src="@{/images/cocaCola.png}" alt="Coca Cola">
+                            <p class="product">Diet coke Price</p>
+                            <p class="product">1.50€ <img class="add" th:src="@{/images/add.png}" alt="Add"></p>                          
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-4 card-item card box-shadow">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <img class="card-imagen" th:src="@{/images/cocaCola.png}" alt="Coca Cola">
+                            <p class="product">Diet coke Price</p>
+                            <p class="product">1.50€ <img class="add" th:src="@{/images/add.png}" alt="Add"></p>                          
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-4 card-item card box-shadow">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <img class="card-imagen" th:src="@{/images/cocaCola.png}" alt="Coca Cola">
+                            <p class="product">Diet coke Price</p>
+                            <p class="product">1.50€ <img class="add" th:src="@{/images/add.png}" alt="Add"></p>                          
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-4 card-item card box-shadow">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <img class="card-imagen" th:src="@{/images/cocaCola.png}" alt="Coca Cola">
+                            <p class="product">Diet coke Price</p>
+                            <p class="product">1.50€ <img class="add" th:src="@{/images/add.png}" alt="Add"></p>                          
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-4 card-item card box-shadow">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <img class="card-imagen" th:src="@{/images/cocaCola.png}" alt="Coca Cola">
+                            <p class="product">Diet coke Price</p>
+                            <p class="product">1.50€ <img class="add" th:src="@{/images/add.png}" alt="Add"></p>                          
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-4 card-item card box-shadow">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <img class="card-imagen" th:src="@{/images/cocaCola.png}" alt="Coca Cola">
+                            <p class="product">Diet coke Price</p>
+                            <p class="product">1.50€ <img class="add" th:src="@{/images/add.png}" alt="Add"></p>                          
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-4 card-item card box-shadow">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <img class="card-imagen" th:src="@{/images/cocaCola.png}" alt="Coca Cola">
+                            <p class="product">Diet coke Price</p>
+                            <p class="product">1.50€ <img class="add" th:src="@{/images/add.png}" alt="Add"></p>                          
+                        </div>
+                    </div>
+
+                    <div class="mb-4 mt-4 card-item card box-shadow">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <img class="card-imagen" th:src="@{/images/cocaCola.png}" alt="Coca Cola">
+                            <p class="product">Diet coke Price</p>
+                            <p class="product">1.50€ <img class="add" th:src="@{/images/add.png}" alt="Add"></p>                          
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <nav id="cart-nav">
+            <p class="left">You have _ items in your cart</p>
+            <p class="right">Your total is: __ €</p>
+            <a href="" class="right"><img class="icon-shop" th:src="@{/images/cart.png}" alt="Cart"></a>
+        </nav>
+    </main>
+</body>

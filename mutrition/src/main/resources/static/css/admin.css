@@ -1,0 +1,371 @@
+:root{
+    --grape: #564787;
+    --lavender: #DBCBD8;
+    --dark-lavender: #a16a97;
+    --white: #F2FDFF;
+    --blue: #9AD4D6;
+    --green:#008000;
+    --oxford-blue: #101935;
+    --selected:  steelblue;
+    --columns: 1;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#navIzq{
+    flex-grow: 1;
+}
+
+/*submenu*/
+
+.submenu{
+    position: absolute;
+    width: 100%;
+    text-align: start;
+    background-color: var(--green);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color:var(--green);
+    font-size: large;
+    text-decoration: none;
+}
+
+.submenu > li > a:hover{
+    color:white;
+    transition: all .1s;
+}
+
+/*menu*/
+
+#menu li:hover .submenu{
+    visibility: visible;
+    opacity:1;
+}
+
+#menu{
+    width: 100%;
+    padding: 0;
+   
+    background-color: var(--green);
+    margin: 0;
+    display: flex;
+    gap:1em;
+    align-items: center;
+    justify-content: space-between;
+}
+#menu > li{
+    position: relative;
+    display: inline-block;
+    width: calc(12% - 3.2px);
+    text-align: center;
+}
+
+#menu > li > a{
+    padding: 15px;
+    color:var(--grey);
+    font-size: x-large;
+    text-decoration: none;
+    width: 100%;
+    border:solid 1px black;
+    display: inline-block;
+    background-color: gray;
+    text-align: center;
+}
+
+#menu > li > a:hover{
+    color:white;
+    transition: all 0.5;
+}
+
+#menu ul{
+    list-style: none;
+}
+
+
+/*header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--dark-lavender);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--grape);
+    border: solid 1px white;
+    padding: 1rem;
+}
+
+nav>a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+nav>a:hover{
+    text-decoration: none;
+    background-color: var(--dark-lavender);
+    color: white;
+}
+
+.right{
+    margin-left: auto;
+}
+
+.mark-solved, .delete-user{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(83, 83, 243);
+    border-radius: 1rem 1rem 1rem 1rem;
+    box-shadow: 0 0 0.25em #0009;
+    transition: box-shadow 0.5s;
+    padding: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+.content{
+    margin: 1rem;
+    position: relative;
+}
+
+.element_list{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+}
+
+.incidence *{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.extra-padding{
+    padding: 2rem;
+}
+
+.incidence{
+    background-color: rgba(187, 168, 250, 0.31);
+    border-radius: 11px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.resident{
+    background-color: rgba(187, 168, 250, 0.31);
+    border-radius: 11px;
+    display: grid;
+    grid-template-columns: auto 2fr 2fr 1fr;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.resident *{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.createUser{
+    text-decoration: none;
+    color: white;
+}
+
+.createUser:hover{
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 512px) {
+    .incidence{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        text-align: center;
+    }
+    .incidence *{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .warning{
+        grid-template-columns: auto !important;
+        grid-template-rows: auto auto;
+        text-align: center;
+    }
+    .warning *{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .resident{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        text-align: center;
+    }
+}
+
+.warning{
+    background-color: rgba(187, 168, 250, 0.31);
+    border-radius: 11px;
+    display: grid;
+    grid-template-columns: 3fr auto;
+    padding: 5px;
+    margin-bottom: 1rem;
+    align-items: center;
+    width: 100%;
+}
+
+.part1,.part2{
+    text-align: justify;
+}
+
+.address{
+    margin-right:2rem ;
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border: solid 1px black;
+    border-radius: 19px;
+    text-align: center;
+}
+.address p{
+    margin-top: 0;
+}
+.address p:last-child{
+    margin: 0;
+}
+
+.hidden{
+    display:none;
+}
+
+.btn-add{
+    float: right;
+    width: 48px;
+    height: 48px;
+    bottom: 10px;
+    right: 10px;
+    background: #2183DF;
+    border: none;
+    line-height: 40px;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 6px 30px rgba(0, 0, 0, 0.04), 0px 8px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 48px;
+    margin-bottom: 1rem;
+}
+
+.btn-add:focus, .btn-add:hover{
+    background-color: var(--blue) !important;
+}
+
+.btn-add>i{
+    color: white;
+}
+
+dialog[open]{
+    position: fixed;
+    width: 30%;
+    max-width: 750px;
+    top: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 21px;
+}
+
+dialog input:focus{
+    outline: none;
+    border-bottom:1px solid #555; 
+}
+
+dialog h2{
+    margin-bottom: 2rem;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+dialog input{
+    display: block;
+    border:0;
+    border-bottom:1px solid #555; 
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+dialog label{
+    margin: auto;
+    margin-right: 1rem;
+    font-weight: normal;
+}
+
+.btn-text-dark{
+    width: 93px;
+    height: fit-content;
+    background: var(--blue);
+    color: white;
+    border: none;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 6px 30px rgba(0, 0, 0, 0.04), 0px 8px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 36px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    white-space: normal;
+}
+
+.dropup-position{
+    position: relative;
+    top: 50px;
+    float: right;
+}
+
+.button-dropdown{
+    margin: 1rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.filter{
+    margin-top: 0;
+    height: 33px;
+}
+
+.btn-element{
+    margin-right: 1rem;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    align-self: end;
+    justify-self: end;
+}
+
+.btn-close{
+    position: absolute;
+    background-color: white;
+    border: none;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+#logo, #profileIcon{
+    width: 50px;
+    height: 50px;
+}
+
