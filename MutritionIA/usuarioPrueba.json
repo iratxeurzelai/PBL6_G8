@@ -1,0 +1,10 @@
+{
+    "name": "xvalencia",
+    "peso": "80",
+    "altura": "1,75",
+    "alergias": [
+        "lactosa",
+        "vegano"
+    ]
+
+}
