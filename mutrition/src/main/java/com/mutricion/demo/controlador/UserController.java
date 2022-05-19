@@ -32,6 +32,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.mutricion.demo.modelo.Role;
+
 @Controller
 public class UserController {
 
@@ -149,5 +154,12 @@ public class UserController {
         modelAndView.addObject("qr", userService.generateQRUrl(user));
         modelAndView.setViewName("qr");
         return modelAndView;
+<<<<<<< HEAD
     }*/
+=======
+    }
+
+    
+
+>>>>>>> db6cca3bb5613cdb9d0d3d1dfbd5851e30ddccfe
 }

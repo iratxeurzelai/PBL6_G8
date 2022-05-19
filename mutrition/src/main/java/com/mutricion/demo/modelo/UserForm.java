@@ -1,5 +1,6 @@
 package com.mutricion.demo.modelo;
 
+<<<<<<< HEAD
 public class UserForm {
     private static final long serialVersionUID = 1L;
 
@@ -37,6 +38,21 @@ public class UserForm {
     public void setPeso(float peso) {
         this.peso = peso;
     }
+=======
+
+public class UserForm {
+    private static final long serialVersionUID = 1L;
+
+    private String name;
+    private String password;
+    private String username;
+    private String lastname;
+    private String email;
+    private float peso;
+    private float altura;
+    private Boolean active;
+
+>>>>>>> db6cca3bb5613cdb9d0d3d1dfbd5851e30ddccfe
 
     public String getEmail() {
         return email;
@@ -58,7 +74,11 @@ public class UserForm {
         return name;
     }
 
+<<<<<<< HEAD
     public void setname(String name) {
+=======
+    public void setName(String name) {
+>>>>>>> db6cca3bb5613cdb9d0d3d1dfbd5851e30ddccfe
         this.name = name;
     }
 
@@ -70,6 +90,7 @@ public class UserForm {
         this.lastname = lastname;
     }
 
+<<<<<<< HEAD
     public Boolean getSexo() {
         return sexo;
     }
@@ -92,5 +113,39 @@ public class UserForm {
 
     public void setAlergiasStr(String alergiasStr) {
         this.alergiasStr = alergiasStr;
+=======
+    public String getUsername() {
+        return username;
+    }
+
+    public void sertUsername(String username) {
+        this.username = username;
+    }
+
+    public Boolean active() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
+   
+    
+    public float getPeso() {
+        return peso;
+    }
+
+    public void setPeso(float peso) {
+        this.peso = peso;
+    }
+
+    public float getAltura() {
+        return altura;
+    }
+
+    public void setAltura(float altura) {
+        this.altura = altura;
+>>>>>>> db6cca3bb5613cdb9d0d3d1dfbd5851e30ddccfe
     }
 }
