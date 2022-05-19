@@ -1,24 +1,17 @@
 package com.mutricion.demo.controlador;
 
-import com.mutricion.demo.modelo.Alergia;
-import com.mutricion.demo.modelo.Role;
-import com.mutricion.demo.modelo.User;
-import com.mutricion.demo.servicio.AlergiaService;
 import com.mutricion.demo.servicio.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
+
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.List;
-import java.util.Set;
-
-import javax.validation.Valid;
 
 @Controller
 public class LoginController {
@@ -26,52 +19,49 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private AlergiaService alergiaService;
-
-    @GetMapping(value={"/", "/login"})
-    public ModelAndView login(){
+   /* @GetMapping(value={"/", "/login"})
+    public ModelAndView logiin(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("login");
         
         return modelAndView;
-    }
+    }*/
 
-    @GetMapping(value="/registration")
-    public ModelAndView registration(){
-       
+    @GetMapping(value = { "/", "/login" })
+    public ModelAndView login() {
+    
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        System.out.println("Autho login->home: "+auth);
+        System.out.println("Autho login->home: "+auth.getName()+" with authority: "+auth.getAuthorities());
         ModelAndView modelAndView = new ModelAndView();
-        User user = new User();
-        modelAndView.addObject("user", user);
-        List<Alergia> alergias = alergiaService.loadAlergias();
-        modelAndView.addObject("alergias", alergias);
-        modelAndView.setViewName("registration");
-        return modelAndView;
-    }
-
-    @PostMapping(value = "/registration")
-    public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult) {
-       
-        ModelAndView modelAndView = new ModelAndView();
-        User userExists = userService.findUserByUsername(user.getUsername());
-        if (userExists != null) {
-            bindingResult
-                    .rejectValue("username", "error.user",
-                            "There is already a user registered with the user name provided");
-        }
-        if (bindingResult.hasErrors()) {
-            modelAndView.setViewName("registration");
+        
+        if(!auth.getName().equals("anonymousUser")){
+            modelAndView.setViewName("home");
         } else {
-            userService.saveUser(user);
-            modelAndView.addObject("successMessage", "User has been registered successfully");
-            modelAndView.addObject("user", new User());
-            modelAndView.setViewName("registration");
-
+            modelAndView.setViewName("login");
         }
         return modelAndView;
     }
 
-    @GetMapping(value="/home")
+    @GetMapping(value = {"/back"})
+    public ModelAndView back() {
+    
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("login");
+        return modelAndView;
+    }
+
+    @GetMapping(value = "/home")
+    @ResponseBody
+    public ModelAndView home(@RequestParam(required = false) String msg) {
+        ModelAndView modelAndView = new ModelAndView();
+        
+        modelAndView.addObject("adminMessage", "Content Available Only for Users with Admin Role");
+        modelAndView.setViewName("home");
+        return modelAndView;
+    }
+
+   /* @GetMapping(value="/home")
     public ModelAndView home(){
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -85,5 +75,5 @@ public class LoginController {
             modelAndView.setViewName("user/home");
         }
         return modelAndView;
-    }
+    }*/
 }

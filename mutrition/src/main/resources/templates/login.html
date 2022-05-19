@@ -6,6 +6,9 @@
     <title>Login</title>
     <div th:remove="tag" th:replace="fragments/head :: head"></div>
     <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/72c8b71cdc.js" crossorigin="anonymous"></script>
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
@@ -22,10 +25,14 @@
         <h3 class="form-signin-heading" th:text="Welcome"></h3>
         <br/>
 
-        <input type="text" id="user_name" name="username" placeholder="User Name"
-               class="form-control"/> <br/>
+        <input type="email" id="email" name="email" class="form-control" th:placeholder="Email"
+             required autofocus>
         <input type="password" th:placeholder="Password"
                id="password" name="password" class="form-control"/> <br/>
+
+        <div>
+            <input placeholder="Code" type='text' name='code' />
+        </div>
 
         <div align="center" th:if="${param.error}">
             <p style="font-size: 20; color: #FF1C19;">User Name or Password invalid, please verify</p>

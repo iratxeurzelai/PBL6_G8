@@ -63,6 +63,17 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <!--<label th:text="sexo" class="col-md-4 col-form-label text-md-right"></label>-->
+                    <div class="col-sm-9">
+                        <input type="radio" name="sexo" value="true" id="male" th:checked="*{sexo}">Hombre<br>
+                         <!--<label for="male" th:text="#{label.male}"></label>-->
+        
+                        <input type="radio" name="sexo" value="false" id="female" th:checked="!*{sexo}">Mujer<br>
+                        <!--<label for="female" th:text="#{label.female}"></label>-->
+                    </div>
+                </div>
+
                 <p>Peso</p>
                 <div class="form-group">
                     <div class="col-sm-9">
@@ -82,7 +93,7 @@
                     </div>
                 </div>
                 
-                <input type="checkbox" th:each="a : ${alergias}" th:field="*{alergias}" th:value="${a.id}" th:text="${a.descripcion}">
+                <input type="checkbox" th:each="a : ${alergias}" th:field="*{alergiasStr}" th:value="${a.id}" th:text="${a.descripcion}">
 
                 <div class="form-group">
                     <div class="col-sm-9">

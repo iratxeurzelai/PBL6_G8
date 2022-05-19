@@ -3,22 +3,47 @@ package com.mutricion.demo.modelo;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 import org.hibernate.validator.constraints.Length;
+import org.jboss.aerogear.security.otp.api.Base32;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+
+import java.io.Serializable;
 import java.util.Set;
 
 @Data
 @Builder
 @AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "User")
-public class User {
+public class User implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Column(name = "secret")
+    private String secret;
+
+    public User() {
+        super();
+        this.secret = Base32.random();
+    }
+
+    public User (UserForm parser){
+        super();
+        this.username = parser.getUsername();
+        this.password = parser.getPassword();
+        this.name=parser.getName();
+        this.lastname = parser.getLastname();
+        this.email=parser.getEmail();
+        this.sexo=parser.getSexo();
+        this.peso = parser.getPeso();
+        this.altura = parser.getAltura();
+        this.secret = Base32.random();
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -42,18 +67,18 @@ public class User {
     @Email(message = "*Please provide a valid Email")
     @NotEmpty(message = "*Please provide an email")
     private String email;
+    @Column(name = "sexo")
+    private Boolean sexo;
     @Column(name = "peso")
     //@NotEmpty(message = "*Por favor inserte el peso")
     private float peso;
     @Column(name = "altura")
     //@NotEmpty(message = "*Por favor inserte la altura")
     private float altura;
-    @Column(name = "active")
-    private Boolean active;
-    @ManyToMany(cascade = CascadeType.MERGE)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "RoleID", joinColumns = @JoinColumn(name = "UserID"), inverseJoinColumns = @JoinColumn(name = "RoleID"))
     private Set<Role> roles;
-    @ManyToMany(cascade = CascadeType.MERGE)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "AlergiaID", joinColumns = @JoinColumn(name = "UserID"), inverseJoinColumns = @JoinColumn(name = "AlergiaID"))
     private Set<Alergia> alergias;
 
