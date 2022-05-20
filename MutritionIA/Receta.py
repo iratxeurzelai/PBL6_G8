@@ -17,6 +17,17 @@ class Receta:
         self.vegetariano =vegetariano
         self.primer_plato =primer_plato
         self.carne = carne
+
+        #guardar las alergias para comprobarlas más facilmente
+        self.alergias=[]
+        if int(huevos)==1:self.alergias.append('huevos')
+        if int(marisco)==1:self.alergias.append('marisco')
+        if int(frutos_secos)==1:self.alergias.append('frutos secos')
+        if int(lacteos)==1:self.alergias.append('lacteos')
+        
+        #logica inversa
+        if int(vegetariano)==0:self.alergias.append('vegetariano')
+
         
     def __str__(self):
         return self.name + 'calories: ' + self.calories

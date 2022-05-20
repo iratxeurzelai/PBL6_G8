@@ -1,6 +1,7 @@
 from csp import Constraint, CSP
 from Receta import *
 from typing import Dict, List, Optional
+from Usuario import *
 import sys,argparse
       
 #Implementaciones de la clase abstracta Constraint definida en csp.py
@@ -112,11 +113,20 @@ class SegundoPlatoConstraint(Constraint[str, Receta]):
         else:
             return False
 
+class AlergiasConstraint(Constraint[str, Receta]):
+    def __init__(self, dia: str, alergias: List) -> None:
+        super().__init__([dia])
+        self.dia: str = dia
+        self.alergias=alergias
+
+    def satisfied(self, assignment: Dict[str, Receta]) -> bool:
+        for alergia in self.alergias:
+            if assignment[self.dia].alergias.__contains__(alergia): return False
+        return True
 
 #Funcion main
-def calcularDietaSemana():
-    recetas = leerRecetas()
-
+def calcularDietaSemana(recetas, usuario: Usuario):
+    alergias=usuario.alergias
     #declarar variables y dominios (Dias y Recetas)
     variables: List[str] = ["LunesP", "LunesS", "MartesP", "MartesS", "MiercolesP", "MiercolesS", "JuevesP", "JuevesS",
      "ViernesP", "ViernesS"]
@@ -125,6 +135,9 @@ def calcularDietaSemana():
         domains[variable] = recetas
     csp: CSP[str, List[Receta]] = CSP(variables, domains)
    
+   #constraints alergias
+    for dia in variables:
+        csp.add_constraint(AlergiasConstraint(dia, alergias))
    #constraints primer plato
     i=0
     while i <= len(variables)-2:
