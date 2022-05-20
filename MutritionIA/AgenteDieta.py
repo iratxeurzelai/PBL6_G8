@@ -10,26 +10,30 @@ import sys,argparse
 #Cada asignaiento el csp comprueba las constraints, si devuelve False, replanifica.
 
 class CaloriesConstraint(Constraint[str, Receta]):
-    def __init__(self, diaP: str, diaS) -> None:
+    def __init__(self, diaP: str, diaS, usuario: Usuario) -> None:
         super().__init__([diaP, diaS])
         self.diaP: str = diaP
         self.diaS: str = diaS
+        self.usuario=usuario
+        
+        self.maxCalorias= int(float(usuario.peso)*17.14+float(usuario.altura)*1.71);
 
     def satisfied(self, assignment: Dict[str, Receta]) -> bool:
         if self.diaP not in assignment or self.diaS not in assignment:
             return True
-        if float(assignment[self.diaP].calories)+float(assignment[self.diaS].calories) in range (1000, 1500):
+        if float(assignment[self.diaP].calories)+float(assignment[self.diaS].calories) in range (self.maxCalorias-500, self.maxCalorias):
             return True
         else:
             return False
 
 class MacroConstraint(Constraint[str, Receta]):
-    def __init__(self, diaAnteriorP: str, dia1S, diaP, diaS) -> None:
+    def __init__(self, diaAnteriorP: str, dia1S, diaP, diaS, usuario: Usuario) -> None:
         super().__init__([diaAnteriorP, dia1S, diaP, diaS])
         self.diaAnteriorP: str = diaAnteriorP
         self.diaAnteriorS: str = dia1S
         self.diaP: str = diaP
         self.diaS: str = diaS
+        self.usuario=usuario
 
     def satisfied(self, assignment: Dict[str, Receta]) -> bool:
         if self.diaAnteriorP not in assignment or self.diaAnteriorS not in assignment or self.diaP not in assignment or self.diaS not in assignment:
@@ -39,39 +43,39 @@ class MacroConstraint(Constraint[str, Receta]):
         #Para luego decidir si devolver True o False.
 
         #proteinas
-        maxProteinas=130
-        if (float(assignment[self.diaAnteriorP].protein)+float(assignment[self.diaAnteriorS].protein)) < 50: #20 40
-            minProteinas = 60 #40
+        maxProteinas=int(self.usuario.peso*1.85)#130
+        if (float(assignment[self.diaAnteriorP].protein)+float(assignment[self.diaAnteriorS].protein)) < self.usuario.peso*0.71:#50 
+            minProteinas = int(self.usuario.peso*0.85) #60
         else:
-            minProteinas=20 #20
-            if float(assignment[self.diaAnteriorP].protein) >100: #100 130
-                maxProteinas = 65 #90
+            minProteinas=int(self.usuario.peso * 0.28) #20
+            if float(assignment[self.diaAnteriorP].protein) >self.usuario.peso * 1.4: #100
+                maxProteinas = int(self.usuario.peso*0.93) #65
             else:
-                maxProteinas=130 #130
+                maxProteinas=int(self.usuario.peso*1.85) #130
         proteinasHoy=float(assignment[self.diaP].protein)+float(assignment[self.diaAnteriorS].protein)
 
         #Fat
-        maxFat=180
-        if (float(assignment[self.diaAnteriorP].fat)+float(assignment[self.diaAnteriorS].fat)) < 300: #100 120
-            minFat = 20 #140
+        maxFat=int(self.usuario.peso*2.57)#180
+        if (float(assignment[self.diaAnteriorP].fat)+float(assignment[self.diaAnteriorS].fat)) < self.usuario.peso*4.28: #300
+            minFat = int(self.usuario.peso*0.28) #20
         else:
-            minFat=10 #100
-            if float(assignment[self.diaAnteriorP].fat) >130: #160 180
-                maxFat = 180 #150
+            minFat=int(self.usuario.peso*0.14) #10
+            if float(assignment[self.diaAnteriorP].fat) >self.usuario.peso*1.85: #130
+                maxFat = int(self.usuario.peso*2.57)#180
             else:
-                maxFat=180 #180
+                maxFat=int(self.usuario.peso*2.57) #180
         fatHoy=float(assignment[self.diaP].fat)+float(assignment[self.diaAnteriorS].fat)
     
         #Sodium
-        maxSodio=3000
-        if (float(assignment[self.diaAnteriorP].protein)+float(assignment[self.diaAnteriorS].protein)) < 50: #20 40
-            minSodio = 2100 #40
+        maxSodio=int(self.usuario.peso*42.85)#3000
+        if (float(assignment[self.diaAnteriorP].protein)+float(assignment[self.diaAnteriorS].protein)) < self.usuario.peso*14.28: #1000
+            minSodio = int(self.usuario.peso*30.0) #2100
         else:
-            minSodio=1700 #20
-            if float(assignment[self.diaAnteriorP].protein) > 130: #100 130
-                maxSodio = 2500 #90
+            minSodio=int(self.usuario.peso*24.28) #1700
+            if float(assignment[self.diaAnteriorP].protein) > self.usuario.peso*40.0: #2900
+                maxSodio = int(self.usuario.peso*35.71) #2500
             else:
-                maxSodio=3100 #130
+                maxSodio=int(self.usuario.peso*44.28) #3100
         sodiumHoy=float(assignment[self.diaP].sodium)+float(assignment[self.diaAnteriorS].sodium)
 
         #constraint
@@ -138,6 +142,7 @@ def calcularDietaSemana(recetas, usuario: Usuario):
    #constraints alergias
     for dia in variables:
         csp.add_constraint(AlergiasConstraint(dia, alergias))
+
    #constraints primer plato
     i=0
     while i <= len(variables)-2:
@@ -152,13 +157,13 @@ def calcularDietaSemana(recetas, usuario: Usuario):
    #contraints calorias
     i=0
     while i <= len(variables)-2:
-        csp.add_constraint(CaloriesConstraint(variables[i], variables[i+1]))
+        csp.add_constraint(CaloriesConstraint(variables[i], variables[i+1], usuario))
         i+=2
 
     #contraints macros
     i=2
     while i <= len(variables)-2:
-        csp.add_constraint(MacroConstraint(variables[i-2], variables[i-1], variables[i], variables[i+1]))
+        csp.add_constraint(MacroConstraint(variables[i-2], variables[i-1], variables[i], variables[i+1], usuario))
         i+=2
     
     #constraint no repetir
