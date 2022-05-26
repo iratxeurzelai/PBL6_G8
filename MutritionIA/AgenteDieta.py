@@ -181,8 +181,8 @@ def calcularDietaSemana(recetas, usuario: Usuario):
 
 
     #calcular una solucion
-    #solution: Optional[Dict[str, Receta]] = csp.backtracking_search()
-    solution: Optional[Dict[str, Receta]] = csp.backtracking_search_with_arc_consistence()
+    solution: Optional[Dict[str, Receta]] = csp.backtracking_search()
+    #solution: Optional[Dict[str, Receta]] = csp.backtracking_search_with_arc_consistence()
     
     if solution is None:
         print("No solution found!")
