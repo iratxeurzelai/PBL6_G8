@@ -12,7 +12,7 @@ def revisarAlergias(alergiasUsuario: List[str], alergiasRecetas: List[str]) -> b
 
 def getAlternativas(usuario: Usuario, indexReceta: int, df: pd.DataFrame, recetas: List[Receta]):
     similarityMatrix=cosine_similarity(df[['calories', 'protein', 'fat', 'sodium']]) #similitud en los macros
-    similar_food = list(enumerate(similarityMatrix[indexReceta])) #crear una tuple (index, similitud)
+    similar_food = list(enumerate(similarityMatrix[indexReceta])) #crear una tuple (index, similitud) respecto a la receta que se le pase
     sorted_similar_food = sorted(similar_food, key=lambda x:x[1], reverse=True) #ordenar por similitud
 
     listaAlternativas = []

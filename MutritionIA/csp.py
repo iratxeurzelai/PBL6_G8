@@ -122,8 +122,8 @@ class CSP(Generic[V, D]):
 
             removals = self.suppose(first, value)
             # if we're still consistent, we recurse (continue)
-            if self.Arc(self.neighbors, first, local_assignment, removals):
-                result: Optional[Dict[V, D]] = self.backtracking_search(local_assignment)
+            if self.Arc( [(X, first) for X in self.neighbors[first]], first, local_assignment, removals):
+                result: Optional[Dict[V, D]] = self.backtracking_search_with_arc_consistence(local_assignment)
                 # if we didn't find the result, we will end up backtracking
                 if result is not None:
                     return result
