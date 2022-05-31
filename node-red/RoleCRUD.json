@@ -1,0 +1,190 @@
+[
+    {
+        "id": "5c17a888e21c1ff7",
+        "type": "tab",
+        "label": "RoleCRUD",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3281a8b04c0564c0",
+        "type": "http request",
+        "z": "5c17a888e21c1ff7",
+        "name": "getRoles",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8081/getRoles",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "2e7b52f131739420"
+            ]
+        ]
+    },
+    {
+        "id": "2d6e6bfb05ccc310",
+        "type": "debug",
+        "z": "5c17a888e21c1ff7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2e7b52f131739420",
+        "type": "json",
+        "z": "5c17a888e21c1ff7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 330,
+        "y": 140,
+        "wires": [
+            [
+                "2d6e6bfb05ccc310",
+                "e57df0a19d66b4fe"
+            ]
+        ]
+    },
+    {
+        "id": "608b869d654157f9",
+        "type": "http in",
+        "z": "5c17a888e21c1ff7",
+        "name": "",
+        "url": "getRoles",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "3281a8b04c0564c0"
+            ]
+        ]
+    },
+    {
+        "id": "de3febe5a41e04cd",
+        "type": "change",
+        "z": "5c17a888e21c1ff7",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 240,
+        "wires": [
+            [
+                "f66bc091d8299999"
+            ]
+        ]
+    },
+    {
+        "id": "f66bc091d8299999",
+        "type": "http response",
+        "z": "5c17a888e21c1ff7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 950,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "e57df0a19d66b4fe",
+        "type": "json-schema-validator",
+        "z": "5c17a888e21c1ff7",
+        "name": "",
+        "func": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"statusType\": {\n      \"type\": \"string\"\n    },\n    \"entity\": {\n      \"type\": \"array\",\n      \"items\": [\n        {\n          \"type\": \"object\",\n          \"properties\": {\n            \"id\": {\n              \"type\": \"integer\"\n            },\n            \"role\": {\n              \"type\": \"string\"\n            }\n          },\n          \"required\": [\n            \"id\",\n            \"role\"\n          ]\n        }\n      ]\n    },\n    \"entityType\": {\n      \"type\": \"string\"\n    },\n    \"metadata\": {\n      \"type\": \"object\"\n    },\n    \"status\": {\n      \"type\": \"integer\"\n    }\n  },\n  \"required\": [\n    \"statusType\",\n    \"entity\",\n    \"entityType\",\n    \"metadata\",\n    \"status\"\n  ]\n}",
+        "x": 550,
+        "y": 240,
+        "wires": [
+            [
+                "fd25de31c72968eb",
+                "de3febe5a41e04cd"
+            ]
+        ]
+    },
+    {
+        "id": "fd25de31c72968eb",
+        "type": "debug",
+        "z": "5c17a888e21c1ff7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e9e86e46adfb7e01",
+        "type": "catch",
+        "z": "5c17a888e21c1ff7",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 420,
+        "y": 460,
+        "wires": [
+            [
+                "100de413d4429e02"
+            ]
+        ]
+    },
+    {
+        "id": "100de413d4429e02",
+        "type": "debug",
+        "z": "5c17a888e21c1ff7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 460,
+        "wires": []
+    }
+]

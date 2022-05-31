@@ -1,0 +1,200 @@
+[
+    {
+        "id": "3aadae247644fd69",
+        "type": "tab",
+        "label": "AlergiaCRUD",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "93c3311d7f1a5c09",
+        "type": "http request",
+        "z": "3aadae247644fd69",
+        "name": "getAlergias",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8081/getAlergias",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 410,
+        "y": 120,
+        "wires": [
+            [
+                "73cb6c53425db7d5"
+            ]
+        ]
+    },
+    {
+        "id": "cd0ff2cdaf04495e",
+        "type": "debug",
+        "z": "3aadae247644fd69",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "73cb6c53425db7d5",
+        "type": "json",
+        "z": "3aadae247644fd69",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 600,
+        "y": 120,
+        "wires": [
+            [
+                "cd0ff2cdaf04495e",
+                "78cd0736beae25c1"
+            ]
+        ]
+    },
+    {
+        "id": "81bc868a06098513",
+        "type": "http in",
+        "z": "3aadae247644fd69",
+        "name": "",
+        "url": "getAlergias",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 200,
+        "wires": [
+            [
+                "93c3311d7f1a5c09",
+                "d67462b0da4e8c00"
+            ]
+        ]
+    },
+    {
+        "id": "fa83d118be19e0a3",
+        "type": "inject",
+        "z": "3aadae247644fd69",
+        "name": "inject",
+        "props": [
+            {
+                "p": "req.params.id",
+                "v": "3",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "x": 70,
+        "y": 120,
+        "wires": [
+            [
+                "93c3311d7f1a5c09"
+            ]
+        ]
+    },
+    {
+        "id": "78cd0736beae25c1",
+        "type": "change",
+        "z": "3aadae247644fd69",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 200,
+        "wires": [
+            [
+                "c11cc3af3408c5a0"
+            ]
+        ]
+    },
+    {
+        "id": "c11cc3af3408c5a0",
+        "type": "http response",
+        "z": "3aadae247644fd69",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "d67462b0da4e8c00",
+        "type": "debug",
+        "z": "3aadae247644fd69",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "7f060e36560cd59d",
+        "type": "catch",
+        "z": "3aadae247644fd69",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 480,
+        "y": 340,
+        "wires": [
+            [
+                "99af777ae6ad027b"
+            ]
+        ]
+    },
+    {
+        "id": "99af777ae6ad027b",
+        "type": "debug",
+        "z": "3aadae247644fd69",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 340,
+        "wires": []
+    }
+]

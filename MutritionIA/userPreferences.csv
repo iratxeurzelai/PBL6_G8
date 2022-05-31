@@ -1,0 +1,2002 @@
+,peso,altura,title
+0,50,151,Caramelized-Honey Nut and Seed Tart 
+1,89,194,Leek-Tomato Quinoa 
+2,77,186,Shrimp and Scallops with Asian Eggplant 
+3,96,195,Caramelized Apples 
+4,45,193,Pasta e Fagioli con Salsicce (Pasta and Beans with Sausage) 
+5,65,163,Balsamic Vinaigrette 
+6,63,189,Bunuelos with Anise Syrup 
+7,50,200,Strawberry and Orange Fools 
+8,90,151,"Crispy Chicken Stew With Lemon, Artichokes, Capers, and Olives "
+9,69,179,Apple Crostata with Cheddar Cheese 
+10,54,170,Lemon-Rubbed Chicken Legs with Garlic and Rosemary 
+11,94,158,Ecclefechan Tart 
+12,53,196,Strawberries & Cream Frappé 
+13,80,159,Easy Raspberry Trifle 
+14,47,185,Honey-Roasted Carrots with Tahini Yogurt 
+15,92,183,Coffee-Marinated Skirt Steak 
+16,59,168,"Salmon with Arugula, Tomato and Caper Sauce "
+17,95,197,Smoked Peppered Mackerel and Sour Cream on Homemade Potato Chips 
+18,77,180,Soft-Shell Crabs with Wilted Spinach and Warm Tomato-Basil Vinaigrette 
+19,62,173,Spinach and Cheese Strata 
+20,48,171,"Artichoke Heart, Fennel, and Parmesan Salad "
+21,89,192,"Oil-Poached Swordfish with White Corn, Guanciale and Chive Oil "
+22,90,199,Jamaican Jerk Chicken 
+23,83,151,Stuffed Sweet Potatoes 
+24,56,180,Asparagus Goat Cheese Bruschetta with Porcini Vinaigrette 
+25,93,167,"Summer Chef's Salad with Grilled Pork, Chicken, and Chimichurri Ranch Dressing "
+26,54,160,Southern Vegetable Gratin 
+27,94,188,Chocolate Almond Bars 
+28,80,157,Spinach Ricotta Gnocchi with Tomato Sauce 
+29,64,155,Hoisin-Glazed Meatloaf Sandwiches 
+30,75,152,"Deviled Eggs with Sour Cream, Chives, and Salmon Roe "
+31,84,151,BLT Burgers 
+32,69,172,Peanut Butter Banana Cream Pie 
+33,59,165,Chicken & Broccoli with Crispy Noodles 
+34,54,174,Oysters Rockefeller 
+35,68,198,Mushroom Salad with Endive and Roquefort Cheese 
+36,94,157,Pan-Fried Pork Chops 
+37,56,170,Green Onion-Parmesan Popovers 
+38,68,198,Santiago de Cuba's Roast Pork Marinated in a Garlicky Allspice-Cumin Adobo (Cerdo Brujo) 
+39,75,170,Broiled Swordfish à la Niçoise 
+40,100,192,"Shrimp with Olive Oil, Garlic and Lime "
+41,74,179,Orange-Flower Pavlovas with Strawberries 
+42,81,193,Sauteed Scallops with Vegetables 
+43,53,195,Confit of Winter Fruits 
+44,94,167,Ham Steak with Bourbon-Cream Sauce 
+45,68,162,"Meringue, Chocolate, and Kirsch Cream Layer Cake "
+46,79,160,Pear and Raspberry Phyllo Flowers 
+47,98,168,Creole Nectarines 
+48,58,184,Strawberry Rhubarb Crumble Smoothie 
+49,57,177,Roasted Bell Pepper Salad with Pine Nuts 
+50,100,178,Steak Diane 
+51,56,187,Ginger Rum-Glazed Ham 
+52,97,191,"Tuna with Orange, Ginger, and Lemongrass Sauce "
+53,55,196,Grilled Skirt Steak Tacos with Roasted Poblano Rajas 
+54,70,176,Fig and Fennel Bread 
+55,86,172,White Bean and Ham Hock Soup with Arugula and Corn Bread Croutons 
+56,55,162,"Prosciutto, Pear and Fennel Salad "
+57,59,180,"Israeli Yogurt ""Cheese"" with Pita and Olives "
+58,51,179,Almond Tuiles 
+59,99,179,Crab Cakes 
+60,74,169,Chicken-Apricot Skewers 
+61,70,165,Apple Torte with Breadcrumb-Hazelnut 
+62,95,166,Chicken and Andouille Sausage Ragù 
+63,57,196,Tahini Chicken Salad 
+64,93,172,Curried Pineapple Chutney 
+65,49,194,Grilled Shrimp with Almonds 
+66,54,196,Chocolate Orange Petits Fours 
+67,93,165,"Creamy Monkfish, Tomato, and Shellfish Potpie with Puff Pastry Crust "
+68,65,156,Sweet Stuffed Capon 
+69,77,187,Caramelized Onion and Portobello Mushroom Soup with Goat Cheese Croutons 
+70,57,176,Grilled Tomatoes Stuffed with Goat Cheese and Sage 
+71,61,177,Roast Lamb with Pistou 
+72,84,153,Chicken and Herb Potstickers with Mint-Chili Sauce 
+73,45,160,Spiced Fillet of Beef with Mizuna Salad 
+74,45,184,"Pasta with Shrimp, Tomato, and Arugula "
+75,100,190,Cinnamon Oat Cakes 
+76,85,184,"Sea Bass with Artichokes, Zucchini and Tomatoes "
+77,58,152,Tea-and-Lemon Gravy 
+78,46,192,Beef Carbonnade 
+79,60,164,Cream of Jerusalem Artichoke Soup 
+80,87,151,Penne with Herbed Zucchini and Goat Cheese 
+81,59,187,Butterscotch Chiffon Pie 
+82,81,196,Grilled Iceberg Wedges with Buttermilk-Basil Dressing 
+83,49,185,Spicy Pickled Shallots 
+84,76,168,Veal Scallops with Creamy Mushroom Sauce 
+85,99,178,Zinfandel Beef Stock 
+86,66,190,Caramel Corn Blondies 
+87,53,189,"Pomelo Salad with Chile, Lime, Peanuts, and Coconut "
+88,67,175,Spicy Southern Barbeque Sauce 
+89,47,160,Hanoi Turmeric Grilled Fish with Dill and Onion 
+90,83,151,Panko-Crustes Mustard Pork Cutlets 
+91,50,154,Spicy Barbeque Sauce 
+92,75,152,"Black Bean, Corn, and Tomato Salad "
+93,63,161,Almond Cream Cheese Frosting 
+94,93,167,Date Walnut Rugelach 
+95,61,173,Oatmeal Trail Mix Cookies 
+96,54,162,Spiced Fruit Compote 
+97,62,181,"Poisson Cru (""Tahitian Salad"") "
+98,77,179,Beef Chili with Chipotle Chilies and Cilantro 
+99,77,178,"Artichoke, Cherry Tomato, and Feta Salad with Artichoke-Pesto Crostini "
+100,99,171,Spanish-Style Fried Chicken With Grilled Avocado 
+101,66,173,Spiced Coffee Affogato With Vanilla Ice Cream 
+102,98,178,Cauliflower Salad with Olives and Capers 
+103,90,160,Herb Roasted Turkey 
+104,83,173,Tandoori Chicken 
+105,68,196,3-Ingredient Thanksgiving Turkey With Orange and Sage 
+106,64,158,"Chicken with Bell Peppers, Onions and Capers "
+107,63,193,Marscarpone Cream 
+108,76,188,Tarragon Pizza Bianca 
+109,49,188,Pistachio Shortbread 
+110,81,197,Minute Steak with Roasted Fennel and Arugula and Caper Dressing 
+111,45,188,Olive Oil and Oregano Potato Cake 
+112,100,197,White Chocolate Mousse and Berry Tart 
+113,65,167,Cranberry-Chipotle Fruit Conserve 
+114,68,195,Bacon-Wrapped Maple Pork Loin 
+115,90,176,Summer Steak Salad with Ginger-Lime Dressing 
+116,70,161,Spicy-Smoky Peanuts 
+117,52,170,Mama Teresa's Vegetable Soup 
+118,55,166,Steamed Broccoli with Olive Oil and Parmesan 
+119,81,200,Almond and Mixed-Berry Shortcakes 
+120,69,193,Colcannon 
+121,94,156,Snapper Crudo with Chiles and Sesame 
+122,98,168,Angel Hair Pasta with Tuna and Tomato Sauce 
+123,70,170,Cold Soba Noodles with Miso and Smoked Tofu 
+124,64,180,Grilled Shrimp and Scallions with Southeast Asian Dipping Sauces 
+125,67,179,Best-Ever BLT Wrap 
+126,80,194,Lemon Crème Brûlée 
+127,58,172,Turkey Tetrazzini 
+128,70,153,Spicy Pork and Mustard Green Soup 
+129,82,153,Curried Meatballs 
+130,50,187,Balsamic Strawberries with Whipped Mascarpone Cheese 
+131,98,163,Chicken Sauté with Sherry 
+132,56,162,Vietnamese-Style Beef Salad 
+133,47,175,Roasted Pepper Turkey with Orange Liqueur 
+134,53,181,Braised Cauliflower with Curry and Yogurt 
+135,50,174,Heaven-and-Earth Tempura Cakes 
+136,64,166,Turkey Green Chili 
+137,94,194,"Tunisian Bell Pepper, Tomato, Tuna and Egg Salad "
+138,62,183,Italian Tartar Sauce 
+139,63,160,Tomato and Red Onion Compote 
+140,62,164,Strawberries with Molasses Sour Cream Sauce 
+141,90,170,Romaine and Broccoli Salad with Creamy Roasted Garlic Dressing 
+142,93,162,Mushroom-Shallot Quiche 
+143,56,193,Gruyère Potato Gratin 
+144,45,157,Goat Cheese with Bell Pepper Dressing 
+145,61,192,Estouffade de Noël 
+146,98,167,Oatmeal Praline Ice Cream with Warm Berry Sauce 
+147,76,150,"Squid Ink Pasta with Shrimp, Nduja, and Tomato "
+148,52,153,Cold Curried Pea and Buttermilk Soup 
+149,88,160,Pink Grapefruit Champagne Sorbet with Pink Grapefruit Sauce 
+150,78,150,Creamed Spinach with Golden Breadcrumb Topping 
+151,52,176,Mashed Potatoes with Kale 
+152,56,157,Pineapple Macadamia Nut Meringue Pies 
+153,56,199,Potato Latkes 
+154,47,174,Scottish Farmhouse Eggs 
+155,92,176,Grilled Chicken with Root Beer Barbecue Sauce 
+156,71,173,"Roasted Sweet Potatoes with Miso, Orange, and Sesame "
+157,54,159,Golden Crisp Daikon Cake with Spicy Herb Soy Sauce 
+158,76,177,Pork Fricassée with Mushrooms and Carrots 
+159,61,163,"Melon and Blueberry Coupe with White Wine, Vanilla and Mint "
+160,54,174,Golden Crisp Daikon Cake with Spicy Herb Soy Sauce 
+161,81,192,Creamy Chicken-Noodle Casserole with Spinach and Mushrooms 
+162,76,157,Meatloaf 
+163,48,198,"Dean & Deluca's Tuna Sandwich with Carrots, Red Onion, and Parsley "
+164,53,160,Pavlova Pyatt 
+165,60,191,"Farfalle with Tuna, Tomatoes and Olives "
+166,57,164,Garlic-and-Rosemary Grilled Chicken with Scallions 
+167,58,166,"Roast Beef, Basil, and Spicy Tomato Chutney Lavash Sandwiches "
+168,72,153,Rotelle with Summer Tomato and Herb Sauce 
+169,70,168,"Lemony Chicken Soup With Farro, White Beans, and Kale "
+170,98,188,Tropical Fruit Compote with Mango Sorbet 
+171,78,177,"Roasted Butternut Squash, Red Grapes, and Sage "
+172,58,199,Almond Cream Cheese Frosting 
+173,66,160,"Apple, Celery, and Smoked Ham Stuffing "
+174,81,159,Chicken Negimaki with Spicy Red Pepper Dipping Sauce 
+175,67,192,Orange Braised Chicken Thighs with Green Olives 
+176,75,158,"Mozzarella, Tomato, and Ham Layered Sandwiches "
+177,74,156,Horseradish-Crusted Salmon with Beet Sauce 
+178,63,156,Strozzapreti with Mushrooms and Ricotta 
+179,65,154,Carrot Soup with Star Anise 
+180,65,171,Spiced Pear Flatbreads with Goat Cheese and Mustard Cream 
+181,49,195,Pan-Grilled Salmon on Toast with Scallion Mayonnaise 
+182,92,167,Caviar and Salmon Blini Tortes 
+183,45,166,Beer-Battered Fish with Smoked-Paprika Mayonnaise 
+184,99,161,Caramel Mousse Napoleon with Caramel Sauce and Berries 
+185,77,190,Pecan Coconut Tart 
+186,72,150,Dan's Baked Stuffed Shrimp 
+187,93,170,Peanut Butter Chocolate Chip Breads 
+188,87,196,Baked Smoked Ham with Mango 
+189,100,174,"Cherry Tomato, Ricotta, and Olive Galettes "
+190,75,173,Calcutta Lobster in Spinach and Yogurt Sauce 
+191,82,176,Roast Beef Wraps with Horseradish Coleslaw 
+192,84,184,Potato and Cabbage Bundles 
+193,63,166,"Zucchini, Tomato, and Corn Salad "
+194,83,193,Hollandaise 
+195,74,194,Sauteed Salmon with Dill Lemon Pesto 
+196,51,195,Escarole and Cheese Spoon Bread 
+197,55,154,German Potato Salad with Bacon-Vinegar Dressing and Dill 
+198,90,162,Seared Rosemary Scallops 
+199,63,172,Turkey Cutlets Milanese with Watercress Salad 
+200,59,159,Japanese-Style Quick-Pickled Slaw 
+201,71,151,"Yucatan-Style Chicken, Lime, and Orzo Soup "
+202,78,167,Lamb and Ratatouille Kebabs 
+203,84,179,Roasted Chicken with Za'atar Stuffing 
+204,79,161,"Sausage, Cranberry, and Pecan Stuffing "
+205,66,185,Marmalade Ice Cream 
+206,98,156,Sausage and Cheese Strata with Sun-Dried Tomatoes 
+207,85,167,Corned Beef Hash with Fried Eggs 
+208,99,158,Strawberry Ice Cream 
+209,79,159,"Grilled Swordfish with Eggplant, Anchovy and Green Olives "
+210,69,174,Milk Chocolate-Pecan Tartlets 
+211,96,167,Spicy-Sweet Tangerine Shrimp with Baby Bok Choy 
+212,50,184,Vanilla Buttercream 
+213,59,193,Brown Rice Salad with Crunchy Sprouts and Seeds 
+214,61,194,Cranberry Relish with Apple Cider 
+215,59,166,Exotic Caramel Sauce 
+216,93,170,"Moroccan Chicken with Eggplant, Tomatoes, and Almonds "
+217,72,193,Chocolate-Bourbon Tart with Currants and Orange Custard Sauce 
+218,46,188,Lamb and Eggplant Moussaka 
+219,54,157,Prunes in Crispy Bacon 
+220,57,199,Red Leaf Caesar Salad with Grilled Parmesan Croutons 
+221,47,153,Chipotle Mayonnaise Dip with Carrots 
+222,51,185,Chicken Curry Soup with Coconut and Lime 
+223,67,172,Asparagus Flan with Cheese Sauce 
+224,57,150,Chestnut Ice Cream 
+225,64,154,"Grilled Lobster with Ginger, Garlic, and Soy Sauce "
+226,47,188,Nutty Brown Rice 
+227,98,169,Prunes in Wine and Armagnac 
+228,51,199,Seared Scallops with Spicy Honey-Citrus Glaze on Celery Salad 
+229,62,156,Beer-Batter-Fried Sardines and Lime 
+230,88,174,Roasted Sweet-Potato Spears with Bacon Vinaigrette 
+231,45,171,Peperoncini Stuffed with Smoked Salmon and Dill Cream 
+232,62,161,Peel-and-Eat Hot Pepper Shrimp 
+233,55,159,Brined and Barbecued Turkey 
+234,96,166,Veal with Eggplant and Prosciutto 
+235,68,150,Cheese Blintzes 
+236,87,190,Red Cabbage and Carrot Slaw 
+237,71,185,Salmon with Spiced Red-Wine Sauce 
+238,75,196,Crepes with Homemade Fruit Syrup 
+239,86,199,Spring Pea Butter With Shallot and Lemon 
+240,74,169,Skirt Steak with Poblano Rajas and Zucchini 
+241,89,173,Basil-Mint Sauce 
+242,87,191,"Goat Cheese Salad with Pancetta, Dried Cherry and Port Dressing "
+243,65,196,Chicken and Dumplings with Mushrooms 
+244,58,192,Steamed Chicken Salad with Sesame Sauce 
+245,93,178,Cherry and Apricot Cobbler 
+246,98,154,Baked Polenta with Shiitake Ragoût 
+247,57,182,"Celery, Radish, and Olive Salad "
+248,74,193,Hermit Bars 
+249,76,188,Upside-Down Caramelized Apricot Tart 
+250,63,199,Coffee Granita with Sambuca Ice Cream and Chocolate Shavings 
+251,74,196,Barbecue Pulled-Turkey Sandwiches 
+252,81,164,Stir-Fried Spinach in Garlic Sauce 
+253,84,164,Five-Spice Candied Pecans 
+254,60,188,Brined Cucumber and Radish Salad 
+255,60,152,"Avocado, Shrimp, and Endive Salad "
+256,85,189,Spicy Spinach Linguine with Olive Oil and Garlic 
+257,45,171,Pink Chicken Sauté 
+258,77,166,Chicken Fricassée with Creamy Sweet-and-Sour Dill Sauce 
+259,58,196,Soft Beef Tacos with Salsa 
+260,67,173,Wild Mushroom Pizza with Garlic Confit and Bacon 
+261,45,156,Pork on a Bun with Bourbon-Barbecue Sauce 
+262,48,177,Belgian Endive and Walnut Salad (Insalata Belga e Noci) 
+263,100,162,"Red Snapper with Black Olives, Capers, and Tomatoes "
+264,88,197,Bo Ssäm Grilled Pork and Pickled Slaw in Lettuce Cups 
+265,80,190,Braised Veal Shanks with White Bean Tomato Sauce 
+266,94,157,"Zucchini, Corn, and Basil Fusilli with Bacon "
+267,59,159,Roquefort Mayonnaise 
+268,71,150,Garlic-Herb Mashed Potatoes 
+269,54,151,Champ 
+270,91,175,Profiteroles with Honey Lavender Ice Cream 
+271,65,194,Smoked Trout and Arugula Toasts 
+272,98,163,Crab and Roasted Red Pepper Strata 
+273,99,193,White Miso Peach/Pear/Apple 
+274,80,153,Penne with Almond Pesto and Green Beans 
+275,87,155,"Tomato, Arugula, and Ricotta Salata Salad "
+276,76,171,Spinach Shakshuka 
+277,87,159,Meyer Lemon Budino 
+278,68,200,Braised Chicken Teriyaki 
+279,73,152,Meatball Sliders 
+280,94,177,"Goat Cheese, Artichoke, and Smoked Ham Strata "
+281,50,189,Cream Cheese-Lemon Zest Frosting 
+282,88,182,Bucatini All'Amatriciana 
+283,89,155,Mock Risotto 
+284,90,159,Beer-Braised Brisket with Onions 
+285,85,179,Sea Bass with Coconut-Curry Sauce 
+286,82,186,Sauteed Chicken with Tomato-Saffron Vinaigrette on Frisée 
+287,55,170,Duck a l'Orange 
+288,56,153,Joe's Roasted Garlic Mashed Potatoes 
+289,57,160,Turkey Green Chili 
+290,60,161,Sante Fe Christmas Turkey Stuffing 
+291,49,182,Mushroom Kasha Burgers with Chipotle Mayonnaise 
+292,69,197,Vanilla Whipped Cream 
+293,100,192,Grilled Salmon in Corn Husks 
+294,60,162,Roast Chicken with Mustard-Thyme Sauce and Green Salad with Olives 
+295,69,173,Fresh Herb Falafel 
+296,75,168,Ratatouille with Penne 
+297,50,175,Jeweled Rice 
+298,86,184,Green Beans with Maple-Pecan Butter 
+299,78,151,"Hot Slow-Roasted Pork, Onion, and Mozzarella Sandwiches "
+300,100,169,Marinated Oriental Chicken 
+301,48,190,"Cecylia Roznowska's Potato Pancakes Stuffed with Bacon, Mushrooms, and Onion "
+302,95,176,Asparagus and Salmon Roe with Egg Sauce 
+303,92,194,Arctic Char with Pistachio Orange Vinaigrette 
+304,53,167,Sicilian Spinach Sauté 
+305,77,154,Cider-Dijon Pork Chops with Roasted Sweet Potatoes and Apples 
+306,97,163,Mexican Confetti Rice 
+307,93,200,Barbecue Chicken Pizza 
+308,69,187,Tropical Chicken Salad 
+309,89,190,"Pear, Blue Cheese, and Fig Napoleons "
+310,83,155,Pork Loin Roast with Fennel-Garlic Rub 
+311,85,154,Stuffed Eggs with Goat Cheese and Dill 
+312,75,175,Ginger-Marinated Hanger Steak 
+313,91,177,Earl Grey Tea Ice Cream 
+314,66,197,Black Bottom Banana Cream Pie 
+315,79,153,Grilled Veal Chops with Warm Tomato-Olive Vinaigrette 
+316,92,150,Pancetta-Studded Beef Tenderloin 
+317,72,186,"Tomato, Goat Cheese, and Onion Tart "
+318,66,180,"Bacon, Cheddar, and Scallion Breads "
+319,98,200,Cranberry-Orange Cheesecake with Chocolate Crust 
+320,62,167,Sweet Potato Corn Bread Stuffing with Greens and Bacon 
+321,71,166,Sheet-Pan Chicken Saltimbocca With Roasted Potatoes and Crispy Kale 
+322,57,178,Mixed Greens with Sheep's-Milk Cheese and Honey Vinaigrette 
+323,65,196,Quick Clam Chowder 
+324,82,184,"Endive, Beet and Roquefort Salad "
+325,82,159,Shellfish Paella Risotto 
+326,70,172,"Green Bean, Red Onion, and Roast Potato Salad with Rosemary Vinaigrette "
+327,93,164,Broccoli Rabe and Butternut Squash 
+328,63,194,Asian Hot Pot with Chicken and Sweet-and-Spicy Dipping Sauce 
+329,59,169,Lox and Melon with Chives and Lemon 
+330,74,182,Apricot-Sour Cream Scones 
+331,84,169,"Spinach, Feta, and Pine-Nut Phyllo Tart "
+332,54,163,Cream Cheese Pastry Dough 
+333,62,176,"Smoked Trout, Watercress and Apple Salad with Creamy Horseradish Dressing "
+334,91,196,Cucumber and Watermelon Salad with Hoisin-Lime Dressing 
+335,64,189,Rib-Eye Steak with Blue Cheese Butter and Walla Walla Onion Rings 
+336,55,193,"Watercress, Pear and Walnut Salad with Poppy Seed Dressing "
+337,90,179,Glazed Pork Loin with Cilantro and Garlic 
+338,65,188,Fish Soup with Bread and Rouille 
+339,81,152,Mashed Potato and Cauliflower Gratin 
+340,58,199,Pasta with Arugula and Plum Tomatoes 
+341,94,177,Toasted Corn Crisps 
+342,74,150,Sun-Dried Tomato Sauce 
+343,96,195,Blue Cheese Buttermilk Biscuits 
+344,92,194,Sesame Quail Eggs 
+345,51,165,Roast Chicken with Dried Fruit and Almonds 
+346,51,161,Buffalo and Pancetta Meat Loaf 
+347,79,189,Tarragon Roast Turkey with Vermouth 
+348,79,158,"Potato, Green Bean, and Corn Salad "
+349,98,196,Chocolate-Hazelnut Mousse 
+350,99,150,Pantry Pasta 
+351,99,159,"Tagliatelle with Spotted Sardines, Eggplant, and House-Baked Ricotta Salata "
+352,81,168,Fried Chicken Thighs with Cheesy Grits 
+353,75,183,Paella Valenciana 
+354,71,158,Queso Fundido 
+355,70,186,Crispy Cornmeal-Bacon Waffles 
+356,96,160,French-American Potato Salad 
+357,95,197,"Veal Shanks, Artichoke Hearts, and Chick-Peas with Preserved Lemon "
+358,92,169,"Apple Cider, Onion, and Raisin Chutney "
+359,96,162,Moroccan Roasted Chicken 
+360,99,168,Sweet Potato Chilaquiles with Griddled Salsa Roja 
+361,94,162,Chicken Salad Sandwiches with Blue Cheese 
+362,92,200,Pearl Couscous with Olives and Roasted Tomatoes 
+363,54,182,Spiced Coffee Mousse 
+364,61,160,Pasta Primavera Pronto 
+365,98,173,Goat Cheese Quesadillas with Roasted Red Pepper Sauce 
+366,68,200,Baked Chicken and Bacon-Wrapped Lady Apples 
+367,99,157,"Pasta, Sausage, and Bean Ragoût "
+368,95,177,Glazed Pork Loin with Cilantro and Garlic 
+369,70,182,"Country-Bread Stuffing with Parmesan, Raisins, and Pine Nuts "
+370,54,185,"Shaved Fennel, Radish, and Grapefruit Salad "
+371,82,190,Buttermilk Panna Cotta with Rhubarb-Strawberry Jelly 
+372,51,159,Boiled Dressing 
+373,87,186,Minted Pineapple-Lime Marmalade 
+374,89,160,Shaved Fennel and Apple Salad 
+375,45,182,Apple-Cherry Tartlets 
+376,67,178,Buttermilk Pancakes with Caramelized Bananas 
+377,48,192,Lime Whipped Cream 
+378,98,199,Crispy Snapper Tacos with Avocado and Tropical-Fruit Salsa 
+379,92,166,Broiled Shrimp with Spicy Ginger-Lime Butter 
+380,95,162,Herb Roasted Turkey 
+381,64,178,Buckwheat Crepes with Honeyed Ricotta and Sautéed Plums 
+382,51,190,Glazed Red Pepper-Fennel Almonds 
+383,99,184,Honey Mustard Sauce 
+384,80,174,Roasted Eggplant and Garlic Dip 
+385,71,164,Roasted Black Sea Bass with Tomato and Olive Salad 
+386,51,177,Beer-Braised Beef and Onions 
+387,48,175,German Potato Salad 
+388,84,198,Pumpkin Walnut Muffins 
+389,99,155,Steamed Mussels with Lemon-Saffron Sauce 
+390,54,191,Easy Apricot Almond Tart 
+391,50,170,Curried Meatballs 
+392,45,189,Pickled Vegetables 
+393,63,190,Millet-Scallion Pancakes 
+394,94,191,Five-Spice Sweet Potato Purée 
+395,75,150,Rice with Julienned Carrots 
+396,55,176,"""Like a Caesar"" "
+397,97,183,Braised Cauliflower with Curry and Yogurt 
+398,45,154,Fig and Raspberry Galette 
+399,46,153,Chocolate and Coconut Pecan Tart 
+400,91,166,Soupe au Pistou 
+401,67,183,Indian-Spiced Chicken With Tomato and Cream 
+402,84,193,Lemon Chiffon Pie with Glazed Cranberries 
+403,51,162,Spring Rolls 
+404,95,160,Irish Coffee Meringues 
+405,74,197,Roasted Peppers with Nectarines 
+406,94,191,Marjoram Vinaigrette 
+407,52,165,"Israeli Yogurt ""Cheese"" with Pita and Olives "
+408,78,151,Shrimp Tempura Cocktail 
+409,77,195,Baked Sea Bass with Walnut-Breadcrumb Crust and Lemon-Dill Sauce 
+410,93,157,Mussel Chowder 
+411,47,186,Beef Pinwheels with Arugula Salad 
+412,76,150,Pork Confit 
+413,93,188,Blueberry Ice Cream 
+414,71,152,Grilled Chicken Salad with Greens and Balsamic Dressing 
+415,55,198,Plantain-Stuffed Chipotles Chiles in Escabèche 
+416,68,191,Penne with Vegetables and Olives 
+417,48,158,Catfish in Spicy Tomato Sauce 
+418,86,164,Hoisin Chicken in Lettuce Leaves 
+419,56,191,Ham and Bell Pepper Frittata 
+420,46,161,Fish and Yuca Stew with Pickled Onions 
+421,72,177,Charred Jalapeño Mayonnaise 
+422,64,152,Broiled Grouper Fillets with Romesco Sauce 
+423,95,187,Tangerine Granita 
+424,71,154,Whole Roasted Snapper with Artichokes and Aïoli 
+425,97,192,White Chocolate Mousse and Berry Tart 
+426,97,155,"Pear, Dried Cherry and Chocolate Chunk Crisp "
+427,84,181,Garlic Soup 
+428,55,185,Thai-Style Tomato and Shrimp Salad 
+429,69,182,Cranberry and Orange Thyme Sorbet 
+430,95,175,Potato and Macaroni Gratin 
+431,68,177,Seared Sea Scallops with Banyuls Vinegar and Chicory Slaw 
+432,69,185,Apple Fritters with Bourbon Ice Cream 
+433,48,192,Chicken Tikka Masala 
+434,90,184,Maverick Grits 
+435,61,164,Parsley Pepita Pesto 
+436,46,173,Spirited Pumpkin Pie 
+437,56,177,Grilled Jerk Pork With Curried Peach Relish 
+438,94,196,Steamed Scrod Fillets Chinese Style 
+439,98,197,"Butternut Squash, Parmesan, and Sage Pizzas "
+440,59,167,"Turkey Burgers with Tomato Jam, Olives and Feta "
+441,61,160,Pasta with Tomatoes and Goat Cheese 
+442,53,175,Seared Tofu with with Green Beans and Asian Coconut Sauce 
+443,71,194,Crab Meat and Beet Purée on Granny Smith Apple 
+444,55,189,"Fettuccine with Smoked Salmon, Goat Cheese, Leeks and Zucchini "
+445,81,188,Sausage and Vegetable Sauté with Eggs 
+446,86,195,Chocolate Zucchini Mini-Muffins 
+447,80,191,Spaghettini with Spicy Tomato Sauce 
+448,89,193,Chewy Nut and Cereal Bars 
+449,89,162,True Vanilla Ice Cream 
+450,98,155,Dried Fruit and Fresh Grapefruit Compote 
+451,93,191,Sauteed Cod with Creamed Corn and Summer Succotash 
+452,48,197,"Roast Beef, Basil, and Spicy Tomato Chutney Lavash Sandwiches "
+453,61,175,Super Potato Salad 
+454,97,186,Pork Loin Roast with Fennel-Garlic Rub 
+455,88,165,"Grilled Eggplant, Red Bell Pepper and Arugula Rolls "
+456,67,197,Grandma Ethel's Brisket with Tzimmes 
+457,73,167,Black-Eyed Pea Curry 
+458,100,167,"Smoked Salmon, Dill and Goat Cheese Pizza "
+459,89,189,"Arugula with Brûléed Figs, Ricotta, Prosciutto, and Smoked Marzipan "
+460,70,150,Jerk Chicken 
+461,98,191,Preserved Figs Eden 
+462,50,155,Vegetable-Stuffed Loin of Veal with Sweetbreads 
+463,94,182,Kiwi Tart 
+464,70,176,Japanese-Style Grilled Fish 
+465,70,162,Chicken in Lemongrass Sauce 
+466,53,195,Butternut Squash and Apple Soup 
+467,75,200,Quick Paella 
+468,87,197,Pork Chops with Mustard Sauce 
+469,61,172,Beef Bourguignon 
+470,91,184,Peach Tarte Tatin 
+471,57,151,Red and Green Fire Salsa 
+472,49,192,Horseradish-Yogurt Sauce 
+473,55,194,Bruschetta with White Beans and Cheese 
+474,100,198,Cream of Potato Soup with Watercress 
+475,50,196,"Sheet-Pan Cumin Chicken Thighs With Squash, Fennel, and Grapes "
+476,88,198,Lobster and Shrimp Cioppino 
+477,53,156,Cranberry Fruit Relish 
+478,68,188,New Chicken Parmesan 
+479,100,197,"Risotto with Leeks, Shiitake Mushrooms, and Truffles "
+480,49,170,Pan-Grilled New York Strip Steaks with Green Olive Tapenade 
+481,98,188,Quick Sesame Chicken With Broccoli 
+482,76,164,"Pasta with Tomatoes, Pine Nuts and Basil "
+483,51,160,Tomato and Red Onion Compote 
+484,86,160,Hollandaise 
+485,93,153,Spiced Carrot Salad 
+486,92,174,Nutmeg-Coated Creamy French Toast 
+487,78,186,Pan-Fried Steaks with Shallot-Gorgonzola Butter 
+488,76,160,Avocado and Tropical-Fruit Salsa 
+489,66,189,Seared Duck Breasts with Red-Wine Sauce and Candied Kumquats 
+490,85,177,Artichoke and Parmesan Risotto 
+491,85,199,Chocolate-Dipped Cherries 
+492,72,175,Broccoli and Broccoli Rabe with Roasted Red Peppers 
+493,85,191,Glazed Sea Bass with Ginger Butter Sauce 
+494,74,178,"Steamed Clams with Ham, Bell Pepper, and Basil "
+495,100,151,Pork Braised with Autumn Vegetables 
+496,54,158,Grilled Pork Chops with Classic Barbecue Sauce 
+497,99,197,Blue Cheese Dip with Onion and Celery 
+498,58,165,Escarole and Mushroom Dressing 
+499,45,153,"Spinach Salad with Bosc Pears, Cranberries, Red Onion, and Toasted Hazelnuts "
+500,71,169,Plum Crisp 
+501,54,155,Frangipane Tart with Strawberries and Raspberries 
+502,89,192,Pot Stickers 
+503,81,199,Carrot-Rice Soup 
+504,45,170,Spinach and Garlic Dip with Pita Triangles and Vegetables 
+505,92,178,Sticky Rice with Mango 
+506,94,181,Christmas Croissant Pudding with Sour Cream and Brown Sugar Sauce 
+507,63,162,Smoked Turkey and Cheese Spread 
+508,95,199,Toasted Blue Cheese and Caramelized Onion Sandwiches 
+509,54,195,Crepes with Homemade Fruit Syrup 
+510,58,160,Brined Pork Chops 
+511,75,161,Chicken Under a Brick with Fresh Herb and Garlic Sauce 
+512,92,154,"Fried Rice with Bacon, Scallions, and Water Chestnuts "
+513,70,155,"Pizza with Fontina, Prosciutto, and Arugula "
+514,73,191,Parmesan Polenta Squares 
+515,51,174,White-Cut Chicken 
+516,48,169,Asparagus with Wasabi-Mayonnaise Dip 
+517,83,159,Celery Salad 
+518,72,152,"Mâche Salad with Blood Oranges, Pistachios, and Pomegranate "
+519,59,200,Basque Tomato Sauce 
+520,54,186,Roast Wild Turkey with Blue Cornbread-Shrimp Stuffing 
+521,50,185,Olive and Parmesan Skillet Cornbread 
+522,49,170,Beef and Snow Peas with Panfried Noodles 
+523,97,182,"Raspberry, White Chocolate, and Almond Trifle "
+524,50,184,Wild Mushroom Strudel with Arugula Pesto 
+525,73,171,Shrimp Palermo 
+526,99,163,Moroccan Fish Tagine with Peppers and Olives 
+527,83,186,Grilled Spiced Double-Thick Pork Chops 
+528,94,164,Pan-Fried Catfish with Arugula-Orange Salad 
+529,66,184,Gingered Beet Risotto 
+530,89,193,Vegetable Medley in Garlic-Chile Sauce 
+531,88,192,Twice-Baked Potatoes with Goat Cheese and Chives 
+532,73,156,Chicken and Mushroom Enchiladas 
+533,85,200,Walnut and Coffee Tart with Coffee Cream 
+534,94,178,Savory Crepes with Mushroom and Bacon Filling 
+535,76,179,Orzo Salad 
+536,89,151,Orange Pancakes `21' Club 
+537,75,166,3-Ingredient Sausage Dinner With Lentils and Fennel 
+538,81,173,"Barbecue Pork Kebabs With
+                Blistered-Chile–Pumpkin Seed Salsa "
+539,99,153,Ramp and Sausage Risotto 
+540,49,195,Tangerine-Date Tartlets with Buttermilk Whipped Cream and Tangerine Granita 
+541,75,187,Green Onion and Mushroom Omelet 
+542,98,160,Family-Style Veal Roast 
+543,56,180,White Fish Stock 
+544,56,165,Passion-Fruit Meringue Tart 
+545,47,188,Trail Mix 
+546,54,179,White Bean Salad 
+547,85,166,Quick Paella 
+548,92,154,Tomato-Cheddar Pie 
+549,64,194,Chili-Glazed Shrimp with Tomatillo-Cilantro Sauce 
+550,95,176,Prune Sauce for Meat or Game 
+551,48,162,Roquefort-Stuffed Pork Chops 
+552,50,152,Chocolate Kumquat Spring Rolls 
+553,60,175,Veal Sauté with Merlot Pan Sauce 
+554,61,191,Greek-Style Braised Lamb Shanks 
+555,78,170,Grilled Pork Chops with Bourbon-Mustard Glaze 
+556,55,162,Chile Lime Tuiles 
+557,48,189,Three-Chili Rice 
+558,94,158,Mashed Potatoes with Creamy Blue Cheese and Rosemary 
+559,61,183,Apricot-Glazed Chicken with Dried Plums and Sage 
+560,63,183,Fruit Salad with Ginger Syrup 
+561,79,188,Brown Chicken Stock 
+562,49,195,Creamed Peas and Onions 
+563,78,165,Smoked-Salmon and Cucumber Rolls 
+564,87,158,Fresh Fruit Compote with Hazelnut-Cinnamon Biscotti 
+565,77,182,Spiced Grilled Cornish Hen 
+566,81,190,Lemon Curd and Blueberry Trifle 
+567,64,191,Snappy Red Bell Pepper Dip with Shrimp 
+568,88,152,Shellfish Stew Provençale 
+569,87,185,Pomegranate-Marinated Lamb with Spices and Couscous 
+570,55,167,"Chicken Cacciatore with Harissa, Bacon, and Rosemary "
+571,97,184,French Onion Soup 
+572,87,185,Shrimp with Zucchini Fritters and Grape-Leaf Spread 
+573,71,190,Marbled Chocolate and Strawberry Galettes 
+574,84,170,Strawberry-Lemon Cream Tart 
+575,85,193,Peach Sabayon with Balsamic Peaches 
+576,77,156,Cauliflower Soup with Thyme Croutons 
+577,63,185,Vegetable Pesto Salad with Warm Goat Cheese Toasts 
+578,87,151,Seared Tuna with Wasabi-Coconut Sauce and Roasted-Pepper Rice Pilaf 
+579,54,195,Bacon and Onion Corn Muffins 
+580,59,166,Blood Orange Tart with Cardamom Pastry Cream 
+581,46,190,Brazilian Fish Stew (Moqueca Capixaba) 
+582,77,174,"Potato, Caramelized Onion, and Goat Cheese Gratin "
+583,65,177,Ginger-Cilantro Chutney 
+584,83,167,Peach-Blueberry Ice Cream Pie 
+585,59,171,Pasta with Green Vegetables and Herbs 
+586,84,184,Steak de Burgo 
+587,91,199,Asian Coleslaw with Shredded Chicken or Turkey 
+588,72,158,Trio of Marinated Goat Cheeses 
+589,75,177,Strawberry and Blueberry Summer Pudding 
+590,92,158,Goat Cheese Ravioli with Bell Peppers and Brown Butter 
+591,71,164,Seared Mahimahi with Hot-and-Sour Mango Relish 
+592,64,196,Mixed Antipasto 
+593,64,174,Pasta and Lamb Casserole (Pastitsio) 
+594,64,194,Clam and Cod Chowder 
+595,52,161,Coffee-Braised Short Ribs with Ancho Chile 
+596,66,151,Lemon-Pistachio Pilaf 
+597,74,157,Mustard Seed Gravy 
+598,87,167,Fried Shrimp with Peanut Sauce 
+599,82,184,Raspberry and Brown Sugar Custard Tart 
+600,55,190,Pistachio Apricot Oatmeal Cookies 
+601,74,163,Ratatouille and Goat Cheese Salad with Pesto Vinaigrette 
+602,58,187,Giant Chocolate Candy Bar With Peanuts and Nougat 
+603,59,152,Grilled Chicken Breasts in Spiced Yogurt 
+604,51,158,Shakshuka 
+605,59,161,Mesclun and Cherry Salad with Warm Goat Cheese 
+606,75,186,Breakfast Bowl With Quinoa and Berries 
+607,77,196,"Lime, Apricot, and Soy-Sauce Chicken Wings "
+608,68,196,Sausage and Potato Breakfast Casserole 
+609,95,182,Chicken and Fall Vegetable Pot Pie 
+610,85,195,Cuban-Style Roast Suckling Pig 
+611,62,188,Potato and Garlic Soup with Herbs 
+612,99,200,Lobster Salad with Summer Vegetables 
+613,91,151,Potato and Wild Mushroom Gratin 
+614,48,190,My Mother's Brisket 
+615,63,184,Gingerbread Trifle With Candied Kumquats and Wine-Poached Cranberries 
+616,59,156,Banana Bread with Chocolate Chips and Walnuts 
+617,61,158,"Duck Breasts with Orange, Honey and Tea Sauce "
+618,86,196,Mussels with Shallots and Tarragon 
+619,78,164,Florida Citrus Pie 
+620,55,165,Spicy Spaghetti with Clams and Red Bell Pepper 
+621,85,152,Strawberries in Sambuca 
+622,65,183,Buttermilk Panna Cotta with Rhubarb-Strawberry Jelly 
+623,53,195,Sticky Sesame Chicken Wings 
+624,55,151,Couscous with Chick-Peas and Tomatoes 
+625,88,182,Smoked-Chicken and Cranberry Salad 
+626,87,152,Fresh Ricotta Cheese 
+627,92,200,Pan-Seared Cod with Creamy Fennel Ragoût 
+628,100,186,Roasted Salmon with Horseradish Crème Fraîche 
+629,92,187,Passion-Fruit Meringue Tart 
+630,83,165,Marinated Eggplant Salad 
+631,47,151,Apple Raisin Bread Pudding 
+632,45,163,Deviled Eggs with Tarragon and Capers 
+633,56,174,Leg of Lamb Stuffed with Greens and Feta 
+634,72,169,Rosemary-Roasted Turkey with Gravy 
+635,52,170,Lamb Chops with Poached Quince and Balsamic Pan Sauce 
+636,90,157,"Roasted Potato, Garlic, and Red Pepper Salad "
+637,94,190,Grilled Skirt Steak Tacos with Roasted Poblano Rajas 
+638,96,156,Salami and Pickle Grilled Cheese 
+639,65,167,"Shrimp, Scallop, and Cod Lasagne "
+640,77,167,Thai-Style Chicken and Rice Soup 
+641,96,176,Crab Cakes with Green Onion and Dill 
+642,95,199,Spanish-Style Shrimp and Scallop Salad 
+643,70,179,Tortilla Soup with Crisp Tortillas and Avocado Relish 
+644,77,182,Coconut Flan 
+645,95,164,Minted Cucumber and Bell Pepper Buttermilk Soup 
+646,70,185,Chive-Goat Cheese Spread 
+647,59,161,Stuffed Poblano Chiles with Walnut Sauce and Pomegranate Seeds 
+648,55,171,Veal with Sherry Sauce 
+649,60,197,Saffron Pasta with Pork and Tomato Sauce 
+650,100,181,Coriander Teriyaki Flank Steak 
+651,55,172,"Chicken Breasts with Scallions, Shiitake Mushrooms, and Tomatoes "
+652,91,200,Roasted Carrots with Cumin Yogurt 
+653,89,193,Red Mole 
+654,83,159,Classic Chicken and Coconut Soup 
+655,67,191,Mixed Vegetable Relish 
+656,57,199,Jícama-Melon Salad 
+657,99,195,Frisée and Roasted-Potato Salad 
+658,46,179,Lemon Cream Cheese Frosting 
+659,67,176,Pomegranate Molasses-Glazed Carrots 
+660,71,156,"Spaghetti with Olive Oil, Garlic and Anchovies "
+661,68,152,Parsleyed Yellow-Potato Salad 
+662,64,156,Chunky Almond Oil 
+663,48,194,Grilled Vegetable Salad with Lemon-Mustard Vinaigrette 
+664,79,154,Corn and Winter Squash with Spinach and Bacon 
+665,45,169,Garlic Mashed Potatoes 
+666,92,163,Pistachio Ice Cream 
+667,61,185,"Chicken with Lemon, Cumin, and Mint "
+668,98,153,Noodle Pudding 
+669,84,195,Mexican Scrambled Eggs 
+670,46,152,Sweet and Chunky Apple Butter 
+671,71,190,Peanut Butter Chocolate Ripple Ice Cream 
+672,70,197,Fennel- and Coriander-Spiced Salmon Fillets 
+673,72,170,Monte Cubano 
+674,46,184,Sauteed Pasta with Lobster 
+675,94,192,Blue Cheese Canapes with Pecans and Grapes 
+676,76,171,Peach Iced Tea Sorbet 
+677,68,157,Seafood-Stuffed Eggplant 
+678,66,152,Vegetable Summer Rolls 
+679,99,157,Roast Beef Salad with Cabbage and Horseradish 
+680,61,194,Fried Chick-Pea Sandwiches with Coriander Yogurt 
+681,65,165,Peanut Butter Banana Ice Cream 
+682,73,193,Roasted Tomato–Cashew Salsa 
+683,57,172,Grape and Walnut Sweet Focaccia 
+684,87,157,Lobster Rolls with Lemon Vinaigrette and Garlic Butter 
+685,94,158,Cheese and Hominy Quesadillas with Tropical Salsa 
+686,51,157,Grilled Striped Bass 
+687,81,170,"Braised Chicken With Asparagus, Peas, and Melted Leeks "
+688,51,151,Rice with Almonds and Raisins 
+689,93,171,BBQ Beef Brisket 
+690,73,172,Ham and Swiss Puff-Pastry Quiche 
+691,48,169,Grilled Spiced Lamb Chops with Cucumber-Mint Sauce 
+692,57,186,Fried Green Olives Stuffed with Blue Cheese 
+693,62,196,Steamed Clams with Pasta 
+694,52,197,Chinese Barbecued Pork 
+695,56,173,"Sautéed Fennel with Almonds, Raisins, and Saffron "
+696,64,178,Chocolate Marshmallow Frosting 
+697,78,164,Berry Toast Cups 
+698,51,195,"Cucumber, Radish, and Tomato Salad with Citrus Dressing "
+699,90,196,Lemon and Toasted-Coconut Meringue Pie 
+700,59,180,"Sourdough, Italian Sausage, and Chestnut Stuffing "
+701,79,191,Berry Tart with Mascarpone Cream 
+702,57,197,Shami Kebabs 
+703,88,156,"Soba with Pea Shoots, Shiitake Mushrooms, and Leeks "
+704,100,180,Spicy Shrimp and Grits 
+705,96,176,Grilled Tilapia with Béarnaise Sabayon and Baby Bok Choy 
+706,58,184,Mussels à la Plancha 
+707,91,192,Holiday Ham with Riesling and Mustard 
+708,99,195,Sweet Potato Soup with Buttered Pecans 
+709,47,195,"Prosciutto, Goat Cheese, and Fig Sandwiches "
+710,71,199,Pear and Dried-Cherry Crisp with Nutmeg-Walnut Streusel 
+711,59,151,Grilled Spiced Double-Thick Pork Chops 
+712,75,168,Frozen Blackberry-Cream Pops 
+713,58,195,White Beans with Tomatoes and Spinach 
+714,90,159,"Asparagus, Bacon, and Frisée Salad "
+715,92,169,Herbed Garlic and Parmesan Croutons 
+716,71,186,Paskha Cheese 
+717,50,200,Herbed Yellow Pepper Scrambled Eggs with Chive Sour Cream on Brioche 
+718,65,184,"Herbed Crepes with Ricotta, Green Bell Pepper, and Spring Tomato Sauce "
+719,95,168,"Linguine with Pecorino, Tomatoes, and Arugula "
+720,87,196,Soft Fish Tacos 
+721,95,167,Roast Chicken with Rosemary-Garlic Paste 
+722,94,176,Lettuce Wraps with Smoked Trout 
+723,93,177,Pan-Fried Trout with Bacon 
+724,59,187,Mango-Coconut Ice Cream Pies with Blackberry Sauce 
+725,66,196,Roast Chicken with Mushroom Stuffing and Sauce 
+726,81,191,Curried Lamb Burgers with Grilled Vegetables and Mint Raita 
+727,53,174,"Chocolate Chunk, Orange and Hazelnut Cookies "
+728,80,186,Yu Bo's Shiitake Mushrooms with Scallions 
+729,59,191,"Roasted Pepper, Cucumber, and Tomato Salad "
+730,99,155,Broiled Mackerel with Ginger and Garlic 
+731,57,200,"Bruschetta with White Beans, Tomatoes and Olives "
+732,77,154,Crispy Apple-Oat Fritters 
+733,79,187,Pepper Chicken with Hummus 
+734,58,154,Sweet Potato with Toasted Coconut 
+735,73,167,Dilled Walnut and Cottage Cheese Cloverleaf Rolls 
+736,72,154,Peanut Butter Bread Pudding 
+737,93,199,Panfried Pressed Poussins 
+738,77,151,Diner-Style Rice Pudding 
+739,60,182,Apple and Fig Custard 
+740,95,178,Santa Fe Tortilla Pizza 
+741,93,160,Zucchini Fritters with Herbs and Cheese 
+742,94,157,Grilled Seafood Salad Niçoise 
+743,53,198,Sweet Potato Fries with Garlic and Herbs 
+744,61,150,Broiled Mackerel with Ginger and Garlic 
+745,46,175,Fresh Pea Hummus Crostini with Pea Tendril Garnish 
+746,57,159,Traditional Indian Raita 
+747,74,159,Tomato and Bacon Salad in Bibb Lettuce Cups 
+748,66,156,Mustard Chicken 
+749,76,156,Chestnut Stuffing 
+750,62,182,Joe's Roasted Garlic Mashed Potatoes 
+751,71,198,Rib-Eye Steaks with Bell Pepper and Olives 
+752,60,170,Mahogany Beef Stew with Red Wine and Hoisin Sauce 
+753,59,199,"Tomato, Potato, and Mustard Green Salad "
+754,90,170,Beer-Braised Pork Belly 
+755,92,152,Tuna Souvlaki Gyro with Beet Tahini and Parsley Salad 
+756,92,159,"Pear, Blue Cheese, and Fig Napoleons "
+757,47,157,Mini Pizzas 
+758,57,172,Chicken Sauté with Garlic 
+759,56,176,Soba Soup with Spinach and Tofu 
+760,99,184,Roast Pork Tenderloins with Cranberry-Port Sauce 
+761,98,198,Sweet Potato Soup with Fried Pancetta and Rosemary Croutons 
+762,46,165,Coriander Chutney 
+763,82,185,"Arugula, Bacon, and Gruyère Bread Pudding "
+764,82,176,Scotch Broth 
+765,94,150,Butternut Squash and Creamed-Spinach Gratin 
+766,90,175,Wild-Mushroom and Potato Stew 
+767,75,174,Chipotle-Sesame Chicken Skewers 
+768,68,172,Chilled Corn Soup with Crab and Chile Oil 
+769,56,177,Strawberries With Balsamic Toffee 
+770,50,188,"White Bean, Sun-dried Tomato, and Feta Bites "
+771,58,169,Cold Minted Pea and Buttermilk Soup 
+772,53,184,Lemon-Garlic Baked Shrimp 
+773,59,189,White Beans with Bacon and Endive 
+774,46,159,"Swordfish, Bacon, and Cherry Tomato Kebabs "
+775,96,166,Hot Slaw a la Greyhound Grill 
+776,45,193,Creamy Chia Coconut Ginger-Carrot Soup 
+777,55,172,Wine-Braised Red Cabbage 
+778,79,165,Avocado and Smoked Salmon Soup 
+779,85,152,Asian Pork and Mushroom Burger Wraps 
+780,72,183,"Cider, Bacon, and Golden Raisin Stuffing "
+781,58,151,Sauteed Skirt Steak with Braised Scallions 
+782,87,175,Veal Scaloppine with Mushroom Cream Sauce 
+783,90,166,Braised Meatballs in Red-Wine Gravy 
+784,71,163,Sticky Sesame Chicken Wings 
+785,79,193,Falafel 
+786,84,186,Fried Neopolitan Pizzas 
+787,98,159,Key Lime Pie 
+788,71,186,"Green Bean, Zucchini and Potato Stew "
+789,90,156,Black-Eyed Pea Curry 
+790,96,174,Rice Noodles with Garlic and Herbs 
+791,84,198,"Potato, Parmesan, and Anchovy Focaccia "
+792,85,169,Fettucine Carbonara with Fried Eggs 
+793,79,186,Broccoli and Brussels Sprouts Slaw 
+794,62,195,Pomegranate-Marinated Lamb with Spices and Couscous 
+795,79,199,Beef Aspic 
+796,56,194,"Grapefruit, Ginger, and Star Anise Compote "
+797,52,163,Goan Shrimp in Roasted-Coconut Sauce 
+798,85,177,"Vegetable, Barley and Chicken Chowder "
+799,79,170,Roasted Parsnips and Butternut Squash 
+800,70,188,Pancetta Roast Chicken with Walnut Stuffing 
+801,46,190,"Raspberry, White Chocolate, and Almond Trifle "
+802,96,200,"Salmon with Potato ""Scales"" "
+803,58,169,Roasted Carrots and Parsnips with Citrus Butter 
+804,66,200,Veal Scallops with Mushrooms and Rosemary 
+805,76,167,Hurricane Marilyn's Couscous and Lentil Salad 
+806,94,194,Simplest Chocolate Honey Mousse 
+807,54,159,Cardamom and Lemon Rice Pudding 
+808,60,173,Warm Jasmine Rice Salad with Shrimp and Thai Herbs 
+809,74,192,Portuguese-Style Salt Cod Fritters with Lemon and Olives 
+810,76,193,Seafood-Stuffed Eggplant 
+811,84,160,Lattice-Topped Apricot Crostata 
+812,84,186,"Spinach, Ham, and Cheese Pie (Pye of Several Things) "
+813,85,175,Lemon Chicken and Artichokes with Dill Sauce 
+814,52,195,"Orecchiette Pasta with Peas, Ham, and Cream "
+815,89,154,Pumpkin Cannelloni with Clams and Sage Brown Butter 
+816,52,191,Apple-Raisin Chutney 
+817,58,163,Zucchini and Olive Mashed Potatoes 
+818,62,172,Currant Tart 
+819,56,193,Chicken Piccata with Niçoise Olives 
+820,95,166,Scrambled Eggs with Sausage and Thyme 
+821,80,193,Pork Chops with Sauteed Red Cabbage 
+822,48,180,Lemon-Garlic Lamb Chops 
+823,94,156,Raspberry-Crème Fraîche Tart 
+824,85,177,"Eggplant Steaks with Pumpkin, Tomato, and Mushroom Ragoût "
+825,62,198,Chicken Mole with Chipotles 
+826,98,196,Shrimp and Vegetables in Ginger Coriander Broth 
+827,60,177,"Polenta Bites with Blue Cheese, Tomatoes, and Pine Nuts "
+828,50,190,Red Mullet Fillets with Haricots Verts and Dried Apricots 
+829,47,196,Mussels with Coconut Curry Sauce 
+830,92,157,"Pear, Apple, and Quince Crostata "
+831,98,198,Feta and Red Bell Pepper Pizza 
+832,48,156,Hazelnut Mole 
+833,45,165,Seafood Stew with Tomatoes and Basil 
+834,74,164,Penne with Slow-Roasted Cherry Tomatoes and Goat Cheese 
+835,98,184,To Make Lobster Oil 
+836,57,196,Spiced Lamb Meatballs With Walnut Romesco 
+837,63,198,Mango Salad with Grilled Shrimp 
+838,94,186,Salade Niçoise 
+839,97,177,Oatmeal Coconut Squares with Chocolate Chips 
+840,83,179,Potato and Celery Root Gratin with Fontina Chee]se 
+841,92,175,Poached Eggs in a Red Wine Sauce 
+842,99,199,Mulled-Wine Cranberry Sauce 
+843,52,159,"Iceberg with Tomatoes, Blue Cheese, and Bacon "
+844,46,152,Plum Almond Tartlets 
+845,58,153,Fish Tacos 
+846,53,151,Fresh Herb Platter (Sabzi Khordan) 
+847,59,194,Roast Beef Sandwiches with Lemon-Basil Mayonnaise and Roasted Red Onions 
+848,88,150,Malt-Beer-Brined Turkey with Malt Glaze 
+849,84,157,Grilled Butterflied Prawns with Sriracha-Lemongrass Butter 
+850,70,150,Thai Curry 
+851,79,161,Balsamic Fig Chutney with Roasted Grapes 
+852,64,194,Raspberry Cheesecake Brownies 
+853,51,180,Sherried Chicken Wings with Mushrooms and Peas 
+854,92,155,Green Beans with Pecan Pesto 
+855,79,174,Cheddar Scones with Ham and Honey-Mustard Butter 
+856,82,194,Duck with Honey-Peppercorn Sauce 
+857,69,166,Spanish-Style Tortilla 
+858,75,152,Curried Chicken and Vegetable Salad Mintz 
+859,97,162,Lemon Sorbetto with Watermelon and Anisette 
+860,87,185,Reuben Bread Pudding 
+861,96,176,"Chicken with Endive, Radicchio and Balsamic Vinegar Glaze "
+862,61,163,Roasted Zucchini and Yogurt Spread 
+863,46,153,"Banana, Raspberry, and Granola Yogurt "
+864,96,175,"Cranberry Chutney With Orange, Figs, and Mustard "
+865,80,150,"Asian Noodle Salad with Eggplant, Sugar Snap Peas, and Lime Dressing "
+866,61,159,Turkey Enchiladas Adobo 
+867,61,200,Chocolatines 
+868,92,183,Apple Raisin Bread Pudding 
+869,52,159,Chicken Nuggets with Mango and Avocado Salsa 
+870,61,177,Curried Herring on Rye Toasts 
+871,88,188,Cucumber-Dill Sauce 
+872,67,200,Bacon-Wrapped Turkey Breast with Hazelnut Mole 
+873,93,164,Melon with Coconut Milk 
+874,77,184,Clams in Garlic Sauce 
+875,46,151,"Roast Beef, Red Pepper, Spinach, and Feta Sandwiches with Tahini Dressing "
+876,51,194,Balsamic Strawberries with Whipped Mascarpone Cheese 
+877,94,177,Orange Pancakes `21' Club 
+878,53,177,Shrimp Creole and Smoked Mozzarella Pizzas 
+879,72,161,Cantaloupe Granita 
+880,61,155,Haroseth 
+881,61,193,Spinach Risotto 
+882,75,168,"Spinach, Ham, and Cheese Pie (Pye of Several Things) "
+883,67,163,Pear and Dried-Cherry Crisp with Nutmeg-Walnut Streusel 
+884,85,186,"Cranberry-Orange Chutney with Cumin, Fennel, and Mustard seeds "
+885,65,167,Blatjang 
+886,86,185,Tagine Bil Kok 
+887,66,162,Apricot Custard Tart 
+888,52,167,Fettucine Carbonara with Fried Eggs 
+889,91,176,Grilled Halibut with Lemongrass Tomato Sauce 
+890,59,176,Crisp Curried Shrimp 
+891,47,160,Creamy Shrimp Crostini 
+892,66,199,Hearts of Romaine with Blue Cheese and Caper Dressing 
+893,65,150,Chicken Salad Sandwiches with Blue Cheese 
+894,46,192,"Oatmeal, Date, Pecan and Chocolate Chip Cookies "
+895,64,197,Sweet Potato Streusel 
+896,72,181,Cold Curried Carrot and Coconut Milk Soup 
+897,88,154,"Potato, Celery and Ham Salad with Tarragon "
+898,97,165,Shrimp Sizzlers Shaw 
+899,91,196,Mint Chocolate Soufflé Crepes 
+900,68,190,Crab-Corn Chowder 
+901,61,159,"Roasted Mushrooms Stuffed with Feta, Spinach, and Bacon "
+902,48,189,Smoked Fish Chowder 
+903,46,164,Chicken Marsala 
+904,86,165,Poached Pears with Cranberry Purée 
+905,58,163,"Fennel, Beet and Orange Salad with Olives "
+906,54,193,Smoked Oyster Caesar 
+907,86,160,Orange Crème Fraîche 
+908,73,173,"Artichoke, Cherry Tomato, and Feta Salad with Artichoke-Pesto Crostini "
+909,92,171,Lemon Ice Cream with Black-Currant Sauce 
+910,48,150,The Great After-Thanksgiving Turkey Enchiladas 
+911,75,173,Red Beans and Rice 
+912,71,178,Ham and Succotash Stew with Cheddar Biscuits 
+913,64,153,Lemon Caper Calamari Steaks with Broccolini 
+914,48,191,Carrot and Squash Ribbons 
+915,78,193,Curly Endive Salad with Warm Bacon Dressing 
+916,95,166,Vietnamese-Style Spring Rolls with Shrimp 
+917,56,191,Mustard Watercress Sauce 
+918,61,188,Avgolemono 
+919,72,155,Rosemary Pork Chops 
+920,93,192,Scallop Chowder with Bacon 
+921,48,193,Parisian Passover Coconut Macaroons 
+922,94,152,Marscarpone Cream 
+923,61,190,Black Olive and Goat Cheese Sandwiches 
+924,57,173,Peanut Noodles with Gingered Vegetables and Tofu 
+925,51,154,Roasted Bell Pepper Salad with Pine Nuts 
+926,85,187,Beef and Green Pepper Stir-Fry 
+927,55,150,Pine Nut Cardamom Scones 
+928,78,178,Mashed Yams and Apples 
+929,74,187,Stacked Chicken Enchiladas with Salsa Verde and Cheese 
+930,57,169,"Sausage, Chestnut and Fig Stuffing "
+931,90,198,"Warm Black Mission Fig, Walnut Crunch, and Blue Cheese Tartlets "
+932,47,171,"Grilled Squid on Spinach, Red Pepper, and Mango Salad "
+933,53,200,Leek-Tomato Quinoa 
+934,86,153,Upside-Down Honey Cheesecakes 
+935,63,193,Vegetables Printanier 
+936,79,151,Crab and Fennel Salad 
+937,74,150,Grilled Kielbasa Tacos 
+938,100,166,"Flatbread Pizzas with Olives, Feta and Artichokes "
+939,73,192,Fig and Blue Cheese Savouries 
+940,58,198,Fusilli with Shrimp and Paneed Chicken 
+941,58,176,Minted Asparagus Frittata 
+942,90,195,"Brown Rice, Tomato and Basil Salad "
+943,97,186,Chocolate Orange Crème Brûlée 
+944,76,153,Rhubarb Compote 
+945,78,189,Coconut Buttercream 
+946,97,181,Gouda and Red Salad Pizza 
+947,82,178,Spicy Beef Burritos 
+948,78,165,Capellini with Salmon and Lemon-Dill-Vodka Sauce 
+949,81,190,Jerusalem Artichoke and Arugula Salad with Parmesan 
+950,49,153,Grilled Lemon-Coriander Chicken 
+951,84,158,Santa Fe Tortilla Pizza 
+952,95,176,"Chilled Celery, Watercress and Fennel Soup "
+953,75,167,Restorative Beef Broth 
+954,55,174,Sloppy Tacos 
+955,63,167,Grandmother Walters's Biscuits 
+956,87,156,Korean-Style Grilled Beef Short Ribs and Scallions 
+957,87,194,Dried Cranberry Compote 
+958,81,196,Shrimp and Grits 
+959,87,164,Spanish Trail Mix 
+960,78,187,Layered Rice Salad with Red and Green Salsas 
+961,58,194,Lemon-Scented Ricotta and Mascarpone Cream Puffs 
+962,100,182,Cherry-Almond Crisp 
+963,74,158,Blue Cheese Corn Bread 
+964,90,176,Fried Rice 
+965,84,196,Frozen Italian Zabaglione Tart with Marsala-Lemon Sauce 
+966,69,162,Orange-Currant Scones 
+967,96,179,Watermelon Sundae 
+968,78,182,Bloody Mary Aspic 
+969,46,159,Glazed and Lacquered Roast Turkey 
+970,72,185,Date Walnut Rugelach 
+971,83,173,Steamed Catfish in Banana Leaves 
+972,97,194,Pico de Gallo 
+973,69,177,"Asian Noodle Salad with Eggplant, Sugar Snap Peas, and Lime Dressing "
+974,73,156,Jalapeño Honey Mustard Pork Kebabs 
+975,67,197,Chive Tartines with Smoked Salmon 
+976,99,196,Tomato-Watermelon Salad with Feta and Toasted Almonds 
+977,71,186,Mustard Seed Gravy 
+978,100,176,Baked Apples Stuffed with Dried Fruit and Pecans 
+979,90,178,Porcini Mushroom Risotto 
+980,79,190,Trout with Tarragon Butter 
+981,56,174,Guacamole 
+982,71,155,Rib Eye Steaks with Mixed Mushroom Sauté 
+983,77,157,Sweet-Potato and Parsnip Purée 
+984,46,154,Spinach and Scallop Soup 
+985,95,171,Beef Tenderloin Steaks Stuffed with Morels 
+986,94,196,"Eggplant, Tomato and Goat Cheese Sandwiches "
+987,72,173,Braised Lamb Shanks with Rutabaga and Carrots 
+988,49,161,Corn and Bell Pepper Chowder 
+989,87,180,Penang Fried Rice Noodles 
+990,98,164,Fresh Mozzarella Cheese 
+991,88,198,Avocado and Smoked Salmon Soup 
+992,56,162,Lamb Pot Roast with Oranges and Olives 
+993,65,187,Hungarian-Style Beef with Bell Peppers and Caraway 
+994,80,194,Margarita Chicken 
+995,73,159,Spicy Roasted Red Pepper and Cheese Corn Breads 
+996,71,160,Baked Halibut with Chopped Olive Salad 
+997,50,194,Spaghetti with Eggplant and Tomato Sauce 
+998,46,157,Chicken and Mushroom Pie with Phyllo-Parmesan Crust 
+999,68,187,Chocolate Sambuca Crinkle Cookies 
+1000,81,158,Chinese Barbecued Pork 
+1001,94,199,Chocolate-Cherry Ice Cream Pie with Hot Fudge Sauce 
+1002,92,183,Rhubarb Sorbet with Gingered Orange Compote 
+1003,55,170,Veal Meatballs with Braised Vegetables 
+1004,71,198,"Vegetable Couscous, Goat Cheese, and Beets "
+1005,49,169,"Pasta with Cherry Tomatoes, Basil, Lemon, and Clams "
+1006,76,156,Chicken with Mushrooms and White Wine 
+1007,93,185,Chocolate Chestnut Ice Cream 
+1008,84,152,Braised Lentils 
+1009,65,196,Plantain Chips 
+1010,74,175,Boston Cream Pie 
+1011,100,177,Nectarine-Raspberry Crisp with Spiced-Oatmeal Crumb Topping 
+1012,76,193,Potato-Leek Matzo Balls 
+1013,48,169,Cumin Pork Roast with Wild Mushroom Sauce 
+1014,94,167,Rice Pilaf with Pistachios and Golden Raisins 
+1015,82,181,Crisp Curry Chicken Wings with Coriander Cucumber Sauce 
+1016,82,177,Ropa Vieja 
+1017,58,161,Chicken with Lots of Garlic 
+1018,78,162,Pan-Seared Tilapia with Chile Lime Butter 
+1019,88,185,"Salmon, Goat Cheese, and Leek Tart "
+1020,90,185,Cranberry Sauce with Dried Cherries and Red Onion Jam 
+1021,62,160,Carrot Soup 
+1022,72,182,Steamed Catfish in Banana Leaves 
+1023,86,200,Smoked Pork Chops with Pineapple-Rosemary Sauce 
+1024,79,198,Crispy Fried Shallots 
+1025,50,155,Ceviche Acapulqueño 
+1026,95,150,Cornmeal-Crusted Oven-Fried Chicken 
+1027,95,199,Indian-Spiced Shrimp 
+1028,96,174,Spicy Beef Curry 
+1029,91,168,Cilantro Mint Dip 
+1030,67,162,"Pizza with Leeks, Tomato and Goat Cheese "
+1031,98,177,Soft Polenta with Leeks 
+1032,88,187,"Avocado, Shrimp, and Endive Salad "
+1033,94,196,Orange Custard Tart 
+1034,73,197,Black Barley With Mushroom Broth 
+1035,83,196,Grilled Lobster with Orange Chipotle Vinaigrette 
+1036,76,161,Pork Chili with Tomatoes 
+1037,87,169,Chilled Zucchini Soup with Lemon-Cumin Shrimp and Cilantro Cream 
+1038,91,156,Caviar on Pumpernickel with Sour Cream 
+1039,80,159,Thai-Curry Seafood Stew 
+1040,47,153,Honey-Caramel Tart with Apricots and Almonds 
+1041,100,189,Pineapple-Rum Ice Cream 
+1042,79,155,Chocolate and Mixed Nut Tart in Cookie Crust 
+1043,98,159,Truffle-Scented Roast Turkey with Shallots and Chestnuts 
+1044,92,183,Sauteed Apples 
+1045,94,159,Broiled Duck Breasts with Orange Chipotle Sauce 
+1046,49,187,Celery-Root and Apple Purée 
+1047,56,181,Peach Parfait With Salted Graham Cracker Crumble 
+1048,95,188,Morel-Crusted Ribs with Polenta 
+1049,59,173,Glazed Pork Loin with Cilantro and Garlic 
+1050,57,163,Arugula-Chicory Salad with Pine Nuts and Goat-Cheese Toasts 
+1051,46,173,Spaghetti and Swiss Chard With Garlic Chips 
+1052,63,154,"Curried Rice, Bacon, and Cabbage Pilaf "
+1053,82,176,Cider-Basted Turkey with Roasted Apple Gravy 
+1054,77,154,Cold Garlic Potato Soup 
+1055,90,191,"Watercress, Celery, and Parsley Salad "
+1056,49,179,Panfried Smashed Potatoes 
+1057,59,169,Turkey Giblet Stock 
+1058,85,195,"Scottish Salmon with Shallot-Truffle Honey Glaze, Lump Crab and Green Apple Risotto, and Quince Jam "
+1059,80,168,"Linguine with Bacon, Sun-Dried Tomatoes and Cream "
+1060,80,165,Mutabal 
+1061,78,155,Sicilian Spinach Sauté 
+1062,60,164,Spinach Salad with Tamarind Dressing and Pappadam Croutons 
+1063,61,198,Lemon Cloud 
+1064,46,188,Green Beans with Ginger and Cashews 
+1065,79,172,"Spicy Boiled Crabs, Shrimp, Potatoes, Corn, and Garlic "
+1066,88,152,Creamy Basil Dressing 
+1067,46,190,Spanish-Style Shrimp and Scallop Salad 
+1068,81,181,Crunchy Wasabi Salmon with Lime 
+1069,75,193,Pumpkin Ginger Rice Pudding 
+1070,100,153,Spinach Salad with Pear and Avocado 
+1071,46,193,Grilled Sea Bass with Tomatoes and Herb Cream Sauce 
+1072,71,198,"Tomato, Cucumber, and Avocado with Lemon Vinaigrette "
+1073,77,185,Orange-Ginger Charoset 
+1074,51,168,"Penne, Spinach, Asparagus and Cashew Salad "
+1075,57,177,Sea Scallops with Vegetable Ragoût 
+1076,75,181,Mesclun and Cherry Salad with Warm Goat Cheese 
+1077,97,162,Barbecued Beef Ribs 
+1078,78,165,Portabella Mushroom and Dried Tomato Bruschetta 
+1079,57,155,Curried Beef and and Sugar Snap Peas Over Rice Noodles 
+1080,96,158,Coconut-Macaroon and Lemon Ice Cream Sandwiches 
+1081,48,191,Gingered Plum Barbeque Sauce 
+1082,62,186,Goose and Tasso Gumbo 
+1083,69,158,Fresh Strawberry Granita 
+1084,74,185,Dinner Rolls Six Ways 
+1085,53,197,Carrot Tart with Ricotta and Herbs 
+1086,82,192,Watermelon Sundae 
+1087,63,162,Hot Beef Borscht with Sour Cream 
+1088,71,177,White Salad with Castelmagno Cheese 
+1089,55,167,"Indian-Spiced Chicken, Eggplant, and Tomato Skewers "
+1090,65,154,Star Anise Ice Cream 
+1091,80,158,Chilled Zucchini Soup with Lemon-Cumin Shrimp and Cilantro Cream 
+1092,49,186,Deviled Ham 
+1093,65,165,Green Posole with Cod and Cilantro 
+1094,84,176,Crepes Directoire 
+1095,100,184,Rhubarb Raspberry Sauce 
+1096,96,196,"Roast Goose with Chestnuts, Prunes and Armagnac "
+1097,70,183,Caesar Salad 
+1098,97,152,Grilled Goat Cheese with Fig Preserves 
+1099,74,186,Catfish in Spicy Tomato Sauce 
+1100,60,193,"Sugar Snap Pea, Potato and Chive Sauté "
+1101,55,185,Chili Lime Shrimp with Avocado and Coriander 
+1102,76,156,Horseradish Cocktail Sauce 
+1103,75,187,Tuna Salad on Olive Bread with Arugula 
+1104,66,150,Goat Cheese and Black Pepper Biscuits with Smoked Salmon and Dill 
+1105,55,197,"Roasted Potato, Garlic, and Red Pepper Salad "
+1106,49,151,Lasagne Rolls with Roasted Tomato and Eggplant 
+1107,47,171,Chicken Soup with Wild Mushrooms and Herbed Matzo Balls 
+1108,60,158,Shrimp and Mushroom Quinoa Risotto 
+1109,71,155,Soupe a l'Oignon au Fromage (French Onion Soup) 
+1110,84,154,Agnolotti with Meat and Spinach Filling 
+1111,60,182,Romaine Salad with Chives and Blue Cheese 
+1112,96,174,Broccoli-Quinoa Salad with Buttermilk Dressing 
+1113,88,192,"Do-Ahead Sheboygan ""Brats"" "
+1114,50,163,Lamb Chops with Feta and Banyuls-Cherry Sauce 
+1115,49,154,Pork Tamale Potpie with Corn Bread Crust 
+1116,68,156,"Dried Cranberry, Walnut, and Lemon Scones "
+1117,66,197,Osso Buco with Mushroom Sauce 
+1118,53,152,Curry-Spiced Citrus and Avocado Salsa 
+1119,80,178,Korean Marinated Beef 
+1120,97,200,Asian Garlic Chicken 
+1121,50,167,Coconut Blondies 
+1122,83,172,Hot Browns 
+1123,57,193,Salmon Glazed with Honey and Mustard 
+1124,67,190,"Orzo with Garbanzo Beans, Goat Cheese, and Oregano "
+1125,51,193,Curried Beef and and Sugar Snap Peas Over Rice Noodles 
+1126,68,175,Warm Cinnamon-Apple Tart with Currants 
+1127,62,197,Spicy Shellfish and Sausage Stew 
+1128,80,199,Grilled Portobello and Red Bell Pepper Salad with Rosemary Dressing 
+1129,56,173,Eggplant Rollatini 
+1130,91,171,Linguine with Tomato-Leek Sauce 
+1131,99,198,Sticky Buns 
+1132,83,154,Iceberg and Watercress Salad with Blue Cheese Dressing 
+1133,48,151,Pan-Asian Chicken and Vegetable Lettuce Wraps 
+1134,89,180,Beefsteak Bismarck 
+1135,79,157,"Pizzas with Prosciutto, Peas, Pea Sprouts and Gruyère "
+1136,51,196,Rhubarb and Strawberry Compote with Fresh Mint 
+1137,89,158,"Red Chard, Avocado, and Blood Orange with Mango-Chutney Dressing "
+1138,73,190,Thyme–Walnut Sandies 
+1139,95,194,Lettuce and Beet Salad with Sour Cream Dressing 
+1140,49,186,Duck Confit 
+1141,78,170,Maple-Apple Pie with Walnut Streusel 
+1142,80,177,Wild Rice and Chicken or Turkey Salad with Tarragon 
+1143,45,189,Green Salad with Radishes and Creamy Mustard Dressing 
+1144,71,194,Cornmeal-Crusted Chicken Breasts 
+1145,81,185,"Sesame, Lemon and Curry Chicken Strips "
+1146,63,161,Clementine-Salted Turkey with Redeye Gravy 
+1147,66,150,Shrimp in Yuca Coconut Purée 
+1148,52,189,Creamed Broccoli with Parmesan 
+1149,75,183,Assorted Vegetables 
+1150,95,188,Veal and Roasted Vegetable Lasagne Anderson 
+1151,66,194,Fried Shrimp with Peanut Sauce 
+1152,56,179,Greek Yogurt Ice Cream 
+1153,94,157,Halibut and Clams with Bell Peppers and Saffron 
+1154,51,161,"Smoked Salmon, Avocado, and Horseradish Spirals "
+1155,82,172,Ceviche de Pescado 
+1156,56,194,Gratin of Butternut Squash 
+1157,96,194,Pasta with Tomatoes and Goat Cheese 
+1158,95,152,"Cauliflower ""Couscous"" With Dried Fruit and Almonds "
+1159,96,157,Shredded Brussels Sprouts with Maple Hickory Nuts 
+1160,45,155,Mango Jícama Chopped Salad 
+1161,90,161,Plantain Picadillo Pie with Cheese 
+1162,76,165,Persimmon Salad with Sweet Ginger Vinaigrette 
+1163,50,186,"Sea Bass with Leeks, Potatoes and Balsamic Vinaigrette "
+1164,77,177,Jerk Pork Tenderloin 
+1165,66,163,"Pizza with Sauteed Endive, Bacon and Fontina "
+1166,90,184,"Spaghetti with Fresh Clams, Parsley, and Lemon "
+1167,51,177,Mushroom Flatbreads with Tricolor Roasted Peppers 
+1168,57,150,Fig and Port Wine Charoset 
+1169,48,190,Green Onion Casserole 
+1170,84,174,Cream Cheese Pie Topped with Peaches and Blackberries 
+1171,73,169,Honey Nut Squares 
+1172,78,171,Frisée and Watercress Salad with Jícama and Oranges 
+1173,49,156,Lemon-Herb Turkey with Lemon-Garlic Gravy 
+1174,65,157,Sherry Crema Catalana Ice Cream with Honeyed Figs 
+1175,49,158,"Cherry Tomato, Ricotta, and Olive Galettes "
+1176,71,194,White Bean and Vegetable Soup 
+1177,94,154,Roast Chicken with Mashed-Potato Stuffing and Root Vegetables 
+1178,98,181,Pigeon-Pea Soup 
+1179,52,186,"Tomato, Basil, and Ricotta Gelati "
+1180,49,162,"Melon, Basil, and Feta Salad With Balsamic–Red Wine Reduction "
+1181,95,170,Dorade With Potatoes and Burst Tomato Sauce 
+1182,87,167,Double-Chocolate Almond Brownies 
+1183,89,196,Carrot Ginger Dressing 
+1184,67,180,"Eggplant Steaks with Pumpkin, Tomato, and Mushroom Ragoût "
+1185,97,198,Shrimp Courtbouillon with Rice 
+1186,62,166,Oat and Walnut Buttermilk Braid 
+1187,99,184,Two-Bean Salad with Balsamic Vinaigrette 
+1188,45,177,Chopped Vegetable Salad with Feta and Olives 
+1189,56,180,Slow-Roasted Red-Wine-Lacquered Salmon Fillet 
+1190,77,163,Yu Bo's Shiitake Mushrooms with Scallions 
+1191,96,188,Chocolate-on-Chocolate Tart with Maple Almonds 
+1192,99,192,Streusel-Roasted Plums with Vanilla Ice Cream 
+1193,50,188,Potato Parsnip Purée 
+1194,52,164,Toasted Tortillas with Herbed Goat Cheese 
+1195,85,188,Chicken Sauté with Olives and Plum Tomatoes 
+1196,89,151,White Miso Peach/Pear/Apple 
+1197,47,187,Lebanese-Style Tuna Salad with Tahini Dressing 
+1198,47,163,Turkey and Sweet-Potato Croquettes with Cranberry Apple Salsa 
+1199,90,190,Pan Fried Potatoes with Paprika and Lemon 
+1200,58,172,Caramel Custards with Ginger (Cremes Caramels au Gingembre) 
+1201,71,171,Croque Madame Casserole With Ham and Gruyère 
+1202,94,193,Curried Stuffed Eggs 
+1203,64,172,"Capellini with Fresh Ricotta, Roasted Garlic, Corn, and Herbs "
+1204,64,172,Hazelnut Meringues with Lemon Cream and Blood Orange Syrup 
+1205,53,184,Grilled Quail Salad with Creamy Garlic Vinaigrette 
+1206,77,167,Kung Pao Chicken 
+1207,94,173,Almond and Jam Tart 
+1208,90,151,"Tomato, Basil, and Ricotta Gelati "
+1209,82,200,Italian Sausage Pasta Salad 
+1210,76,197,Croque Madame With Cranberry-Mustard Relish 
+1211,97,170,Wild-Mushroom Bundles 
+1212,63,157,Caramelized Onion and Sour Cream Spread 
+1213,82,191,Pork Cutlets with Figs and Balsamic Vinegar 
+1214,49,197,Pan-Roasted Salmon with Ginger and Curry 
+1215,68,177,Salmon Fillets with a Wasabi Coating 
+1216,90,174,Stout-Braised Short Ribs 
+1217,78,180,Thai-Inspired Shrimp Stir-Fry 
+1218,55,180,Rosemary-Roasted Chicken and Garlic 
+1219,49,158,Braised Short Ribs with Red Wine Gravy 
+1220,97,197,Lemon Zabaglione 
+1221,81,163,Ma–Po Tofu (Spicy Bean Curd with Beef) 
+1222,58,156,Zucchini Salad With Ajo Blanco Dressing & Spiced Nuts 
+1223,57,191,Irish Stew With Pearl Barley 
+1224,81,172,Fettuccine with Shiitake Mushroom Sauce 
+1225,64,164,"Romaine, Grilled Avocado, and Smoky Corn Salad with Chipotle-Caesar Dressing "
+1226,81,199,Salmon Cakes with Lemon Yogurt Sauce 
+1227,62,187,Peach Iced Tea Sorbet 
+1228,82,200,Vinaigrette 
+1229,97,182,Asian-Style Noodle Salad 
+1230,64,181,Grilled Mahimahi with Lime-Ginger Vinaigrette 
+1231,95,198,Grilled Shrimp and Scallions with Southeast Asian Dipping Sauces 
+1232,63,170,Lobster Salad Canapes 
+1233,47,154,Spinach and Omelet Roll 
+1234,54,193,Bulgarian Beef Stew 
+1235,72,179,Vegetable Couscous with Black Olives 
+1236,83,158,Coconut Almond Granola:topping for Salad 
+1237,78,160,Lemon Tart with Frozen Lime Cream 
+1238,78,197,Lemon Meringue Custards 
+1239,86,181,"Watercress, Endive, and Orange Salad "
+1240,94,171,"Butternut Squash, Ricotta, and Sage Crostini "
+1241,61,190,Buttermilk Rye Crepes 
+1242,67,190,Tuscan Kale Caesar Slaw 
+1243,91,189,Strozzapreti with Spinach and Preserved Lemon 
+1244,90,191,Whipped Sweet Potatoes with Brown Sugar-Pecan Topping 
+1245,86,153,Curry-Coconut Mussels Babalu's 
+1246,65,158,Citrus Marinated Shrimp Cocktail 
+1247,61,184,Mexican Chocolate Torte 
+1248,91,171,3-Ingredient Thanksgiving Turkey With Orange and Sage 
+1249,55,152,Sunday Sauce with Sausage and Braciole 
+1250,55,168,Pear and Fig Strudels with Ginger Cream 
+1251,96,190,Chicken and Mushroom Enchiladas 
+1252,97,185,Trout with Tarragon Butter 
+1253,52,193,Quick Sesame Chicken With Broccoli 
+1254,62,191,Ham Stock 
+1255,47,161,Salmon Spring Rolls with Coriander Dipping Sauce 
+1256,66,197,Curried Egg Salad 
+1257,85,155,Walnut and Pancetta Pansoti with Asparagus in Parmesan Broth 
+1258,87,183,Cold-Smoked Chicken with Baby Bok Choy and Cashew Salad 
+1259,86,165,Spinach and Madeira 
+1260,81,160,"Pasta, Sausage and Bean Soup "
+1261,69,200,Boston Cream Pie 
+1262,56,190,Roasted Poblano-Cream Soup 
+1263,56,164,Grilled Clams on the Half Shell with Ginger Mignonnette 
+1264,45,187,Green Vegetable Salad 
+1265,68,189,"Moroccan Chicken with Eggplant, Tomatoes, and Almonds "
+1266,64,184,Roasted Tuna with Grapefruit and Tarragon 
+1267,89,182,Mexican Chocolate Brownies 
+1268,83,194,Blue Cheese Souffles with Grape Syrup on Fig and Walnut Brioche 
+1269,69,172,Whole Wheat Date Rolls 
+1270,82,197,Asparagus Soup with Lemon Crème Fraîche 
+1271,71,160,Curried Meatballs 
+1272,76,157,"Berry, Beet, Mint, Lime, and Chia Seed Smoothie "
+1273,82,161,Vietnamese Sticky Chicken with Daikon and Carrot Pickle 
+1274,65,194,Root Vegetable Cobbler with Chive Biscuit Topping 
+1275,66,166,Salmon Club Sandwich 
+1276,90,187,Buttermilk Fried Chicken 
+1277,57,190,Cajun Corn Bread Stuffing 
+1278,98,160,"Crispy Pork Cutlets with Capers, Lemon, Arugula, and Chopped Eggs "
+1279,94,163,"Rosemary-Rubbed Side of Salmon with Roasted Potatoes, Parsnips, and Mushrooms "
+1280,78,150,Spicy Curried Mussels 
+1281,62,197,Texas Beef Brisket Chili 
+1282,45,184,Turkey Scaloppine with Mushroooms 
+1283,51,173,Curried Sea Bass 
+1284,47,158,"Tequila, Apple, and Dried Cranberry Compote "
+1285,48,189,Brown Stock 
+1286,96,175,Shami Kebabs 
+1287,87,153,Mashed Potatoes with Crisp Ham 
+1288,57,157,Sweet Stuffed Capon 
+1289,74,200,Peach-Raspberry Bundles with Orange Custard Sauce 
+1290,84,165,Chicken Divan 
+1291,98,156,Mozzarella-Topped Peppers with Tomatoes and Garlic 
+1292,89,188,Mashed Potatoes and Turnips with Horseradish 
+1293,65,168,Fig and Raspberry Galette 
+1294,86,193,Chicken with Spicy Tomato Sauce 
+1295,58,173,Smoked Salmon Soufflé 
+1296,70,151,Green-Curry Chicken with Peas and Basil 
+1297,84,174,Poached Chicked with Curried Yogurt Sauce 
+1298,58,152,"Rice Pilaf with Lamb, Carrots, and Raisins "
+1299,53,184,Butternut Squash Galette 
+1300,93,165,Green Bean and Radish Salad 
+1301,63,183,Grilled Haloumi Cheese and Lemon 
+1302,77,161,Peanut Butter and Chocolate Pie 
+1303,63,177,Braised Lamb Shanks with Spring Vegetables and Spring Gremolata 
+1304,66,175,Sea Bass with Spicy Roasted Bell Pepper Sauce 
+1305,64,165,Wild Mushroom and Green Bean Salad with Goat Cheese 
+1306,47,185,Apricot and Walnut Varenikis 
+1307,98,180,Grilled Burgers with Roquefort Mayonnaise and Barbecued Red Onions 
+1308,47,159,Scallop and Shrimp Creole 
+1309,75,191,Grilled Roast Beef and Stilton Sandwich 
+1310,77,196,Traditional Crab Cakes '21' Club 
+1311,80,154,Southwestern Lime Chicken with Ancho Chili Sauce 
+1312,92,189,Asparagus Goat Cheese Bruschetta with Porcini Vinaigrette 
+1313,84,176,Oriental Chicken 
+1314,50,162,Beet Chips with Curried Sour Cream 
+1315,47,179,Grilled Skirt Steak and Arugula Salad with Roquefort and Catalina Dressing 
+1316,50,190,Steamed Mussels with Sausages and Fennel 
+1317,57,155,Farro with Wild Mushrooms and Herbs 
+1318,57,194,Link Family Crawfish Boil 
+1319,80,177,Crab and Herb Fettucine 
+1320,55,188,Lobster Salad with Spicy Lemon Dressing 
+1321,63,184,Savoy Cabbage and Radicchio Slaw with Blood Orange Dressing 
+1322,73,186,Seasonal Fruit–Herb Saladitas 
+1323,45,163,Pork Medallions with Spiced Tomato Pan Gravy 
+1324,67,200,Pork Confit 
+1325,72,162,Cleansing Ginger-Chicken Soup 
+1326,89,191,Basic Tomato Sauce 
+1327,98,157,Soft-Shelled Crab Sandwiches 
+1328,54,171,Sauteed Broccoli Rabe 
+1329,65,168,Roast Turkey with Herb Butter and Caramelized-Onion Gravy 
+1330,90,173,Prosciutto with Melon 
+1331,50,164,Garlic Orange Pork Chops 
+1332,100,157,"Pinto Bean, Sausage, and Fennel Gratin "
+1333,45,197,Cream of Mushroom Soup 
+1334,80,158,Veal Scallops with Mushrooms and Rosemary 
+1335,96,199,Braised Chicken With Chickpeas and Swiss Chard 
+1336,95,158,Mushroom Caesar Salad 
+1337,98,197,Shallot Butter 
+1338,81,179,Brazilian Fish Stew (Moqueca Capixaba) 
+1339,68,181,Corn Soup with Sautéed Scallops and Bacon 
+1340,87,195,Quinoa with Mango and Curried Yogurt 
+1341,66,156,Chocolate “Creme Egg” Tart 
+1342,87,191,Asparagus and Leek Risotto with Prosciutto 
+1343,66,166,Corned Beef and Cabbage 
+1344,65,163,Apple Walnut Pancakes with Cinnamon Cream and Fudge Sauce '21' Club 
+1345,56,199,Pear-Almond Tartlets 
+1346,72,163,"Caramel, White Chocolate and Rum Bread Pudding "
+1347,89,154,Rhubarb Lambrusco Granita 
+1348,93,163,Pimiento Mac and Cheese 
+1349,93,169,Citrus-Sage Roast Turkey Breast with Gravy: Small Crowd 
+1350,73,155,Sauteed Kale with Cracklings and Garlic Bread Crumbs 
+1351,52,175,Baked Figs with Grand Marnier and Whipped Cream 
+1352,76,172,Hungarian-Style Beef with Bell Peppers and Caraway 
+1353,73,158,Pepper-Crusted Steak with Horseradish Cream on Grilled Garlic Crostini 
+1354,79,196,Breaded Skinless Fish Fillets with Red Pepper Mayonnaise 
+1355,79,196,Creamed Corn Gratin with Fried Onion Rings and Bacon 
+1356,91,183,Slow-Cooked Ratatouille Over Goat Cheese Polenta 
+1357,82,197,Roasted Canadian Bacon 
+1358,78,195,Salted Roast Turkey with Chipotle Glaze and Caramelized-Onion Gravy 
+1359,67,187,Macadamia Nut and Bittersweet Chocolate Ice-Cream Bombe with Macadamia Nut Praline 
+1360,50,151,Roast Rack of Lamb with Orange-Chipotle Purée 
+1361,45,199,Kale and Smoked Bacon salad with Zinfandel Vinaigrette 
+1362,87,152,Maple-Soy-Glazed Salmon 
+1363,61,184,Fried Chicken with Bacon and Pepper Cream Gravy 
+1364,77,183,"Cauliflower ""Bistecche"" with Pancetta and Caper Berries "
+1365,97,172,Grilled Sea Bass with Tropical Salsa 
+1366,64,200,Beef Liver Bourguignonne 
+1367,45,179,Parmesan Polenta 
+1368,84,167,"Lemon-Roasted Salmon With Escarole, Asparagus, and Potatoes "
+1369,73,184,Chicken and Mixed Vegetable Stew 
+1370,45,177,"Tomato, Cucumber, and Pita Salad "
+1371,73,157,Ma-Po Tofu 
+1372,90,158,Pear and Hazelnut Crumb Pie 
+1373,58,177,"Green Bean, Corn, and Coconut Stir-Fry (Thoren) "
+1374,79,159,Herb-Roasted Sausages and Butternut Squash 
+1375,99,182,Goat Cheese Souffles and Mixed Greens with Raspberry Vinaigrette 
+1376,93,180,Short Ribs Braised in Ancho Chile Sauce 
+1377,71,164,Rump Roast Brooks 
+1378,49,169,Saffron Couscous with Fresh Peas and Chives 
+1379,45,183,Glazed Ham 
+1380,52,197,"""Route 66"" Chili "
+1381,67,191,Chicken and Fall Vegetable Pot Pie 
+1382,65,193,Grilled Beef Steak Verciano 
+1383,82,196,Caribbean Chicken Breasts 
+1384,84,184,Oysters on the Half Shell with Spicy Vinegar 
+1385,81,177,Shoe String Potatoes (Pommes Pailles) 
+1386,83,179,Minestrone 
+1387,51,178,Ginger-Tomato Chutney 
+1388,97,169,Roast Pork with Sweet-and-Sour Chile Cilantro Sauce 
+1389,61,180,Mixed Baby Greens with Aniseed Vinaigrette and Goat Cheese Crostini 
+1390,69,162,Brisket With Pomegranate-Walnut Sauce and Pistachio Gremolata 
+1391,55,151,"Bulgur Salad with Chickpeas, Roasted Peppers, and Spiced Cumin Dressing "
+1392,69,198,Pork Chops with Ginger-Soy Glaze 
+1393,98,174,Tomato and Red Onion Compote 
+1394,54,178,Grilled East Coast Oysters with Corn Jalapeño Salsita 
+1395,97,162,Roasted Almonds with Rosemary Fleur de Sel 
+1396,99,169,Chinese Beef Noodle Soup 
+1397,68,186,Portobello Mushrooms Stuffed with Parmesan Whipped Potatoes 
+1398,55,171,All-Day Slow-Cooker Cassoulet 
+1399,49,153,"Italian Potato Salad with Rosemary, Lemon and Capers "
+1400,60,160,Spring Greens with Roasted Beets and Blood Oranges 
+1401,96,199,Baked Eggs and Mushrooms in Ham Crisps 
+1402,73,172,Lemon-Herb Mayonnaise 
+1403,96,160,Cheddar Chutney Toasts 
+1404,70,191,Mixed Cherry Tomatoes with Tamarind Dressing 
+1405,47,177,"Pepper, Rosemary, and Cheese Bread "
+1406,67,168,Blueberry-Buttermilk Chess Pie 
+1407,72,189,Cheddar Chutney Tea Sandwiches 
+1408,65,183,Scallops Provençale 
+1409,80,186,"Roasted Butternut Squash, Rosemary, and Garlic Lasagne "
+1410,57,150,Homemade Cheese Spread With Garlic and Herbs 
+1411,64,192,Corn and Bell Pepper Chowder 
+1412,61,177,Worcestershire and Orange-Glazed Baby Back Ribs 
+1413,93,190,Nectarine and Plum Tartlets 
+1414,70,160,Linguine with Clams and Arugula 
+1415,59,190,Bacon and Buttermilk Mashed Potatoes 
+1416,99,181,Tandoori-Style Grilled Chicken 
+1417,68,173,One-of-Each Soup 
+1418,88,190,Orange Custard Tart 
+1419,89,196,Seared Tuna on Fettuccine with Green Olives and Arugula 
+1420,45,169,Caramelized Nut Tart 
+1421,95,200,Haroseth (Dried Fruit and Nut Paste) 
+1422,82,193,"Roasted Sweet Potatoes with Miso, Orange, and Sesame "
+1423,71,158,Arugula and Smoked Mozzarella Salad with Lemon Vinaigrette 
+1424,53,190,Broiled Arctic Char with Basil Sauce and Tomato 
+1425,65,168,Croutes au Fromage 
+1426,48,192,Pasta Bolognese 
+1427,66,194,"Celery, Apple, and Fennel Slaw "
+1428,81,184,Savory Parmesan Pain Perdu with Poached Eggs and Greens 
+1429,86,193,White Beans with Tomatoes and Spinach 
+1430,61,172,Spaghetti with Eggplant and Tomato Sauce 
+1431,79,162,Scandinavian Yellow Pea Soup 
+1432,55,159,Haroseth 
+1433,70,196,Gravlaks with Sweet Mustard Sauce 
+1434,76,161,"Steak with Ham, Provone and Mushroom Sauce "
+1435,92,170,Thai-Curry Seafood Stew 
+1436,57,175,Espagnole Sauce 
+1437,60,161,Radish Canapes Leeds 
+1438,92,172,Provençal Vegetable Soup (Soupe au Pistou) 
+1439,70,160,Central Asian Rice and Bean Stew 
+1440,83,181,Prime Rib Roast with Red-Wine Sauce 
+1441,80,159,Berry and Ricotta Slice 
+1442,45,167,Curried Chicken and Vegetable Salad Mintz 
+1443,59,157,Potato and Macaroni Gratin 
+1444,53,161,"Potato, Leek and Onion Soup with Garlic Cheese Toasts "
+1445,97,197,Raspberry Sorbet 
+1446,83,189,Mama Lucia's Chicken Cacciatore 
+1447,87,192,Cream Cheese-Lemon Zest Frosting 
+1448,61,188,Roasted Game Hen with Citrus-Clove Glaze 
+1449,79,172,Chicken Sauté Fine Herbes 
+1450,92,160,Curly Endive and Apple Smoked Bacon Salad 
+1451,70,197,Cornbread Stuffing with Fresh and Dried Fruit 
+1452,98,182,Crab Cakes with Creamy Chili Sauce 
+1453,87,184,Roasted Potatoes with Garlic 
+1454,85,184,"Fillet of Salmon with Fennel, Tomatoes, and Risotto "
+1455,83,176,"Broiled Tomato, Corn, and Okra "
+1456,57,159,Ben's Chunky Applesauce 
+1457,70,151,Mango Meringue Tartlets 
+1458,84,174,Mozzarella in Carrozza with Anchovy Sauce 
+1459,49,187,"Linguine with Uncooked Tomato, Arugula, and Olive Sauce "
+1460,81,167,Pipérade with Ham 
+1461,65,164,Grilled Rib-Eye Steaks with Cucumber Relish 
+1462,67,164,Dried Cranberry Compote 
+1463,58,178,"Cuban Avocado, Watercress, and Pineapple Salad (Ensalada de Aguacate, Berro, y Piña) "
+1464,69,185,Watermelon with Parmesan and Mint 
+1465,56,192,Mashed Potatoes with Kale 
+1466,52,194,Peppery Horseradish Mashed Potatoes 
+1467,81,176,Fudgy Chocolate-Raspberry Bars 
+1468,59,150,Maltese Chicken with Red Wine and Honey Gravy 
+1469,96,178,"Puff Pastry Turnovers with Shrimp, Scallops and Spinach "
+1470,50,185,Vietnamese Beef Soup with Star Anise 
+1471,78,180,Crème Fraîche Sorbet 
+1472,74,165,Saffron Shrimp Crab Cakes 
+1473,93,170,"Green Bean, Yellow Pepper, and Bacon Salad with Oregano Vinaigrette "
+1474,53,189,Whole Baked Trout with Mushrooms 
+1475,65,153,Halibut with Sambal Vinaigrette and Wasabi Cream 
+1476,77,187,Apple Walnut Pancakes with Cinnamon Cream and Fudge Sauce '21' Club 
+1477,65,190,Maple-Glazed Yams with Pecan Topping 
+1478,90,167,"Pasta Salad with Mozzarella, Sun-Dried Tomatoes and Olives "
+1479,76,161,Cheesy Sausage and Sage Stuffing 
+1480,97,182,Braised Greek Chicken and Artichokes 
+1481,83,172,Turkey Hash 
+1482,57,155,Buckwheat Batter 
+1483,62,179,Slow Roasted Lamb Shanks with Braised Lentils 
+1484,49,192,Beef and Broccoli Stir Fry 
+1485,56,197,Shrimp and Peppers in Spicy Tomato Sauce 
+1486,82,200,Epicurean Broiled Turkey 
+1487,99,169,Black-Olive Grissini 
+1488,81,164,Velvety Chilled Corn Soup 
+1489,72,194,Orange–Brown Butter Wet Nuts 
+1490,65,155,Dukkah-Crusted Lamb Chops with Pomegranate Molasses 
+1491,47,150,Tomato-Mozzarella Pizza with Phyllo Crust 
+1492,95,193,Spinach and Mint Soup 
+1493,59,196,Strawberry Prosecco Soup 
+1494,67,154,Rib-Eye Tacos with Onion Jam and Horseradish Crème Fraîche 
+1495,55,168,Chilled Lime-Coconut Pie with Macadamia-Coconut Crust 
+1496,91,193,Steamed Lobster with Lemon-Herb Butter 
+1497,91,198,Candied Sweet-Potato Purée 
+1498,82,169,Classic Havana Frittata 
+1499,69,153,Frozen Yogurt Sundaes with Kahlua Caramel Sauce 
+1500,60,150,Broccoli with Garlic and Parmesan Cheese 
+1501,70,191,Rainbow Chard and Radicchio Sauté 
+1502,58,160,Basic Duck Stock 
+1503,61,194,Lemon-Pepper Chicken 
+1504,52,170,"Grilled Pizza with Fresh Corn, Bell Pepper, Pancetta, and Fontina "
+1505,47,189,Carrot and Cranberry Salad with Fresh Ginger Dressing 
+1506,45,169,Epicurean Broiled Turkey 
+1507,77,193,Pear-Ginger Strudel with Ginger-Custard Sauce 
+1508,89,196,"Bacon, Cabbage and Gruyère Pizza "
+1509,87,167,Mojo Sauce 
+1510,56,151,Zesty Pinto Beans 
+1511,63,199,Roasted Bell Pepper and Onion Tart 
+1512,85,180,Panettone Panzanella with Pancetta and Brussels Sprouts 
+1513,70,160,Spicy Pork and Kumquat Stir-Fry 
+1514,79,152,Turkey Hash with Sweet Potatoes and Turnips 
+1515,50,194,"Linguine with Zucchini, Carrots, and Mixed Herb Pesto "
+1516,49,170,Steamed Uku Laulau with Ginger-Scallion Sauce 
+1517,49,154,Creamy Chocolate-Cheese Flan with Hibiscus Sauce 
+1518,46,157,Mussels au Gratin 
+1519,84,174,Sweet Potato Purée with Brown Sugar and Sherry 
+1520,96,171,Green Beans and Celery Root Salad with Mustard Vinaigrette 
+1521,97,181,Dark Chocolate and Lemon Ganache Tartlets 
+1522,79,193,Baked Sea Bass in Herbed Salt Crust 
+1523,79,161,Grilled Lobster and Potatoes with Basil Vinaigrette 
+1524,61,150,"Detox Pho with Beef, Mushrooms, and Kale "
+1525,65,187,Ham and Sage Ponice 
+1526,64,191,Caramelized Pineapple with Brown Sugar-Ginger Ice Cream 
+1527,96,174,Grilled Lamb Chops with Porcini Mustard 
+1528,68,165,Grilled Lemon Chicken Salad with Dill Cream Dressing 
+1529,89,193,Chile-Rubbed Turkey 
+1530,82,173,Skirt Steak Fajitas with Lime and Black Pepper 
+1531,100,152,"""Drunken"" Pork Chops "
+1532,63,153,Roast Chicken and Root Vegetables with Mustard-Rosemary Sauce 
+1533,82,156,Chilled Cream of Zucchini Soup with Mussels and Fresh Mint 
+1534,59,162,Tarragon Pizza Bianca 
+1535,74,171,Bulgur Pilaf 
+1536,82,187,Grilled Charmoula Quail 
+1537,72,176,Blue Cheese Coleslaw 
+1538,82,181,Jeweled Rice with Dried Fruit 
+1539,100,198,Grilled Shrimp with Fiery Lemongrass-Chile Sambal 
+1540,46,168,Mint Chip Ice Cream 
+1541,81,164,Tomato Chutney 
+1542,74,150,Creamy Rosemary Turkey and Vegetable Potpie with Herbed Dumplings 
+1543,70,187,Fusilli All'amatriciana 
+1544,87,197,Marinated Tri-Tip with Chinese Mustard Sauce and Roasted Green Onions and Mushrooms 
+1545,78,199,Vanilla Buttercream 
+1546,65,180,Vegetable Tortilla Lasagne 
+1547,85,186,Spring Rolls 
+1548,90,168,Couscous with Garbanzo Beans and Golden Raisins 
+1549,73,185,Rigatoni with Hot Sausage and Fennel 
+1550,77,170,"Tomato, Mozzarella, and Basil Salad Glucksman "
+1551,65,162,Sweet Spiced Nuts 
+1552,78,156,Two-Bean Chili with Vegetables 
+1553,46,184,Golden Lentil Dip 
+1554,100,154,"Gemelli with Asparagus, Smoked Salmon, and Dill "
+1555,72,182,Peppered Lamb with Pine Nut Sauce 
+1556,91,193,Restorative Beef Broth 
+1557,50,165,Shrimp Curry with Yu Choy and Kabocha Squash 
+1558,88,164,Chocolate Wafer and Graham Cracker Brownies 
+1559,53,173,Greek Chicken and Potatoes 
+1560,49,159,Gingered Shrimp with Asian Noodles 
+1561,52,165,Eula Mae's Seafood Gumbo 
+1562,64,151,Shredded Brussels Sprout and Ricotta Toast 
+1563,49,183,Thousand Island Slaw with Chicken 
+1564,55,197,"Porcini Mushroom Latkes with Mushroom Salad and Chive ""Cream"" "
+1565,62,187,Crispy Cornmeal-Bacon Waffles 
+1566,97,156,"Seafood, Sausage and Bell Pepper Paella "
+1567,75,180,Romesco Sauce 
+1568,99,178,Cinnamon Oat Cakes 
+1569,68,171,Turkey Wraps with Curry-Chutney Mayonnaise and Peanuts 
+1570,100,171,Beet and Goat Cheese Salad with Pistachios 
+1571,65,151,Spice-Rubbed Duck Legs Braised with Green Olives and Carrots 
+1572,48,172,Lemon-Poppy Seed Waffles with Blueberry Sauce 
+1573,63,150,Chicken Soup with Wild Mushrooms and Herbed Matzo Balls 
+1574,58,192,Golden-Fried Pumpkin Purses 
+1575,61,166,"Challah, Sausage, and Dried Cherry Stuffing "
+1576,73,158,Yellow Tomato Soup 
+1577,61,180,Prunes in Wine with Toasted-Almond Cookies 
+1578,100,198,Pan-Fried Trout with Bacon 
+1579,100,176,"Eggplant, Red Pepper, and Fontina Panini with Spinach Salad "
+1580,57,152,Vietnamese-Style Beef Salad 
+1581,55,154,Garlic-Roasted Shrimp with Red Peppers and Smoked Paprika 
+1582,53,174,Pan-Grilled Lamb with Walnut-Mint Pesto 
+1583,100,177,Bing Cherry and Raspberry Sauce 
+1584,88,152,Picadillo Tostadas 
+1585,45,153,Szechuan Steak au Poivre with Port-Ginger Sauce 
+1586,91,151,Blueberry Muffins with Lemon Blackberry Glaze 
+1587,96,195,Grilled Pineapple with Butter-Rum Glaze and Vanilla Mascarpone 
+1588,64,190,Fennel and Celery Salad (Dama Bianca) 
+1589,47,180,Smoked Salmon-Wasabi Tea Sandwiches 
+1590,57,200,"Scrambled Eggs with Avocado, Onion, and Cheddar "
+1591,78,156,Turkey Cutlets with Oranges and Coriander 
+1592,79,175,Roquefort Buttermilk Dressing 
+1593,96,170,Ginger-Soy Grilled Steak 
+1594,66,197,Grilled Quail Salad with Creamy Garlic Vinaigrette 
+1595,55,166,Grilled Bananas with Rum Ice Cream and Mexican Hot Chocolate Sauce 
+1596,49,175,Armagnac-Poached Prunes with Vanilla Ice Cream 
+1597,65,158,Moroccan Tea Biscuits 
+1598,74,177,Grilled Cumin Chicken Breasts with Avocado Salsa 
+1599,100,162,Skewered Beef Fajitas 
+1600,90,154,Herb-Crusted Flank Steak with Cherry Tomatoes and Olives 
+1601,77,167,Caramelized Onion and Goat Cheese Tarts 
+1602,76,179,"Shrimp, Fava Bean, and Asparagus Salad "
+1603,57,152,Peach Chutney 
+1604,45,190,Minted Radish Tea Sandwiches with Lemon Mayonnaise 
+1605,85,160,Chicken Burritos with Poblano Chiles and Corn 
+1606,75,152,Cobb Salad Pitas 
+1607,66,185,Ham Stock 
+1608,47,158,"Radicchio, Fontina, and Goat Cheese Pizza "
+1609,66,197,Gruyère Cheese Soufflé with Dill 
+1610,95,192,Mutabal 
+1611,77,183,Potato and Cheese Ravioli with Fresh Tomato Sauce 
+1612,96,153,Roasted Tomato Sauce 
+1613,94,170,"Eggplant, Roasted Pepper, and Goat Cheese Terrine with Parsley Sauce "
+1614,49,193,Spicy Tomato Chutney 
+1615,65,161,Vegetable-Stuffed Loin of Veal with Sweetbreads 
+1616,46,159,Fish Taco Platter 
+1617,52,157,Braised Short Ribs 
+1618,66,167,Sweetened Strawberries 
+1619,70,198,Eggplant Caprese with Grilled Tomato and Basil Vinaigrette 
+1620,54,189,Grilled Shrimp and Scallions with Southeast Asian Dipping Sauces 
+1621,81,160,White Fish Stock 
+1622,60,154,Avgolemono 
+1623,48,157,Poached Salmon with Tarragon Sauce and Fingerling Potatoes 
+1624,47,173,Amaranth and Feta Phyllo Triangles 
+1625,61,178,Strawberry Shortcakes 
+1626,79,197,Fresh Herb Falafel 
+1627,75,175,"Pasta with Caramelized Onions, Cabbage, and Smoked Ham "
+1628,59,184,Deviled Eggs with Capers and Tarragon 
+1629,74,180,Grilled Pork Chops with Italian Relish 
+1630,49,162,Creamed Spinach Deluxe 
+1631,53,184,"Cauliflower ""Rice"" Tabbouleh "
+1632,98,200,Spicy Gumbo-Laya 
+1633,57,158,Simple Veal Pasta Sauce 
+1634,69,189,"Pear, Dried Cherry and Chocolate Chunk Crisp "
+1635,45,158,"Spaghetti with Fresh Clams, Parsley, and Lemon "
+1636,83,192,Grilled Mahi-Mahi with Tomatillo-Avocado Salsa and Pineapple 
+1637,65,199,Salmon and Spinach Strudel 
+1638,94,175,Leg of Lamb Stuffed with Greens and Feta 
+1639,49,183,Cauliflower and Chickpea Curry 
+1640,73,152,Snow Eggs with Pistachio Custard and Chocolate Drizzle 
+1641,63,176,Kids' Matzoh Pizza 
+1642,71,167,Pork Chops with Sage-Garlic Butter 
+1643,58,187,Minted Eggplant Rounds 
+1644,47,200,Balsamic Vinaigrette 
+1645,73,189,Grilled Strip Steaks with Olive-Oregano Relish 
+1646,73,160,"Cranberry Sauce with Cherries, Marsala and Rosemary "
+1647,65,157,Lamb and Orzo Stuffed Pepper with Chunky Tomato Sauce 
+1648,95,190,Shaking Beef 
+1649,96,176,"Meringue, Chocolate, and Kirsch Cream Layer Cake "
+1650,89,180,Cayenne Corn Bread Sticks 
+1651,69,171,Butternut Squash Latkes with Sage and Pine Nut Yogurt Sauce 
+1652,94,186,Venison Chops with Blackberry Compote 
+1653,45,171,Fruit and Seed Bars 
+1654,96,192,Smoked Duck and Walnuts with Winter Greens 
+1655,78,160,Perfect Mashed Potatoes 
+1656,53,189,"Scrambled Eggs with Ramps, Morels, and Asparagus "
+1657,47,171,Chicken Breasts with Chive and Mustard Sauce 
+1658,71,156,"Linguine with Pecorino, Tomatoes, and Arugula "
+1659,50,164,"Peanut Butter, Banana, and Jelly ""Ice Cream"" "
+1660,61,176,Green Beans with Caramelized Pecans 
+1661,77,157,Artichoke and Parmesan Risotto 
+1662,76,174,Molasses-and-Spice Pumpkin Pie 
+1663,75,158,Pasta with Shrimp and Artichokes 
+1664,79,174,Irish Coffee Meringues 
+1665,73,159,Blueberry Lemon Crumbles 
+1666,50,198,Chicken Salad with Grapes and Walnuts 
+1667,95,180,Orange Currant Scones 
+1668,53,199,Sweet Potato Salad with Orange-Maple Dressing 
+1669,54,153,Frozen Peanut Butter Pie with Candied Bacon 
+1670,58,174,Strawberries with Cassis 
+1671,91,161,Fruit Salad with Honey-Lime Dressing 
+1672,54,156,Bacon and Onion Corn Muffins 
+1673,60,199,Petit Trois's French Onion Soup 
+1674,98,173,Lamb with Peas and Tomatoes 
+1675,93,187,Spinach Soufflé with Shallots and Smoked Gouda Cheese 
+1676,94,195,Chicken Liver Mousse 
+1677,74,159,"Cheesy Baked Spaghetti Squash Boats With Salami, Sundried Tomatoes, and Spinach "
+1678,84,192,Pumpkin Cider Bread 
+1679,90,157,Chris Lilly's Flank Steak and Shiitake Yakitori 
+1680,66,165,"Spinach, Fennel, and Sausage Stuffing with Toasted Brioche "
+1681,59,192,Tecate Skirt-Steak Tacos 
+1682,93,162,Grilled Avocado with Strawberry-Mango Salsa 
+1683,84,199,Butterscotch Blondie Bars With Peanut-Pretzel Caramel 
+1684,84,156,Curried Tomato Chicken Salad 
+1685,82,187,Pomegranate-Marinated Lamb with Spices and Couscous 
+1686,77,192,Broiled Eggplant with Cilantro Vinaigrette 
+1687,88,181,Cornmeal Bao With Turkey and Black Pepper Sauce 
+1688,50,153,Modern Mince Pie 
+1689,78,187,"Avocado, Shrimp, and Endive Salad "
+1690,57,156,Porcini Fondue with Ham and Ciabatta 
+1691,64,156,Spring Pea Butter With Shallot and Lemon 
+1692,45,199,Chestnut and Sherry Soup with Truffle Garnish 
+1693,49,188,Chicken with Mustard Cream on Watercress 
+1694,81,165,Creamed Peas and Onions 
+1695,83,162,Shrimp in Sherry Butter Sauce 
+1696,74,151,Cinnamon Oat Cakes 
+1697,64,177,Classic Posole 
+1698,47,153,Grilled Cheddar and Bacon with Mango Chutney 
+1699,48,174,Grilled Shrimp Salad with Corn and Avocado 
+1700,69,172,Oat and Walnut Buttermilk Braid 
+1701,80,176,Bacon and Egg Empañadas 
+1702,56,174,Curried Sweet Potato Pancakes 
+1703,85,189,Potato and Shiitake Mushroom Gratin 
+1704,80,176,"Mushroom, Radicchio, and Smoked Mozzarella Lasagne "
+1705,64,172,Warm Asparagus Toast with Pancetta and Vinaigrette 
+1706,97,184,Mini Ham and Cheese Rolls 
+1707,72,175,Holiday Biscotti with Cranberries and Pistachios 
+1708,92,185,Swiss Chard Ricotta Gnudi with Fall Mushrooms 
+1709,72,154,Scallion Potato Pancake and Smoked-Salmon Sandwiches 
+1710,48,195,Grilled Heirloom Tomato and Mozzarella Sandwiches with Green Heirloom Tomato Gazpacho 
+1711,88,168,Bouillabaisse Linder 
+1712,65,163,Lamb Kofte with Garlic Yogurt Sauce 
+1713,95,169,Coriander Noodles with Zucchini and Carrots 
+1714,55,190,Asparagus with Wasabi-Mayonnaise Dip 
+1715,78,183,Porcini Fondue with Ham and Ciabatta 
+1716,97,154,Hushpuppies 
+1717,46,193,Beef Braised in Red Wine 
+1718,77,178,Curried Stuffed Eggs 
+1719,52,190,Taiwanese Beef Noodle Soup 
+1720,51,152,"Apricot, Date, and Pistachio Haroseth "
+1721,60,173,Sauteed Vegetables with Chile-Tamarind Sauce 
+1722,83,175,Open Shrimp Ravioli with Lime Ginger Butter 
+1723,50,156,Frozen Lemon Pie Pops 
+1724,48,190,Spaghetti with Parsley Pesto 
+1725,80,184,Cornish Game Hens with Mustard and Rosemary 
+1726,67,192,"Chicken, Ham, and Tarragon Pie "
+1727,48,150,Celery Root Bisque with Thyme Croutons 
+1728,98,196,"Green Bean, Yellow Pepper, and Bacon Salad with Oregano Vinaigrette "
+1729,72,158,Grilled New Potatoes with Parmesan and Herbs 
+1730,55,170,Danish Red Cabbage 
+1731,61,187,"Pear, Cherry, and Pine Nut Tartlets "
+1732,97,183,"Grilled Scallop ""Ceviche"" "
+1733,80,173,Hanoi Beef Noodle Soup 
+1734,91,172,"Watercress, Pear and Walnut Salad with Poppy Seed Dressing "
+1735,72,186,Pistachio Sea Bass with Crab Salad 
+1736,45,183,Fresh Strawberry Ice Cream 
+1737,46,156,Creamy Parmesan Polenta 
+1738,45,197,Bittersweet Chocolate Irish Whiskey Cake 
+1739,72,151,Mini Pizzas 
+1740,73,156,Blueberry Sour Cream Pie 
+1741,51,169,Sautéed Pork Tenderloin with Prunes 
+1742,75,193,Crab and Herb Fettucine 
+1743,57,197,"Corn, Tomato, and Lobster Salad "
+1744,82,192,Pear-Almond Tartlets 
+1745,54,169,Shellfish Mixed Grill 
+1746,75,195,Chocolate-Coffee Gingerbread with Hazelnut Poached Pears 
+1747,93,154,Braised Eggplant with Onion and Tomato 
+1748,52,191,Roast Turkey with Herb Butter and Caramelized Onion-Balsamic Gravy 
+1749,93,183,Morel-Crusted Ribs with Polenta 
+1750,87,192,Panna Cotta with Crushed Raspberry Sauce 
+1751,65,169,Bittersweet Chocolate-Orange Fondue 
+1752,62,198,Sauteed Pasta with Lobster 
+1753,77,161,Tomato-Mushroom Bisque 
+1754,100,178,Vanilla Ice Cream Base 
+1755,84,158,Goat Cheese and Thyme Potato Cake 
+1756,69,155,Apple Chips 
+1757,83,157,Beef Sates with Southeast Asian Sauce 
+1758,94,167,Baked Stuffed Mushrooms with Crab 
+1759,94,197,Chicken and Swiss Chard Enchilada Casserole 
+1760,57,194,Agnolotti with Meat and Spinach Filling 
+1761,89,155,Duck Breast with Sweet Cherry Sauce 
+1762,85,163,Roasted Butternut Squash and Apple Salad 
+1763,62,178,Ratatouille 
+1764,54,180,Cabbage and Corn Slaw with Cilantro and Orange Dressing 
+1765,53,183,Fish Vermicelli with Fresh Dill and Pineapple Sauce 
+1766,59,195,Roasted Spiced Chicken with Cinnamon- and Honey-Glazed Sweet Potatoes 
+1767,70,174,Venison Chili with Snowcap Beans 
+1768,76,171,Sausage Shepherd's Pie with Sweet Potatoes and Squash 
+1769,71,190,Hazelnut-Crusted Racks of Lamb with Tomato-Olive Ragoût 
+1770,82,181,Lemon-Spice Bread Pudding with Sauteed Peaches 
+1771,67,181,Breakfast Cookies 
+1772,51,164,Lemon Crème Caramel 
+1773,73,183,Brooklyn Feijoada 
+1774,82,153,Twice-Baked Goat Cheese Souffles with Salad 
+1775,52,177,Vegetable Tortilla Lasagne 
+1776,58,170,Shrimp Salad Rolls 
+1777,47,173,Court-Bouillon 
+1778,88,174,Spiced Carrot Cauliflower Soup 
+1779,99,190,Pasta with Confit Duck and Savoy Cabbage 
+1780,100,196,Indian Pudding 
+1781,54,188,Indonesian Spice Cake 
+1782,56,159,Banana Cream Pie 
+1783,84,163,Whole-Wheat Walnut Popovers 
+1784,93,179,Salmon with Lentils and Mustard-Herb Butter (Saumon aux Lentilles) 
+1785,52,198,Gougères 
+1786,46,199,Black-Bottom Raspberry Cream Pie 
+1787,64,195,Red-Cooked Pork with Frizzled Ginger 
+1788,80,159,Herbed Ham and Cheddar Frittata 
+1789,91,198,Creamy Rice with Parsnip Purée and Root Vegetables 
+1790,62,155,"Shrimp, Scallop, and Cod Lasagne "
+1791,70,162,Pistachio Popover Cremes Brulees with Grand Marnier Syrup 
+1792,66,191,Cranberry Relish with Apple Cider 
+1793,100,175,Grilled Fish Tostadas with Pineapple-Jícama Salsa 
+1794,75,182,Seared Rainbow Chard with Leeks 
+1795,77,169,Caviar Tart 
+1796,62,186,Grilled Rib-Eye Steaks with Parsley-Garlic Butter 
+1797,70,186,Portobello Mushroom and Sausage Pizzas 
+1798,48,168,Stuffed Masa Pockets with Green Chiles and Cheese 
+1799,67,199,Apple and Sausage Stuffing 
+1800,59,197,Sauteed Pineapple with Rum Sauce 
+1801,57,188,Grilled Lamb with Lima Bean Skordalia 
+1802,63,168,Scalloped Potatoes with Goat Cheese and Herbes de Provence 
+1803,98,179,Easy Roast Turkey With No-Roux Gravy 
+1804,58,181,Parmesan-Crusted Chicken Breasts 
+1805,60,167,Pork and Hominy Stew with Red Chiles (Pozole Rojo) 
+1806,51,195,Roasted Tomatoes with Stilton 
+1807,88,157,"Sauteed Chicken Breasts with Pear, Bell Pepper, and Cilantro Salsa "
+1808,98,175,Cheddar and Chive Rounds 
+1809,78,172,Winter Tomato Sauce 
+1810,65,163,Chilled Tarragon Tomato Soup with Vegetable Confetti 
+1811,87,172,"Bow Ties with Peas, Lemon, and Mint "
+1812,61,184,Coconut-Vegetable Slaw 
+1813,61,187,Parmesan Custard Tart with Butternut Squash 
+1814,63,179,Artichoke and Parmesan Risotto 
+1815,82,167,Rhubarb Charlotte 
+1816,57,193,Romesco Sauce 
+1817,81,165,English Chocolate Trifle with Apricots and Raspberries 
+1818,62,187,Cranberry-Fig Compote 
+1819,90,150,Matzo-Stuffed Roast Chicken for Passover 
+1820,64,186,Sweet-and-Sour Stuffed Mustard Cabbage 
+1821,94,176,Green Beans with Mushroom-Madeira Sauce 
+1822,64,193,Peach and Berry Trifle 
+1823,81,156,Korean-Style Noodles with Vegetables 
+1824,76,159,Chickpeas with Spinach 
+1825,92,179,Couscous Tabbouleh 
+1826,66,162,White Chocolate-Sambuca Cream 
+1827,54,191,Pumpkin Spice Cupcakes 
+1828,49,169,Fig Balsamic-Glazed Duck with Pearl Onion and Pear Hash 
+1829,53,161,Spicy-Smoky Peanuts 
+1830,48,163,Minted Eggplant Rounds 
+1831,96,157,Fennel and Sausage Ragù Over Pasta 
+1832,45,186,Light Lemon Yogurt Sauce 
+1833,48,193,Greek-Herbed Spinach Latkes with Feta-Yogurt Sauce 
+1834,99,153,Shepherd's Pie with Parsnip Topping 
+1835,54,189,Carrot and Radish Salad 
+1836,65,186,Brown Rice Salad with Crunchy Sprouts and Seeds 
+1837,54,159,Ancho Chile Sauce 
+1838,91,182,Lobster Rolls with Lemon Vinaigrette and Garlic Butter 
+1839,56,177,Citrus Arancine with Pecorino Cheese 
+1840,71,166,Caramelized-Onion Dip with Cilantro-Garlic Pita Crisps 
+1841,91,169,Sauteed Trout with Pecans 
+1842,53,180,"Persian-Spiced Chicken With Spaghetti Squash, Pomegranate, and Pistachios "
+1843,86,196,Fried Fish Tacos 
+1844,90,200,"""Seethed"" Mussels with Parsley and Vinegar "
+1845,98,195,"Sea Bass with Artichokes, Zucchini and Tomatoes "
+1846,48,177,Pistachio Cardamom Butter Cookies 
+1847,80,179,Blanquette de Veau 
+1848,62,168,Brown Stock 
+1849,52,151,Banana Caramel Chocolate Pie 
+1850,51,156,"Melon, Arugula, and Serrano Ham with Smoked Paprika Dressing "
+1851,93,150,Roasted Pork Tenderloin with Sage Corn Bread Crust 
+1852,62,151,Seared Sea Scallops on Sautéed Spinach with Hoisin Butter Sauce 
+1853,88,199,Crab Salad with Endive and Tomato-Cilantro Sauce 
+1854,99,159,Spicy Glazed Pork Ribs 
+1855,58,195,Fennel and Endive Salad with Orange Vinaigrette 
+1856,67,174,"Chicken with Endive, Radicchio and Balsamic Vinegar Glaze "
+1857,84,199,French Toast Santa Fe 
+1858,78,188,Miss Milton's Lovely Fudge Pie 
+1859,84,196,Moroccan Beet Leaf or Swiss Chard Salad (Salade de Blettes) 
+1860,49,154,Eggplant Spread 
+1861,92,198,Colcannon 
+1862,75,163,Avocado Sour Cream Mousse 
+1863,97,150,Radish Sandwiches on Zucchini Basil Muffins 
+1864,64,161,"Cuban Avocado, Watercress, and Pineapple Salad (Ensalada de Aguacate, Berro, y Piña) "
+1865,92,178,Sea Bass with Spicy Roasted Bell Pepper Sauce 
+1866,95,185,"Bulgur Salad with Chickpeas, Roasted Peppers, and Spiced Cumin Dressing "
+1867,97,185,Spice-Rubbed Chicken Breasts with Lemon-Shallot Sauce 
+1868,54,175,Truffled Lobster Risotto 
+1869,48,170,Brussels Sprouts with Shallots and Salt Pork 
+1870,96,167,Spice-Rubbed Lamb Chops with Roasted Tomatoes 
+1871,79,150,Red Cabbage Salad with Warm Pancetta-Balsamic Dressing 
+1872,74,193,Porchetta-Style Roast Turkey Breast 
+1873,90,199,Perciatelli with Meatballs and Tomato-Porcini Sauce 
+1874,62,169,Brown Sugar-Cured Turkey with Wild Mushroom-Shallot Gravy 
+1875,78,157,Cheddar Dill Biscuits 
+1876,75,172,Latin-Style Chicken and Rice 
+1877,75,156,Lettuce and Beet Salad with Sour Cream Dressing 
+1878,60,196,Mediterranean Chickpea Latkes 
+1879,73,163,Mojo Sauce 
+1880,64,182,Honey-Peach Tart with Vanilla Ice Cream 
+1881,64,174,Chicken Negimaki with Spicy Red Pepper Dipping Sauce 
+1882,47,161,Thai Grilled Beef Salad 
+1883,62,155,Baked-Potato Buttermilk Biscuits 
+1884,52,176,Bow Thai Pasta with Shrimp 
+1885,63,178,Guacamole with Roasted Tomatillos 
+1886,69,190,Banoffee Pie 
+1887,83,174,Turkey Giblet Stock 
+1888,50,176,Chicken and Green Bean Coconut Curry 
+1889,89,200,"Bulgur with Onion, Tomato, and Feta "
+1890,70,182,Smoked-Turkey Tea Sandwiches with Arugula Mayonnaise 
+1891,84,169,Roasted Potatoes with Garlic 
+1892,50,197,"Tomato, Onion and Zucchini Salad "
+1893,53,153,Brown Sugar-Ginger Ice Cream 
+1894,59,196,Blade Steaks with Mushrooms 
+1895,99,171,Cranberry Sauce with Port and Cinnamon 
+1896,51,195,Hot-and-Sour Coleslaw 
+1897,100,164,Fresh Homemade Ricotta 
+1898,86,150,Peach Bonbons 
+1899,91,170,"Fettuccine with Morels, Asparagus, and Goat Cheese "
+1900,63,167,Braised Lamb with Spinach 
+1901,81,151,"Tomato, Cucumber, and Feta Salad "
+1902,84,192,Sweet Potato Gnocchi with Fried Sage and Shaved Chestnuts 
+1903,76,188,Mustard-Seed Cheddar Sticks 
+1904,56,168,Spicy Sweet Corn and Poblano Soup 
+1905,91,154,Rustic Nectarine and Blackberry Crostata with Cornmeal Crust 
+1906,71,177,Sauteed Chicken Breasts with Herbed Mustard Butter and Duo of Spring Peas 
+1907,92,161,Yellow Tomato Coulis 
+1908,48,170,Tomato Chutney 
+1909,83,168,Peanut Dacquoise with Peanut Butter Mousse 
+1910,77,170,Chilled Tomatillo and Cucumber Soup 
+1911,76,173,Coconut Barbecued Ribs 
+1912,57,165,Coffee Granita with Sambuca Ice Cream and Chocolate Shavings 
+1913,85,191,Turkey Giblet Stock 
+1914,50,172,Strawberry Jam 
+1915,91,151,Corn and Black Bean Tortilla Cakes 
+1916,99,153,Oz Family Stir-Fried Rice 
+1917,51,190,Anchovy Toasts 
+1918,90,152,Herb-Roasted Turkey 
+1919,54,196,Duck-Confit Rillettes 
+1920,85,162,Red and Green Fire Salsa 
+1921,72,159,"Iroquois Stew with Beef, Chicken and Pork "
+1922,51,164,Pat's Chicken with Peaches and Jalapenos 
+1923,87,158,Cinnamon Biscuits 
+1924,75,160,Turkey Cutlets with Springtime Vegetables 
+1925,47,194,Cowboy Frittata 
+1926,86,159,Cranberry-Port Gelatin with Crystallized Ginger and Celery 
+1927,75,182,Banana and Mango Spring Rolls with Coconut-Chocolate Ganache 
+1928,46,184,Blt Bow Ties 
+1929,52,185,Sweet Cucumber and Radish Salad 
+1930,51,162,Seafood Canapes with Lemon-Chive Butter 
+1931,86,154,Prunes in Crispy Bacon 
+1932,92,163,Couscous with Lamb Stew 
+1933,84,153,Quick Moroccan Vegetable Couscous 
+1934,100,170,Grilled Skirt Steak with Herb Salsa Verde 
+1935,52,158,Tomatoes Stuffed with Bulgur and Pine Nuts 
+1936,60,156,Chocolate Peanut Butter Pretzel Cupcakes 
+1937,74,176,Asian Salmon Bowl with Lime Drizzle 
+1938,56,172,"Potato Salad with Pancetta, Rosemary, and Lemon "
+1939,52,191,Chocolate-Pistachio Sablés 
+1940,57,196,Rhubarb Streusel Pie 
+1941,69,159,Warm Berry Preserves 
+1942,72,192,Dried Cranberry Compote 
+1943,96,157,Spicy Tomato Sauce 
+1944,64,196,Quince and Cranberry Sauce 
+1945,100,190,"Fruit Salad with Herb, Citrus, Mint-Maple, or Basic Syrup "
+1946,86,186,Chocolate-Orange Easter-Egg Truffles 
+1947,96,162,Aged Sherry-Walnut Vinaigrette 
+1948,93,152,"Arugula, Bacon, and Gruyère Bread Pudding "
+1949,60,161,Pera Bella Helena 
+1950,46,179,Spinach and Omelet Roll 
+1951,94,161,Antoinette's Gulyas 
+1952,69,195,"Halibut with Carrots, Fennel, Lemon, and Garlic "
+1953,65,194,Filet Mignon with Rajas 
+1954,56,174,Spiced Streusel Apple Pie 
+1955,80,177,Deviled Eggs with Capers and Tarragon 
+1956,68,152,Easy Provençal Lamb 
+1957,86,183,"Chicken, Ham and Fennel Pot Pies "
+1958,63,175,Lemon Whipped Cream 
+1959,85,167,"Green Bean, Orange, and Green Olive Salad "
+1960,97,181,Veal Scaloppine with Mushroom Cream Sauce 
+1961,57,185,Red Wine Beef Stew 
+1962,46,193,Moroccan Raw Carrot Salad 
+1963,46,183,Mixed Lettuce Chiffonade with Gorgonzola-Herb Dressing 
+1964,87,188,Asparagus and Leek Soup 
+1965,46,189,Tropical Fruit Salsa 
+1966,88,166,Marinated Halibut on Radish Sprout and Fennel Salad 
+1967,75,190,3-Ingredient Steak With Crispy Parmesan Potatoes 
+1968,94,151,Wholewheat Blinis with American Caviar 
+1969,79,165,Baked Figs 
+1970,66,190,Cinnamon-Chocolate Brownies with Chocolate Ganache 
+1971,88,198,Fried Calamari Salad 
+1972,62,163,Mint Chutney 
+1973,88,193,Croque Madame With Cranberry-Mustard Relish 
+1974,79,173,Turkey Chili with White Beans 
+1975,87,171,Lowfat Turkey Stroganoff 
+1976,100,152,Rhubarb Marmalade 
+1977,67,183,Minute Steak with Roasted Fennel and Arugula and Caper Dressing 
+1978,55,150,Thai Red Curry Soup with Chicken and Vegetables 
+1979,52,173,Butternut-Corn Chowder with Goat Cheese Croutons 
+1980,69,177,"Three-Onion, Sun-Dried Tomato, Olive Tart "
+1981,53,176,Asian Eggplant 
+1982,93,194,Pecan Thins 
+1983,55,198,Curried Chicken Salad Pita Sandwiches 
+1984,48,199,Broiled Sea Trout with Basil Sauce 
+1985,66,153,Curried Cider-Braised Pork Chops 
+1986,74,178,Tuscan Porterhouse Steak with Red Wine-Peppercorn Jus 
+1987,51,154,"Sauteed Veal with Shrimp, Mushroom, and Brandy Cream Sauce "
+1988,65,157,Romaine and Red Onion Salad with Parmesan Balsamic Vinaigrette 
+1989,60,182,"Pizza with Leeks, Tomato and Goat Cheese "
+1990,52,192,Bacon Smashed Potatoes 
+1991,57,156,Buttermilk Cornbread with Monterey Jack Cheese 
+1992,88,152,"Sausage, Chestnut and Fig Stuffing "
+1993,58,175,"Turkey, Tomato, Ricotta, and Mozzarella Lasagne "
+1994,86,178,Deep-Dish Caramel Apple Pie 
+1995,82,197,Lemon and Olive Mayonnaise 
+1996,54,179,Dry-Rubbed Flank Steak with Grilled Corn Salsa 
+1997,87,172,Crab-and-Pork Spring Rolls 
+1998,82,199,Tomatillo Salsa with Serranos 
+1999,74,157,Chicken and Spelt Soup with Greens 

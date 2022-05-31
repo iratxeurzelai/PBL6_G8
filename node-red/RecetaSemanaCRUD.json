@@ -1,0 +1,162 @@
+[
+    {
+        "id": "0eba2d2bec36fcd5",
+        "type": "tab",
+        "label": "RecetaSemanaCRUD",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3560bfca98667302",
+        "type": "http request",
+        "z": "0eba2d2bec36fcd5",
+        "name": "getRecetaSemana",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "localhost:8081/getRecetaSemana/{{req.params.id}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "642c2ee0e9ff303a",
+                "77644b2b74576cbc"
+            ]
+        ]
+    },
+    {
+        "id": "0d40377dcd7ed5fd",
+        "type": "debug",
+        "z": "0eba2d2bec36fcd5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "642c2ee0e9ff303a",
+        "type": "json",
+        "z": "0eba2d2bec36fcd5",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 550,
+        "y": 140,
+        "wires": [
+            [
+                "0d40377dcd7ed5fd",
+                "b3390e5995a41df4"
+            ]
+        ]
+    },
+    {
+        "id": "fcddbef215bd1d46",
+        "type": "http in",
+        "z": "0eba2d2bec36fcd5",
+        "name": "",
+        "url": "getRecetaSemana/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "3560bfca98667302",
+                "aa7ec7ed178e09d5"
+            ]
+        ]
+    },
+    {
+        "id": "b3390e5995a41df4",
+        "type": "change",
+        "z": "0eba2d2bec36fcd5",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 140,
+        "wires": [
+            [
+                "7f436f167c16afab"
+            ]
+        ]
+    },
+    {
+        "id": "7f436f167c16afab",
+        "type": "http response",
+        "z": "0eba2d2bec36fcd5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "aa7ec7ed178e09d5",
+        "type": "debug",
+        "z": "0eba2d2bec36fcd5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 290,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "77644b2b74576cbc",
+        "type": "debug",
+        "z": "0eba2d2bec36fcd5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 260,
+        "wires": []
+    }
+]

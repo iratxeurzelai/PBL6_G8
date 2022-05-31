@@ -1,0 +1,379 @@
+[
+    {
+        "id": "cd558b3dee55cd0d",
+        "type": "tab",
+        "label": "IA",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d0be97724fc3fa7f",
+        "type": "cronplus",
+        "z": "cd558b3dee55cd0d",
+        "name": "",
+        "outputField": "payload",
+        "timeZone": "",
+        "persistDynamic": false,
+        "commandResponseMsgOutput": "output1",
+        "outputs": 1,
+        "options": [
+            {
+                "name": "schedule1",
+                "topic": "topic1",
+                "payloadType": "default",
+                "payload": "",
+                "expressionType": "cron",
+                "expression": "0 */20 9,17 * * *",
+                "location": "",
+                "offset": "0",
+                "solarType": "all",
+                "solarEvents": "sunrise,sunset"
+            }
+        ],
+        "x": 200,
+        "y": 500,
+        "wires": [
+            [
+                "4bad89dcd1531c09"
+            ]
+        ]
+    },
+    {
+        "id": "84667dfc90d84341",
+        "type": "amqp in",
+        "z": "cd558b3dee55cd0d",
+        "name": "Dejar",
+        "topic": "SinProcesar",
+        "iotype": "4",
+        "ioname": "Dejar",
+        "server": "4df80762.46dbd8",
+        "x": 70,
+        "y": 200,
+        "wires": [
+            [
+                "c0cdb214cdbce6a8",
+                "2ac7b7e51b1bc679"
+            ]
+        ]
+    },
+    {
+        "id": "2ac7b7e51b1bc679",
+        "type": "http request",
+        "z": "cd558b3dee55cd0d",
+        "name": "getDieta",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "localhost:8000/getDieta",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 220,
+        "y": 120,
+        "wires": [
+            [
+                "e595b0c50d46ba87",
+                "3bad3d4dbaf1dc2f"
+            ]
+        ]
+    },
+    {
+        "id": "e595b0c50d46ba87",
+        "type": "amqp out",
+        "z": "cd558b3dee55cd0d",
+        "name": "Prueba",
+        "routingkey": "Procesada",
+        "iotype": "0",
+        "ioname": "Prueba",
+        "server": "4df80762.46dbd8",
+        "x": 440,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "3bad3d4dbaf1dc2f",
+        "type": "debug",
+        "z": "cd558b3dee55cd0d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "9c84ba4871468ee5",
+        "type": "http request",
+        "z": "cd558b3dee55cd0d",
+        "name": "CreateSemana",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8084/crearSemana",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 600,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4bad89dcd1531c09",
+        "type": "change",
+        "z": "cd558b3dee55cd0d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\"Authorization\":\"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJib3JqYS5yb21lcm9AYWx1bW5pLm1vbmRyYWdvbi5lZHUiLCJyb2xlcyI6WyJVU0VSIl0sImV4cCI6MTY1MzU2MDUxMH0.NyGB-jH96RQnMePSCiPEcgu7kW84GB1P-C3-1JRlSSJ1Rc5gUY1TS2-_SS387jWD0zVaNLmQSz0QWnXrg5OSBw\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 500,
+        "wires": [
+            [
+                "9c84ba4871468ee5"
+            ]
+        ]
+    },
+    {
+        "id": "da97dab6c55b262e",
+        "type": "e-mail",
+        "z": "cd558b3dee55cd0d",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "",
+        "dname": "",
+        "x": 870,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d72396f60603ebb5",
+        "type": "http request",
+        "z": "cd558b3dee55cd0d",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8081/getUser/{{id}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 410,
+        "y": 260,
+        "wires": [
+            [
+                "70652808ad6f5991",
+                "78eb9255f00ca47c"
+            ]
+        ]
+    },
+    {
+        "id": "055aa646fa9e3381",
+        "type": "function",
+        "z": "cd558b3dee55cd0d",
+        "name": "",
+        "func": "msg.id = msg.payload.id\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 260,
+        "wires": [
+            [
+                "d72396f60603ebb5",
+                "332e4a9ba62c7413"
+            ]
+        ]
+    },
+    {
+        "id": "d7616e7f28e10285",
+        "type": "function",
+        "z": "cd558b3dee55cd0d",
+        "name": "",
+        "func": "msg.to = msg.payload.entity.email\nmsg.payload = \"Buenas, ya estan las recetas de la semana que viene disponibles en la pagina web de Mutrition. ¡Buen provecho!\"\nmsg.topic = \"Recetas actualizadas\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 260,
+        "wires": [
+            [
+                "da97dab6c55b262e",
+                "aa0f1ec73e1d9ec6"
+            ]
+        ]
+    },
+    {
+        "id": "8fd94f5c8c1b27ab",
+        "type": "inject",
+        "z": "cd558b3dee55cd0d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 420,
+        "wires": [
+            [
+                "4bad89dcd1531c09"
+            ]
+        ]
+    },
+    {
+        "id": "70652808ad6f5991",
+        "type": "debug",
+        "z": "cd558b3dee55cd0d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "332e4a9ba62c7413",
+        "type": "debug",
+        "z": "cd558b3dee55cd0d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "id",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c0cdb214cdbce6a8",
+        "type": "json",
+        "z": "cd558b3dee55cd0d",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "055aa646fa9e3381"
+            ]
+        ]
+    },
+    {
+        "id": "78eb9255f00ca47c",
+        "type": "json",
+        "z": "cd558b3dee55cd0d",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 570,
+        "y": 260,
+        "wires": [
+            [
+                "d7616e7f28e10285",
+                "439cb9431d9b39f4"
+            ]
+        ]
+    },
+    {
+        "id": "aa0f1ec73e1d9ec6",
+        "type": "debug",
+        "z": "cd558b3dee55cd0d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "to",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "439cb9431d9b39f4",
+        "type": "debug",
+        "z": "cd558b3dee55cd0d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "4df80762.46dbd8",
+        "type": "amqp-server",
+        "host": "localhost",
+        "port": "5672",
+        "vhost": "",
+        "keepalive": "30",
+        "usetls": false,
+        "verifyservercert": true,
+        "useca": false,
+        "ca": "",
+        "usetopology": true,
+        "topology": "{\n\t\"exchanges\": [\n\t\t{\"name\": \"Prueba\", \"type\": \"direct\", \"options\": {\"durable\": false}}\n\t],\n\t\"queues\": [\n\t\t{\"name\": \"Dejar\",\"options\":{\"durable\":false}},\n\t\t{\"name\": \"Obtener\",\"options\":{\"durable\":false}}\n\t],\n\t\"bindings\": [\n\t\t{\"source\": \"Prueba\", \"queue\": \"Obtener\", \"pattern\": \"Procesada\",\"args\":{}},\n\t\t{\"source\": \"Prueba\", \"queue\": \"Dejar\", \"pattern\": \"SinProcesar\",\"args\":{}}\n\t]\n}"
+    }
+]

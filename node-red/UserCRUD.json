@@ -1,0 +1,864 @@
+[
+    {
+        "id": "2baa0a651494ed47",
+        "type": "tab",
+        "label": "UserCRUD",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d3e12539114d746c",
+        "type": "http request",
+        "z": "2baa0a651494ed47",
+        "name": "addUser",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "body",
+        "url": "localhost:8081/addUser",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 560,
+        "y": 120,
+        "wires": [
+            [
+                "51b60f68858595d1",
+                "a30323a9c3bb5ee1"
+            ]
+        ]
+    },
+    {
+        "id": "7dcc428cfe832c02",
+        "type": "debug",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "51b60f68858595d1",
+        "type": "json",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 730,
+        "y": 120,
+        "wires": [
+            [
+                "7dcc428cfe832c02",
+                "ba87daa996857f7b"
+            ]
+        ]
+    },
+    {
+        "id": "c6382c50b4d050c0",
+        "type": "http in",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "url": "addUser",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 120,
+        "wires": [
+            [
+                "50b610fdc367b8b4",
+                "f399d6f9b8f0ac80"
+            ]
+        ]
+    },
+    {
+        "id": "ba87daa996857f7b",
+        "type": "change",
+        "z": "2baa0a651494ed47",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 870,
+        "y": 200,
+        "wires": [
+            [
+                "cc47d180fc4d204c"
+            ]
+        ]
+    },
+    {
+        "id": "cc47d180fc4d204c",
+        "type": "http response",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1030,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "50b610fdc367b8b4",
+        "type": "debug",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 210,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a30323a9c3bb5ee1",
+        "type": "debug",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f399d6f9b8f0ac80",
+        "type": "json-schema-validator",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "func": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"password\": {\n      \"type\": \"string\"\n    },\n    \"peso\": {\n      \"type\": \"number\"\n    },\n    \"altura\": {\n      \"type\": \"number\"\n    },\n    \"roles\": {\n      \"type\": \"string\"\n    },\n    \"name\": {\n      \"type\": \"string\"\n    },\n    \"sexo\": {\n      \"type\": \"boolean\"\n    },\n    \"email\": {\n      \"type\": \"string\"\n    },\n     \"lastname\": {\n      \"type\": \"string\"\n    },\n    \"alergias\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"password\",\n    \"peso\",\n    \"altura\",\n    \"roles\",\n    \"name\",\n    \"sexo\",\n    \"email\",\n    \"lastname\",\n    \"alergias\"\n  ]\n}",
+        "x": 330,
+        "y": 120,
+        "wires": [
+            [
+                "d3e12539114d746c",
+                "9a251dc004c567a6"
+            ]
+        ]
+    },
+    {
+        "id": "98a263b2f52e091c",
+        "type": "catch",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 340,
+        "y": 1320,
+        "wires": [
+            [
+                "7e630810917fcac1"
+            ]
+        ]
+    },
+    {
+        "id": "7e630810917fcac1",
+        "type": "debug",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "error",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "9a251dc004c567a6",
+        "type": "debug",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "30d49449f10cf09e",
+        "type": "http request",
+        "z": "2baa0a651494ed47",
+        "name": "getUsers",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "localhost:8081/getUsers",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 320,
+        "y": 420,
+        "wires": [
+            [
+                "999c61fbab209d72"
+            ]
+        ]
+    },
+    {
+        "id": "df6a9e28ad934eca",
+        "type": "debug",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "999c61fbab209d72",
+        "type": "json",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 470,
+        "y": 420,
+        "wires": [
+            [
+                "df6a9e28ad934eca",
+                "e4275733da9241f3"
+            ]
+        ]
+    },
+    {
+        "id": "e2e7424ba10f7e01",
+        "type": "http in",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "url": "getUsers",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 420,
+        "wires": [
+            [
+                "30d49449f10cf09e"
+            ]
+        ]
+    },
+    {
+        "id": "e4275733da9241f3",
+        "type": "change",
+        "z": "2baa0a651494ed47",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 420,
+        "wires": [
+            [
+                "d50e1bcab73aa15a"
+            ]
+        ]
+    },
+    {
+        "id": "d50e1bcab73aa15a",
+        "type": "http response",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 810,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "ccb7ada6794432fe",
+        "type": "http request",
+        "z": "2baa0a651494ed47",
+        "name": "getUser[id]",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8081/getUser/{{req.params.id}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 250,
+        "y": 580,
+        "wires": [
+            [
+                "d49b52091b4f44fe"
+            ]
+        ]
+    },
+    {
+        "id": "e0e99fe1c89defc8",
+        "type": "debug",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "d49b52091b4f44fe",
+        "type": "json",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 430,
+        "y": 580,
+        "wires": [
+            [
+                "50974a4e958b443b"
+            ]
+        ]
+    },
+    {
+        "id": "79d89037163aaa2e",
+        "type": "http in",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "url": "/getUser/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 660,
+        "wires": [
+            [
+                "ccb7ada6794432fe",
+                "24d3ea62d92b15d0"
+            ]
+        ]
+    },
+    {
+        "id": "e6c63396326524cb",
+        "type": "inject",
+        "z": "2baa0a651494ed47",
+        "name": "inject",
+        "props": [
+            {
+                "p": "req.params.id",
+                "v": "3",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "x": 90,
+        "y": 580,
+        "wires": [
+            [
+                "ccb7ada6794432fe"
+            ]
+        ]
+    },
+    {
+        "id": "39e7b53f57624822",
+        "type": "change",
+        "z": "2baa0a651494ed47",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 660,
+        "wires": [
+            [
+                "ac9fe1d1fc553bad"
+            ]
+        ]
+    },
+    {
+        "id": "ac9fe1d1fc553bad",
+        "type": "http response",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 970,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "24d3ea62d92b15d0",
+        "type": "debug",
+        "z": "2baa0a651494ed47",
+        "name": "msg",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 270,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "50974a4e958b443b",
+        "type": "json-schema-validator",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "func": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"statusType\": {\n      \"type\": \"string\"\n    },\n    \"entity\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"id\": {\n          \"type\": \"integer\"\n        },\n        \"dni\": {\n          \"type\": \"string\"\n        },\n        \"nombre\": {\n          \"type\": \"string\"\n        },\n        \"apellido1\": {\n          \"type\": \"string\"\n        },\n        \"apellido2\": {\n          \"type\": \"string\"\n        },\n        \"sexo\": {\n          \"type\": \"boolean\"\n        },\n        \"fechaNacimiento\": {\n          \"type\": \"null\"\n        },\n        \"hospital\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"id\": {\n              \"type\": \"integer\"\n            },\n            \"nombre\": {\n              \"type\": \"string\"\n            },\n            \"fechaSubscripcion\": {\n              \"type\": \"null\"\n            },\n            \"direccion\": {\n              \"type\": \"string\"\n            }\n          },\n          \"required\": [\n            \"id\",\n            \"nombre\",\n            \"fechaSubscripcion\",\n            \"direccion\"\n          ]\n        }\n      },\n      \"required\": [\n        \"id\",\n        \"dni\",\n        \"nombre\",\n        \"apellido1\",\n        \"apellido2\",\n        \"sexo\",\n        \"fechaNacimiento\",\n        \"hospital\"\n      ]\n    },\n    \"entityType\": {\n      \"type\": \"string\"\n    },\n    \"metadata\": {\n      \"type\": \"object\"\n    },\n    \"status\": {\n      \"type\": \"integer\"\n    }\n  },\n  \"required\": [\n    \"statusType\",\n    \"entity\",\n    \"entityType\",\n    \"metadata\",\n    \"status\"\n  ]\n}",
+        "x": 630,
+        "y": 580,
+        "wires": [
+            [
+                "39e7b53f57624822",
+                "e0e99fe1c89defc8"
+            ]
+        ]
+    },
+    {
+        "id": "ab59818e121f6f20",
+        "type": "debug",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "b775e3a0d39e971e",
+        "type": "json",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 730,
+        "y": 820,
+        "wires": [
+            [
+                "ab59818e121f6f20",
+                "cbd7644827882bf4"
+            ]
+        ]
+    },
+    {
+        "id": "6538d268f730690c",
+        "type": "http in",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "url": "updateUser/:id",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 900,
+        "wires": [
+            [
+                "0183a0049e8e7cf6",
+                "f4cbed96b7aa5870"
+            ]
+        ]
+    },
+    {
+        "id": "a6cf8204d3809b93",
+        "type": "inject",
+        "z": "2baa0a651494ed47",
+        "name": "inject",
+        "props": [
+            {
+                "p": "req.params.id",
+                "v": "5",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payloadType": "str",
+        "x": 70,
+        "y": 820,
+        "wires": [
+            [
+                "f0771b8ed8dac6b2"
+            ]
+        ]
+    },
+    {
+        "id": "f0771b8ed8dac6b2",
+        "type": "function",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "func": "\nmsg.headers = {}\nmsg.headers['Content-type'] = 'application/json; charset=UTF-8';\nmsg.payload= JSON.stringify({\"id\":5,\"nombre\":\"hey\",\"apellido1\":\"amonarriz\",\"apellido2\":\"pagola\",\"sexo\":true,\"fechaNacimiento\":\"1996-10-17\",\"diagnosticos\":[]})\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 820,
+        "wires": [
+            [
+                "f4cbed96b7aa5870"
+            ]
+        ]
+    },
+    {
+        "id": "f7a2608bd83f7f99",
+        "type": "http request",
+        "z": "2baa0a651494ed47",
+        "name": "deletePaciente[id]",
+        "method": "DELETE",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8081/deletePaciente/{{req.params.id}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 310,
+        "y": 1040,
+        "wires": [
+            [
+                "1aa3489c570e4f44"
+            ]
+        ]
+    },
+    {
+        "id": "9d32a6e559a80808",
+        "type": "debug",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "1aa3489c570e4f44",
+        "type": "json",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 510,
+        "y": 1040,
+        "wires": [
+            [
+                "9d32a6e559a80808",
+                "75a6c203b4f21668"
+            ]
+        ]
+    },
+    {
+        "id": "46fca74eccd68c1d",
+        "type": "http in",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "url": "/deletePaciente/:id",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 1120,
+        "wires": [
+            [
+                "f7a2608bd83f7f99"
+            ]
+        ]
+    },
+    {
+        "id": "6146188c602e38a7",
+        "type": "inject",
+        "z": "2baa0a651494ed47",
+        "name": "inject",
+        "props": [
+            {
+                "p": "req.params.id",
+                "v": "5",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "x": 110,
+        "y": 1040,
+        "wires": [
+            [
+                "f7a2608bd83f7f99"
+            ]
+        ]
+    },
+    {
+        "id": "cbd7644827882bf4",
+        "type": "change",
+        "z": "2baa0a651494ed47",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 920,
+        "wires": [
+            [
+                "40cdc5a2305892bc"
+            ]
+        ]
+    },
+    {
+        "id": "40cdc5a2305892bc",
+        "type": "http response",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "75a6c203b4f21668",
+        "type": "change",
+        "z": "2baa0a651494ed47",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "application/json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 1100,
+        "wires": [
+            [
+                "35e28b66618e86fc"
+            ]
+        ]
+    },
+    {
+        "id": "35e28b66618e86fc",
+        "type": "http response",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 850,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "0183a0049e8e7cf6",
+        "type": "debug",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "6c2be536f57a2d64",
+        "type": "debug",
+        "z": "2baa0a651494ed47",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "f4cbed96b7aa5870",
+        "type": "http request",
+        "z": "2baa0a651494ed47",
+        "name": "updateUserCuenta[id]",
+        "method": "PUT",
+        "ret": "txt",
+        "paytoqs": "body",
+        "url": "http://localhost:8081/updateUserCuenta/{{req.params.id}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 520,
+        "y": 820,
+        "wires": [
+            [
+                "b775e3a0d39e971e",
+                "6c2be536f57a2d64"
+            ]
+        ]
+    }
+]

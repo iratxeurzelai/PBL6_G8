@@ -20,6 +20,7 @@ dfMixta =crearDatasetMixta(df[['title', 'calories', 'protein', 'fat', 'sodium']]
 @app.post("/getDieta/")
 def generarDieta(usuario: Usuario):
     solucion = calcularDietaSemana(recetas, usuario)
+    solucion['usuario'] = usuario.id
     return solucion
 
 @app.get("/shuffle/")

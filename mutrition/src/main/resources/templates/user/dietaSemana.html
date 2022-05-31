@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/styleSettings.css">
+    <div th:remove="tag" th:replace="fragments/head :: head"></div>
+  </head>
+  <body>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+    <div th:replace="fragments/headerUser :: headerUser"></div>
+
+    <div class="hero">
+      <section class="py-5 fuera">
+        <div class="container">
+          <h1 class="mb-5">Ajustes</h1>
+          <div class="bg-white shadow rounded-lg d-block d-sm-flex">
+            <div class="row">
+              <div class="col-sm-2">
+                <img src="images/persona.png" width="100%" height="80%" style="margin-top: 20%; margin-left: 10%;">
+              </div>
+              <div class="col-sm-2">
+              <div th:each="recetas : ${recetaSemana}" class="card card-block">
+                <img class="card-img-top" src="images/L.png" data-holder-rendered="true">
+                <div class="card-block">
+                  <p th:text="${recetas.receta.title}" class="card-text"></p>
+                  <p th:text="${recetas.receta.title}" class="card-text"></p>
+                  <a href="#" class="btn btn-primary botonCambiarReceta">Cambiar</a>
+                </div>
+                </div>
+              </div>
+            </div>     
+          </div>
+        </div>
+      </section>
+    </div>
+  
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>    
