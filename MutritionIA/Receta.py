@@ -1,4 +1,6 @@
 import sys,argparse,csv
+from typing import Dict, List, Optional
+
 class Receta:
     def __init__(self, name, calories, fat, protein, sodium, huevos, frutas, marisco, lacteos, frutos_secos, verduras, legumbres,
     vegetariano, primer_plato, carne):
@@ -45,4 +47,3 @@ def leerRecetas():
                     recetas.append(receta)
         csv_file.close()
         return recetas
-  

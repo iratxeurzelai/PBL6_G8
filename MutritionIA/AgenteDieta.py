@@ -130,20 +130,28 @@ class AlergiasConstraint(Constraint[str, Receta]):
 
 #Funcion main
 def calcularDietaSemana(recetas, usuario: Usuario):
-    alergias=usuario.alergias
     #declarar variables y dominios (Dias y Recetas)
     variables: List[str] = ["LunesP", "LunesS", "MartesP", "MartesS", "MiercolesP", "MiercolesS", "JuevesP", "JuevesS",
      "ViernesP", "ViernesS"]
     domains: Dict[str, List[Receta]] = {}
     for variable in variables:
         domains[variable] = recetas
-    csp: CSP[str, List[Receta]] = CSP(variables, domains)
+    
+    neighbors: List[tuple] = []
+    for i in range (0, len(variables)):
+        for j in range (0, len(variables)):
+            if(j!=i):
+                neighbors.append(tuple((variables[i], variables[j])))
+
+    csp: CSP[str, List[Receta]] = CSP(variables, domains, neighbors)
    
-   #constraints alergias
+    alergias=usuario.alergias
+
+    #constraints alergias
     for dia in variables:
         csp.add_constraint(AlergiasConstraint(dia, alergias))
 
-   #constraints primer plato
+    #constraints primer plato
     i=0
     while i <= len(variables)-2:
         csp.add_constraint(PrimerPlatoConstraint(variables[i]))
@@ -174,6 +182,8 @@ def calcularDietaSemana(recetas, usuario: Usuario):
 
     #calcular una solucion
     solution: Optional[Dict[str, Receta]] = csp.backtracking_search()
+    #solution: Optional[Dict[str, Receta]] = csp.backtracking_search_with_arc_consistence()
+    
     if solution is None:
         print("No solution found!")
     else:
