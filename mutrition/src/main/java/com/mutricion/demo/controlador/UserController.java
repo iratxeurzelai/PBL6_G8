@@ -70,7 +70,7 @@ public class UserController {
         userJson.put("roles","2");
        
         String query = userJson.toString();
-        String uri = "http://localhost:1880/addUser/";
+        String uri = "http://0.0.0.0:1880/addUser/";
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -105,7 +105,7 @@ public class UserController {
         ModelAndView modelAndView = new ModelAndView();
         //get alergias
       
-        String uri = "http://localhost:1880/getAlergias";
+        String uri = "http://0.0.0.0:1880/getAlergias";
 
         String body = restTemplate.getForObject(uri, String.class);
         JSONObject bodyObject = new JSONObject(body);
@@ -119,7 +119,7 @@ public class UserController {
            }
         }
 
-       uri = "http://localhost:1880/getRoles";
+       uri = "http://0.0.0.0:1880/getRoles";
 
        body = restTemplate.getForObject(uri, String.class);
        bodyObject = new JSONObject(body);
@@ -165,7 +165,7 @@ public class UserController {
         int id = user.getId();
        
         String query = userJson.toString();
-        String uri = "http://localhost:1880/updateUser/" + id;
+        String uri = "http://0.0.0.0:1880/updateUser/" + id;
         
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);

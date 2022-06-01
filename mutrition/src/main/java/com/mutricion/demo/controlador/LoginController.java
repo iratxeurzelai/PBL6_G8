@@ -57,7 +57,7 @@ public class LoginController {
         if(!auth.getName().equals("anonymousUser")){
             User user = userService.findUserByEmail(auth.getName());
             int id = user.getId();
-            String uri = "http://localhost:1880/getRecetaSemana/"+ id;
+            String uri = "http://0.0.0.0:1880/getRecetaSemana/"+ id;
             System.out.println("rest :" +restTemplate);
             
             String body = restTemplate.getForObject(uri, String.class);
