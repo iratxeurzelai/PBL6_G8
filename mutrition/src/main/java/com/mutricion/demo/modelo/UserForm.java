@@ -12,6 +12,7 @@ public class UserForm {
     private float peso;
     private float altura;
     private String rolesStr;
+    private String cuentaCorriente;
     private String alergiasStr;
 
     public float getPeso() {
@@ -85,4 +86,13 @@ public class UserForm {
     public void setAlergiasStr(String alergiasStr) {
         this.alergiasStr = alergiasStr;
     }
+
+    public String getCuentaCorriente() {
+        return cuentaCorriente;
+    }
+
+    public void setCuentaCorriente(String cuentaCorriente) {
+        this.cuentaCorriente = cuentaCorriente;
+    }
+
 }

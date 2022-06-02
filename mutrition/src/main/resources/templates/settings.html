@@ -73,13 +73,6 @@
                         onFocus="if (this.value=='Apellido') this.value='';">
                     </div>
                   </div>
-                  <!--<div class="col-md-6">
-                    <div class="form-group">
-                      <label>Email</label>
-                      <input type="text" name="email" placeholder="Email" class="form-control"
-                        onFocus="if (this.value=='ejemplo@gmail.com') this.value='';">
-                    </div>
-                  </div>-->
                 </div>
 
                 <div>
@@ -136,13 +129,14 @@
                   <div class="col-md-9">
                     <div class="form-group">
                       <label>Numero de cuenta</label>
-                      <input type="text" class="form-control" value="ES00 0000 0000 00 0000000000"
+                      <input type="text" name="cuentaCorriente" class="form-control"
+                        value="ES00 0000 0000 00 0000000000"
                         onFocus="if (this.value=='ES00 0000 0000 00 0000000000') this.value='';">
                     </div>
                   </div>
                 </div>
                 <div>
-                  <button class="btn btn-primary">Aceptar</button>
+                  <button type="Submit" class="btn btn-primary">Aceptar</button>
                   <button class="btn btn-light">Cancelar</button>
                 </div>
               </form>
@@ -150,46 +144,47 @@
 
 
             <div class="tab-pane fade" id="application" role="tabpanel" aria-labelledby="application-tab">
-              <form autocomplete="off" action="#" th:action="@{/updateUserDatos}" th:object="${user}" method="post"
+              <form autocomplete="off" action="#" th:action="@{/updateUserDatosPer}" th:object="${user}" method="post"
                 role="form">
                 <h3 class="mb-4">Datos personales</h3>
                 <div class="row">
                   <div class="col-md-6">
                     <label>Sexo: </label><br>
                     <div class="form-check form-check-inline">
-                      <label><input class="form-check-input" type="radio" id="mujerRadio" name="inlineRadioOptions"
+                      <label><input class="form-check-input" type="radio" id="mujerRadio" name="sexo"
                           checked>Mujer</label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <label><input class="form-check-input" type="radio" id="hombreRadio"
-                          name="inlineRadioOptions">Hombre</label>
-                    </div>
-                    <div class="form-group">
-                      <label>Edad</label>
-                      <input type="text" class="form-control" value="" size="4">
+                      <label><input class="form-check-input" type="radio" id="hombreRadio" name="sexo">Hombre</label>
                     </div>
                     <div class="form-group">
                       <label>Peso</label>
-                      <input type="text" class="form-control" value="kg" size="4"
+                      <input type="text" name="peso" class="form-control" value="kg" size="4"
                         onFocus="if (this.value=='kg') this.value='';">
                     </div>
                     <div class="form-group">
                       <label>Altura</label>
-                      <input type="text" class="form-control" value="cm" size="4"
+                      <input type="text" name="altura" class="form-control" value="cm" size="4"
                         onFocus="if (this.value=='cm') this.value='';">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label class="letrak">Alergias</label><br>
-                      <label><input type="checkbox" id="cbox1" value="alergia1"> Alergia 1</label><br>
+                      <th:block th:each="a : ${alergias}">
+                        <input type="checkbox" field="*{alergiasStr}" name="alergiasStr" th:value="${a.id}" th:text="${a.descripcion}">
+                        <br />
+                      </th:block>
+
+                      <!--<input type="checkbox" th:each="a : ${alergias}" field="*{alergiasStr}" name="alergiasStr" th:value="${a.id}" th:text="${a.descripcion}">-->
+                      <!--<label><input type="checkbox" id="cbox1" value="alergia1"> Alergia 1</label><br>
                       <label><input type="checkbox" id="cbox2" value="alergia2"> Alergia 2</label><br>
                       <label><input type="checkbox" id="cbox3" value="alergia3"> Alergia 3</label><br>
                       <label><input type="checkbox" id="cbox4" value="alergia4"> Alergia 4</label><br>
                       <label><input type="checkbox" id="cbox5" value="alergia5"> Alergia 5</label><br>
                       <label><input type="checkbox" id="cbox6" value="alergia6"> Alergia 6</label><br>
                       <label><input type="checkbox" id="cbox7" value="alergia7"> Alergia 7</label><br>
-                      <label><input type="checkbox" id="cbox8" value="alergia8"> Alergia 8</label><br>
+                      <label><input type="checkbox" id="cbox8" value="alergia8"> Alergia 8</label><br>-->
                     </div>
                   </div>
                 </div>
@@ -199,7 +194,7 @@
                 </div>
               </form>
             </div>
-            
+
           </div>
 
         </div>

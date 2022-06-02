@@ -29,15 +29,55 @@
                 <img src="images/persona.png" width="100%" height="80%" style="margin-top: 20%; margin-left: 10%;">
               </div>
               <div class="col-sm-2">
-              <div th:each="recetas : ${recetaSemana}" class="card card-block">
-                <img class="card-img-top" src="images/L.png" data-holder-rendered="true">
-                <div class="card-block">
-                  <p th:text="${recetas.receta.title}" class="card-text"></p>
-                  <p th:text="${recetas.receta.title}" class="card-text"></p>
-                  <a href="#" class="btn btn-primary botonCambiarReceta">Cambiar</a>
+                <div class="card card-block">
+                  <img class="card-img-top" src="images/L.png" data-holder-rendered="true">
+                  <div class="card-block">
+                    <p class="card-text"><span th:text="${receta1}"></span></p>
+                    <p class="card-text"><span th:text="${receta2}"></span></p>
+                    <a href="#" class="btn btn-primary botonCambiarReceta">Cambiar</a>
+                  </div>
+                  </div>
                 </div>
+                <div class="col-sm-2">
+                  <div class="card card-block">
+                    <img class="card-img-top" src="images/M.png" data-holder-rendered="true">
+                    <div class="card-block">
+                      <p class="card-text"><span th:text="${receta3}"></span></p>
+                      <p class="card-text"><span th:text="${receta4}"></span></p>
+                      <a href="#" class="btn btn-primary botonCambiarReceta">Cambiar</a>
+                    </div>
+                  </div>
                 </div>
-              </div>
+                <div class="col-sm-2">
+                  <div class="card card-block">
+                    <img class="card-img-top" src="images/M.png" data-holder-rendered="true">
+                    <div class="card-block">
+                      <p class="card-text"><span th:text="${receta5}"></span></p>
+                      <p class="card-text"><span th:text="${receta6}"></span></p>
+                      <a href="#" class="btn btn-primary botonCambiarReceta">Cambiar</a>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="card card-block">
+                      <img class="card-img-top" src="images/J.png" data-holder-rendered="true">
+                      <div class="card-block">
+                        <p class="card-text"><span th:text="${receta7}"></span></p>
+                        <p class="card-text"><span th:text="${receta8}"></span></p>
+                        <a href="#" class="btn btn-primary botonCambiarReceta">Cambiar</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="card card-block">
+                      <img class="card-img-top" src="images/V.png" data-holder-rendered="true">
+                      <div class="card-block">
+                        <p class="card-text"><span th:text="${receta9}"></span></p>
+                        <p class="card-text"><span th:text="${receta10}"></span></p>
+                        <a href="#" class="btn btn-primary botonCambiarReceta">Cambiar</a>
+                      </div>
+                    </div>
+                  </div>
             </div>     
           </div>
         </div>

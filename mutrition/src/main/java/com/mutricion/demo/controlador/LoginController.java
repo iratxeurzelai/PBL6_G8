@@ -6,7 +6,7 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.mutricion.demo.modelo.RecetaSemana;
 import com.mutricion.demo.modelo.User;
-import com.mutricion.demo.servicio.RecetaService;
+
 import com.mutricion.demo.servicio.UserService;
 
 import org.json.JSONArray;
@@ -38,14 +38,6 @@ public class LoginController {
             gson=new Gson();
     }
 
-   /* @GetMapping(value={"/", "/login"})
-    public ModelAndView logiin(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("login");
-        
-        return modelAndView;
-    }*/
-
     @GetMapping(value = { "/", "/login" })
     public ModelAndView login() {
     
@@ -57,7 +49,7 @@ public class LoginController {
         if(!auth.getName().equals("anonymousUser")){
             User user = userService.findUserByEmail(auth.getName());
             int id = user.getId();
-            String uri = "http://0.0.0.0:1880/getRecetaSemana/"+ id;
+            String uri = "http://localhost:1880/getRecetaSemana/"+ id;
             System.out.println("rest :" +restTemplate);
             
             String body = restTemplate.getForObject(uri, String.class);
@@ -80,14 +72,6 @@ public class LoginController {
         }
         return modelAndView;
     }
-
-    /*@GetMapping(value = {"/back"})
-    public ModelAndView back() {
-    
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("login");
-        return modelAndView;
-    }*/
 
     @GetMapping(value = "/home")
     @ResponseBody

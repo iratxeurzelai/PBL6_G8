@@ -14,7 +14,7 @@ import java.util.Objects;
 @Setter
 @NoArgsConstructor
 @Entity
-public class RecetaSemana implements Serializable {
+public class RecetaSemana implements Serializable{  
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long recetasemanaid;
@@ -35,16 +35,16 @@ public class RecetaSemana implements Serializable {
         this.receta = receta;
     }
 
+
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (!(o instanceof RecetaSemana))
-            return false;
+        if (this == o) return true;
+        if (!(o instanceof RecetaSemana)) return false;
         RecetaSemana that = (RecetaSemana) o;
         return Objects.equals(receta.getId(), that.receta.getId()) &&
                 Objects.equals(user.getId(), that.user.getId()) &&
                 Objects.equals(fecha, that.fecha);
+
     }
 
     @Override

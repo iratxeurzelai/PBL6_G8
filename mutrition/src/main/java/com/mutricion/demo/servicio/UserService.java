@@ -11,6 +11,8 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
+import com.mutricion.demo.configuracion.MessageConfig;
+import com.mutricion.demo.modelo.ChangePasswordForm;
 import com.mutricion.demo.modelo.Role;
 import com.mutricion.demo.modelo.User;
 import com.mutricion.demo.repositorio.RoleRepository;
@@ -24,6 +26,9 @@ public class UserService {
     private UserRepository userRepository;
     private RoleRepository roleRepository;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    @Autowired
+    private MessageConfig messageConfig;
 
     @Autowired
     public UserService(UserRepository userRepository,RoleRepository roleRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
@@ -51,6 +56,20 @@ public class UserService {
         user.setRoles(new HashSet<Role>(Arrays.asList(userRole)));
         System.out.println(user);
         return userRepository.save(user);
+    }
+
+    public void cambiarContraseña(ChangePasswordForm form) throws Exception {
+        User user = findUserById(form.getId());
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
+        if (!passwordEncoder.matches(form.getActPassword(), user.getPassword())) {
+            throw new Exception(messageConfig.getMessage("error.password.invalid"));
+        }
+        if (passwordEncoder.matches(form.getNewPassword(), user.getPassword())) {
+            throw new Exception(messageConfig.getMessage("error.password.same"));
+        }
+        user.setPassword(form.getNewPassword());
+        saveUser(user);
     }
 
     public static String QR_PREFIX = "https://chart.googleapis.com/chart?chs=200x200&chld=M%%7C0&cht=qr&chl=";

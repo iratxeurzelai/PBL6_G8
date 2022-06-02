@@ -8,23 +8,27 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 
 import org.springframework.http.MediaType;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 import com.google.gson.Gson;
-import com.mutricion.demo.configuracion.MessageConfig;
+
 import com.mutricion.demo.modelo.Alergia;
 import com.mutricion.demo.modelo.Role;
 import com.mutricion.demo.modelo.User;
 import com.mutricion.demo.modelo.UserForm;
-
+import com.mutricion.demo.servicio.AlergiaService;
+import com.mutricion.demo.servicio.RoleService;
 import com.mutricion.demo.servicio.UserService;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,18 +40,22 @@ import org.springframework.web.servlet.ModelAndView;
 public class UserController {
 
     private UserService userService;
-    private MessageConfig messageConfig;
+    //private RoleService roleService;
+    
     private RestTemplate restTemplate;
     Gson gson;
 
-   /* @Autowired
-    private AlergiaService alergiaService;*/
+    @Autowired
+    private RoleService roleService;
+
+    @Autowired
+    private AlergiaService alergiaService;
     
     public UserController(UserService userService,
-                MessageConfig messageConfig, RestTemplate restTemplate){
+                RestTemplate restTemplate){
             this.userService=userService;
             this.restTemplate=restTemplate;
-            this.messageConfig=messageConfig;
+           
             gson=new Gson();
     }
 
@@ -60,17 +68,17 @@ public class UserController {
         JSONObject userJson=new JSONObject();
         userJson.put("password",  passwordEncoder.encode(userParser.getPassword()));//encryptar
         userJson.put("name", userParser.getName());
-        System.out.println("el lastname es " + userParser.getLastname());
         userJson.put("lastname", userParser.getLastname());
         userJson.put("email", userParser.getEmail());
         userJson.put("sexo", userParser.getSexo());
         userJson.put("peso", userParser.getPeso());
         userJson.put("altura", userParser.getAltura());
         userJson.put("alergias", userParser.getAlergiasStr());
+        userJson.put("cuentaCorriente", "0");
         userJson.put("roles","2");
        
         String query = userJson.toString();
-        String uri = "http://0.0.0.0:1880/addUser/";
+        String uri = "http://localhost:1880/addUser/";
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -85,10 +93,8 @@ public class UserController {
             modelAndView.addObject("successMessage","Usuario registrado correctamente");
             modelAndView.addObject("user", new UserForm());
 
-            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-            //User user = userService.findUserByEmail(auth.getName());
             User user = userService.findUserByEmail(userParser.getEmail());
-            //userService.updateUser2FA(true, user);
+            
             modelAndView.addObject("qr", userService.generateQRUrl(user));
             modelAndView.setViewName("qr");
 
@@ -105,7 +111,7 @@ public class UserController {
         ModelAndView modelAndView = new ModelAndView();
         //get alergias
       
-        String uri = "http://0.0.0.0:1880/getAlergias";
+        String uri = "http://localhost:1880/getAlergias";
 
         String body = restTemplate.getForObject(uri, String.class);
         JSONObject bodyObject = new JSONObject(body);
@@ -119,7 +125,7 @@ public class UserController {
            }
         }
 
-       uri = "http://0.0.0.0:1880/getRoles";
+       uri = "http://localhost:1880/getRoles";
 
        body = restTemplate.getForObject(uri, String.class);
        bodyObject = new JSONObject(body);
@@ -145,6 +151,24 @@ public class UserController {
     @GetMapping(value="/settings")
     public ModelAndView configuracion(){
         ModelAndView modelAndView = new ModelAndView();
+       
+        String url = "http://localhost:1880/getAlergias";
+
+        String body = restTemplate.getForObject(url, String.class);
+        JSONObject bodyObject = new JSONObject(body);
+       
+        JSONArray lista = null;
+        List<Alergia> alergias=new ArrayList<>();
+
+        if(bodyObject.getString("statusType").equals("OK")){
+           lista = bodyObject.getJSONArray("entity");
+           for(int i = 0; i < lista.length(); i++) {
+               alergias.add((gson.fromJson(lista.getJSONObject(i).toString(), Alergia.class)));
+           }
+        }
+       
+        modelAndView.addObject("alergias", alergias);
+       
         modelAndView.setViewName("settings");
         return modelAndView;
     }
@@ -165,7 +189,7 @@ public class UserController {
         int id = user.getId();
        
         String query = userJson.toString();
-        String uri = "http://0.0.0.0:1880/updateUser/" + id;
+        String uri = "http://localhost:1880/updateUserCuenta/" + id;
         
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -180,5 +204,81 @@ public class UserController {
         return modelAndView;
     }
 
+    @PostMapping(value = "/updateUserVip")
+    public ModelAndView UpdateUserToVip(UserForm userParser, BindingResult bindingResult) throws UnsupportedEncodingException{
+       
+        ModelAndView modelAndView = new ModelAndView();
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user = userService.findUserByEmail(auth.getName());
 
+        JSONObject userJson=new JSONObject();
+       
+        Set<Role> roles = user.getRoles();
+        Role role = roleService.buscarRoleId(1);
+        roles.add(role);
+       
+        userJson.put("roles",roles);
+        userJson.put("cuentaCorriente", userParser.getCuentaCorriente());
+
+        int id = user.getId();
+       
+        String query = userJson.toString();
+        String uri = "http://localhost:1880/updateUserVip/" + id;
+        
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        HttpEntity<String> entity = new HttpEntity<String>(query, headers);
+
+        restTemplate.put(uri, entity, id);
+        
+        modelAndView.setViewName("settings");
+
+      
+        return modelAndView;
+    }
+
+    @PostMapping(value = "/updateUserDatosPer")
+    public ModelAndView UpdateUserDatosPersonales(UserForm userParser, BindingResult bindingResult) throws UnsupportedEncodingException{
+       
+        ModelAndView modelAndView = new ModelAndView();
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user = userService.findUserByEmail(auth.getName());
+
+        JSONObject userJson=new JSONObject();
+  
+        userJson.put("sexo", userParser.getSexo());
+        userJson.put("peso", userParser.getPeso());
+        userJson.put("altura", userParser.getAltura());
+    
+
+        String alergiasStr = userParser.getAlergiasStr();
+        Set<Alergia> alergiasList=new HashSet<>();
+        String [] alergiasData=alergiasStr.split("[,]");
+        if(alergiasData.length>1){
+            for(String a:alergiasData){
+                Alergia alergia=alergiaService.buscarAlergiaId(Integer. parseInt(a));
+                alergiasList.add(alergia);
+            }
+        } else alergiasList.add(alergiaService.buscarAlergiaId(Integer.parseInt(alergiasData[0])));
+		
+        userJson.put("alergias", alergiasList);
+        
+        int id = user.getId();
+       
+        String query = userJson.toString();
+        String uri = "http://localhost:1880/updateUserDatosPer/" + id;
+        
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        HttpEntity<String> entity = new HttpEntity<String>(query, headers);
+
+        restTemplate.put(uri, entity, id);
+        
+       modelAndView.setViewName("settings");
+
+      
+        return modelAndView;
+    }
 }

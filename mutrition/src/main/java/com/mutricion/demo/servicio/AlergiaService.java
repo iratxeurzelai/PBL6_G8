@@ -23,20 +23,21 @@ public class AlergiaService {
         this.alergiaRepository = alergiaRepository;
     }
 
-    
-    /** 
-     * @return List<Alergia>
-     */
+
     public List<Alergia> loadAlergias(){
-       System.out.println("holaaaaaa");
+      
         return alergiaRepository.findAll();
     }
 
-    
-    /** 
-     * @param alergia
-     * @return Alergia
-     */
+    public Alergia buscarAlergiaId(int id){
+        return alergiaRepository.findById(id);
+    }
+
+    public Alergia buscarRoleDescripcion(String descripcion){
+        return alergiaRepository.findByDescripcion(descripcion);
+    }
+
+
     public Alergia saveAlergia(Alergia alergia) {
         return alergiaRepository.save(alergia);
     }

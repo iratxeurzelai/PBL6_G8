@@ -42,6 +42,7 @@ public class User implements Serializable {
         this.peso = parser.getPeso();
         this.altura = parser.getAltura();
         this.secret = Base32.random();
+        this.cuentaCorriente = parser.getCuentaCorriente();
     }
 
     @Id
@@ -68,6 +69,8 @@ public class User implements Serializable {
     private float peso;
     @Column(name = "altura")
     private float altura;
+    @Column(name = "cuentaCorriente")
+    private String cuentaCorriente;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "RoleID", joinColumns = @JoinColumn(name = "UserID"), inverseJoinColumns = @JoinColumn(name = "RoleID"))
     private Set<Role> roles;
