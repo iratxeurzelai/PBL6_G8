@@ -33,7 +33,11 @@ def generarDieta(item_id: int, usuario: Usuario):
     alternativas = getAlternativas(usuario, int(item_id), df, recetas)
     return alternativas
 
-@app.get("/recommend/")
-def generarDieta(peso: int, altura: int):
-    recomendacion = getRecomendacionReceta(peso, altura, dfMixta, usuariosDF)
-    return recomendacion
+@app.post("/recommend/")
+def generarDieta(usuario: Usuario):
+    recomendacionNames = getRecomendacionReceta(usuario.peso, usuario.altura, dfMixta, usuariosDF)
+    recomendadas = {} 
+    recomendadas['Sabado'] = getRecetaIdByName(recomendacionNames[0], recetas)
+    recomendadas['Domingo'] = getRecetaIdByName(recomendacionNames[1], recetas)
+    recomendadas['usuario'] = usuario.id
+    return recomendadas

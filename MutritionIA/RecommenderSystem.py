@@ -67,7 +67,16 @@ def getRecomendacionReceta(peso: int, altura: int, dfmixta: pd.DataFrame, usuari
         else:
             actual=0.0
 
-    receta_recomendar=recomendationDF[indexLaMejor:indexLaMejor+1] #un dataframe de 1 elemento
-    recetaNP=receta_recomendar.to_numpy() #conertirlo a numpy
-    recetaList = recetaNP.tolist() #pasarlo a lista compatible con json
-    return recetaList
+    similar_food = list(enumerate(cosine_sim[indexLaMejor]))
+    sorted_similar_food = sorted(similar_food, key=lambda x:x[1], reverse=True)
+    segundaRecetaIndex = sorted_similar_food[1][0]
+
+    receta_recomendar=recomendationDF[indexLaMejor:indexLaMejor+1].to_numpy().tolist()
+
+    segunda=recomendationDF[segundaRecetaIndex:segundaRecetaIndex+1].to_numpy().tolist()
+
+    listaNames = []
+    listaNames.append(receta_recomendar[0][2])
+    listaNames.append(segunda[0][2])
+
+    return listaNames

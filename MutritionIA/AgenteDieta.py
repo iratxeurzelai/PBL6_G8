@@ -186,7 +186,7 @@ def calcularDietaSemana(recetas, usuario: Usuario):
     
     if solution is None:
         print("No solution found!")
-    else:
+    #else:
         #print(solution)
-        print("{" + "\n".join("{!r}: {!r},".format(k, v) for k, v in solution.items()) + "}")
+        #print("{" + "\n".join("{!r}: {!r},".format(k, v) for k, v in solution.items()) + "}")
     return solution

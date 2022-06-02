@@ -47,3 +47,12 @@ def leerRecetas():
                     recetas.append(receta)
         csv_file.close()
         return recetas
+
+def getRecetaIdByName(nombre: str, recetasLista: List[Receta]) -> int:
+    id = 0
+    i = 0
+    for receta in recetasLista:
+        if receta.name == nombre:
+            id=i
+        i+=1
+    return id
