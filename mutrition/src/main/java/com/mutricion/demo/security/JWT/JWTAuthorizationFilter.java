@@ -46,8 +46,11 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
 
             String header=null;
             Cookie [] cookies=req.getCookies();
+            System.err.println("ANTES DEL IF DE LOS COOKIES");
             if(cookies!=null){
+                System.err.println("DENTRO   DEL IF DE LOS COOKIES");
                 for(Cookie cookie:cookies){
+                    System.err.println("ANTES DEL FOR DEL IF DE LOS COOKIES");
                     if(cookie.getName().equals("JWT")){
                         header="Bearer "+cookie.getValue();
                         System.out.println("Obtiene cookie con value: "+header);
@@ -71,11 +74,7 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
             
             UsernamePasswordAuthenticationToken authentication = getAuthentication(req, header);
     
-            SecurityContext securityContext = SecurityContextHolder.getContext();
-            securityContext.setAuthentication(authentication);
-
-            HttpSession session = req.getSession(true);
-            session.setAttribute("SPRING_SECURITY_CONTEXT", securityContext);
+            SecurityContextHolder.getContext().setAuthentication(authentication);
 
         chain.doFilter(req, res);
     }
@@ -113,12 +112,7 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
            
             UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
                     null, null, null);
-            SecurityContext securityContext = SecurityContextHolder.getContext();
-            securityContext.setAuthentication(usernamePasswordAuthenticationToken);
-
-            HttpSession session = req.getSession(true);
-            session.setAttribute("SPRING_SECURITY_CONTEXT", securityContext);
-
+            SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
         }
         return null;
     }
