@@ -33,7 +33,7 @@ public class LoginController {
     Gson gson;
 
     public LoginController(RestTemplate restTemplate){
-           
+        
             this.restTemplate=restTemplate;
             gson=new Gson();
     }
