@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
@@ -23,6 +24,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
@@ -69,7 +71,11 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
             
             UsernamePasswordAuthenticationToken authentication = getAuthentication(req, header);
     
-            SecurityContextHolder.getContext().setAuthentication(authentication);
+            SecurityContext securityContext = SecurityContextHolder.getContext();
+            securityContext.setAuthentication(authentication);
+
+            HttpSession session = req.getSession(true);
+            session.setAttribute("SPRING_SECURITY_CONTEXT", securityContext);
 
         chain.doFilter(req, res);
     }
@@ -107,7 +113,11 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
            
             UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
                     null, null, null);
-            SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+            SecurityContext securityContext = SecurityContextHolder.getContext();
+            securityContext.setAuthentication(usernamePasswordAuthenticationToken);
+
+            HttpSession session = req.getSession(true);
+            session.setAttribute("SPRING_SECURITY_CONTEXT", securityContext);
 
         }
         return null;
