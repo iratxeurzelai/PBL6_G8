@@ -59,10 +59,6 @@ public class User implements Serializable {
 	    @GeneratedValue(strategy = GenerationType.AUTO)
 	    @Column(name = "UserID")
 	    private Integer id;
-	    /*@Column(name = "Username")
-	    @Length(min = 5, message = "*Your user name must have at least 5 characters")
-	    @NotEmpty(message = "*Please provide a username")
-	    private String username;*/
 	    @Column(name = "Password")
 	    @Length(min = 5, message = "*Your password must have at least 5 characters")
 	    @NotEmpty(message = "*Please provide your password")
@@ -80,11 +76,11 @@ public class User implements Serializable {
 	    @Column(name = "sexo")
 	    private Boolean sexo;
 	    @Column(name = "peso")
-	    //@NotEmpty(message = "*Por favor inserte el peso")
 	    private float peso;
 	    @Column(name = "altura")
-	    //@NotEmpty(message = "*Por favor inserte la altura")
 	    private float altura;
+	    @Column(name = "cuentaCorriente")
+	    private float cuentaCorriente;
 	    @ManyToMany(fetch = FetchType.EAGER)
 	    @JoinTable(name = "RoleID", joinColumns = @JoinColumn(name = "UserID"), inverseJoinColumns = @JoinColumn(name = "RoleID"))
 	    private Set<Role> roles;
@@ -166,6 +162,14 @@ public class User implements Serializable {
 
 		public void setSecret(String secret) {
 			this.secret = secret;
+		}
+
+		public float getCuentaCorriente() {
+			return cuentaCorriente;
+		}
+
+		public void setCuentaCorriente(float cuentaCorriente) {
+			this.cuentaCorriente = cuentaCorriente;
 		}
 
 		

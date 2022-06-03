@@ -45,27 +45,30 @@ public class Receiver {
         "ViernesP", "ViernesS"};
         
         int j=0;
+
         String nombre = null;
         User user = userService.findUserById((int) jsonArray.get("usuario"));
 
         Date date = new Date();
         Calendar c = Calendar.getInstance();
+        System.out.println("dia de la semanaaaa " +c);
         c.setTime(date);
 
-        c.add(Calendar.DATE, 2);
+        //c.add(Calendar.DATE, 2);
         for (int i = 0; i < semana.length; i++) {
             JSONObject jsonObject = jsonArray.getJSONObject(semana[i]);
             nombre = jsonObject.getString("name");
             Receta receta = recetaService.findByTitle(nombre);
             
             // convert date to calendar
-            if(j%2==0){
+            
+            if((j%2==0) && (i != 0)){
                 c.setTime(date);
                 c.add(Calendar.DATE, 1);
                 date = c.getTime();
             }
+           
             j++;
-
             RecetaSemana recetaSemana=new RecetaSemana();
 
             recetaSemana.setReceta(receta);

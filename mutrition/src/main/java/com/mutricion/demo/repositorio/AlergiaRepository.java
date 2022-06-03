@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 public interface AlergiaRepository extends JpaRepository<Alergia, Integer> {
 
     List<Alergia> findAll();
-    
+    Alergia findByDescripcion(String role);
+    Alergia findById(int id);
 }
 

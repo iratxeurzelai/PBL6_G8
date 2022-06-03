@@ -19,9 +19,7 @@ public class ResourceRecetaSemana {
 	private RecetaSemanaRepositorio repoReceta;
 	
 	@GetMapping("/getRecetaSemana/{id}")
-	public Response getAllUsers(@PathVariable int id){
-		
-		System.out.println("HA ENTRAUUUU");
+	public Response getRecetaSemana(@PathVariable int id){
 		
 		List <RecetaSemana> lista=repoReceta.findByUserId(id);
 		
@@ -32,6 +30,7 @@ public class ResourceRecetaSemana {
 			res= Response.status(Response.Status.NOT_FOUND).build();
 		}
 		else{        
+			
 			res= Response.ok().entity(listaFiltrada).build();
 		}
 		return res;

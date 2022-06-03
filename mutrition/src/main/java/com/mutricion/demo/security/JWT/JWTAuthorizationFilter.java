@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
@@ -23,6 +24,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
@@ -44,8 +46,11 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
 
             String header=null;
             Cookie [] cookies=req.getCookies();
+            System.err.println("ANTES DEL IF DE LOS COOKIES");
             if(cookies!=null){
+                System.err.println("DENTRO   DEL IF DE LOS COOKIES");
                 for(Cookie cookie:cookies){
+                    System.err.println("ANTES DEL FOR DEL IF DE LOS COOKIES");
                     if(cookie.getName().equals("JWT")){
                         header="Bearer "+cookie.getValue();
                         System.out.println("Obtiene cookie con value: "+header);
@@ -108,7 +113,6 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
             UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
                     null, null, null);
             SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
-
         }
         return null;
     }

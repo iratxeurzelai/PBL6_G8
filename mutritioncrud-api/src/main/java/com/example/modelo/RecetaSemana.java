@@ -14,6 +14,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class RecetaSemana implements Serializable{  
     @Id
@@ -55,4 +56,46 @@ public class RecetaSemana implements Serializable{
     public int hashCode() {
         return Objects.hash(receta.getId(), fecha);
     }
+
+
+	public Long getRecetasemanaid() {
+		return recetasemanaid;
+	}
+
+
+	public void setRecetasemanaid(Long recetasemanaid) {
+		this.recetasemanaid = recetasemanaid;
+	}
+
+
+	public User getUser() {
+		return user;
+	}
+
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
+	public Receta getReceta() {
+		return receta;
+	}
+
+
+	public void setReceta(Receta receta) {
+		this.receta = receta;
+	}
+
+
+	public Date getFecha() {
+		return fecha;
+	}
+
+
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
+    
+    
 }

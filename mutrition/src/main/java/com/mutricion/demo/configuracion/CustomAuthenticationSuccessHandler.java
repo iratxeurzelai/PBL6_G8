@@ -40,7 +40,7 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
         Cookie cookie = new Cookie("JWT", token);
         cookie.setHttpOnly(true);
         cookie.setSecure(true);
-        cookie.setMaxAge((int) SecurityConstants.EXPIRATION_TIME);
+       // cookie.setMaxAge((int) SecurityConstants.EXPIRATION_TIME);
         System.out.println("El cookie es " + cookie);
         System.out.println("-------------------------");
         response.addCookie(cookie);
