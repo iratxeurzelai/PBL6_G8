@@ -5,3 +5,5 @@ class Usuario(BaseModel):
     peso : int
     altura : int
     alergias : List
+    prefiere : List
+    noprefiere : List

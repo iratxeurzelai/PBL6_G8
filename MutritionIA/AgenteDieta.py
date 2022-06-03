@@ -1,4 +1,5 @@
-from csp import Constraint, CSP
+from turtle import pos
+from csp import Constraint, CSP, Preference
 from Receta import *
 from typing import Dict, List, Optional
 from Usuario import *
@@ -128,7 +129,24 @@ class AlergiasConstraint(Constraint[str, Receta]):
             if assignment[self.dia].alergias.__contains__(alergia): return False
         return True
 
-#Funcion main
+
+#Preferencias
+
+class PreferenciasTipoComida(Preference):
+    def __init__(self, positivos: List[str], negativos: List[str]) -> None:
+        self.positivos = positivos
+        self.negativos = negativos
+
+    def funcion_heuristica(self, receta: Receta) -> int:
+        valor = 0
+        for positivo in self.positivos:
+            if receta.contiene.__contains__(positivo):
+                valor+=1
+        for negativo in self.negativos:
+            if receta.contiene.__contains__(negativo):
+                valor-=1
+        return valor
+
 def calcularDietaSemana(recetas, usuario: Usuario):
     #declarar variables y dominios (Dias y Recetas)
     variables: List[str] = ["LunesP", "LunesS", "MartesP", "MartesS", "MiercolesP", "MiercolesS", "JuevesP", "JuevesS",
@@ -179,8 +197,10 @@ def calcularDietaSemana(recetas, usuario: Usuario):
         for j in range (i+1, len(variables)):
             csp.add_constraint(NoRepetirComidaConstraint(variables[i], variables[j]))
 
-
+    #preferencias
+    csp.add_preference(PreferenciasTipoComida(usuario.prefiere, usuario.noprefiere))
     #calcular una solucion
+    csp.optimizacion()
     solution: Optional[Dict[str, Receta]] = csp.backtracking_search()
     #solution: Optional[Dict[str, Receta]] = csp.backtracking_search_with_arc_consistence()
     

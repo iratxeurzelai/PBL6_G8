@@ -30,6 +30,16 @@ class Receta:
         #logica inversa
         if int(vegetariano)==0:self.alergias.append('vegetariano')
 
+        #contiene
+        self.contiene=[]
+        if int(huevos)==1:self.contiene.append('huevos')
+        if int(marisco)==1:self.contiene.append('marisco')
+        if int(frutos_secos)==1:self.contiene.append('frutos secos')
+        if int(lacteos)==1:self.contiene.append('lacteos')
+        if int(carne)==1:self.contiene.append('carne')
+        if int(verduras)==1:self.contiene.append('verduras')
+        if int(legumbres)==1:self.contiene.append('legumbres')
+        if int(frutas)==1:self.contiene.append('frutas')
         
     def __str__(self):
         return self.name + 'calories: ' + self.calories
