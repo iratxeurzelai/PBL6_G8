@@ -20,7 +20,7 @@ public class CustomLogoutSuccessHandler implements LogoutSuccessHandler{
 
         Cookie cookie = new Cookie("JWT", null);
         cookie.setHttpOnly(true);
-        cookie.setSecure(true);
+        //cookie.setSecure(true);
         cookie.setMaxAge(0);
         response.addCookie(cookie);
         response.sendRedirect("/");
