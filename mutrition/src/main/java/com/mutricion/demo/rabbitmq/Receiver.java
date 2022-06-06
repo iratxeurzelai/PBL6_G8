@@ -104,14 +104,6 @@ public class Receiver {
                 rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGER_NAME3, RabbitMQConfig.ROUTING_KEY_RECOMENDAR, objectToSend.toString());
                 finde = false;
             }
-            
-
-            objectToSend.put("itemid", receta.getId());
-            objectToSend.put("dia", date.getDate());
-            objectToSend.put("mes", date.getMonth());
-
-            rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGER_NAME2, RabbitMQConfig.ROUTING_KEY_DAR, objectToSend.toString());
-            
         }
     }
 }

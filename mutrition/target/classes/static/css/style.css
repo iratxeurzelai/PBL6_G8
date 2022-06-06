@@ -3,27 +3,23 @@ body {
   background-color: #fff;
   /*height: 200vh;*/
   position: relative; }
-body:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  -webkit-transition: .3s all ease;
-  -o-transition: .3s all ease;
-  transition: .3s all ease;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1; }
-body.offcanvas-menu:before {
-  opacity: 1;
-  visibility: visible; }
-
-.fuera{
-  margin-top: 0% !important;
-}
+  body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1; }
+  body.offcanvas-menu:before {
+    opacity: 1;
+    visibility: visible; }
 
 p {
   color: #b3b3b3;
@@ -34,7 +30,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
 .card-img-top{
   height: 65%; 
-  width: 65% !important; 
+  width: 65%; 
   display: block; 
   margin: auto;
   margin-top: 5%; 
@@ -43,6 +39,7 @@ h1, h2, h3, h4, h5, h6,
 .botonCambiarReceta{
   color: white !important;
   margin-bottom: 10% !important;
+  margin:10px !important;
 }
 .card-block{
   text-align: center;
@@ -65,6 +62,16 @@ a {
   height: 100vh;
   width: 100%;
   background-color: #04949c;
+}
+
+.imgRecomendacion{
+  border: 7px solid #00929a;
+  border-radius: 20%;
+}
+.imgFinde{
+  display:block;
+  margin:auto;
+  width: 300px;
 }
 
 .site-navbar {

@@ -5,8 +5,6 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -114,6 +112,46 @@ public class RecetaController {
         }
 
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("user/home");
+        return modelAndView;
+    }
+
+    @GetMapping(value="/createAlternativa")
+    public ModelAndView crearAlternativa(HttpServletRequest request) throws IOException {
+        ModelAndView modelAndView = new ModelAndView();
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user = userService.findUserByEmail(auth.getName());
+
+        JSONObject objectToSend=new JSONObject();
+        Set<String> prefiere = new HashSet<>();
+        prefiere.add("carne");
+        Set<String> noprefiere = new HashSet<>();
+        objectToSend.put("id", user.getId());
+        objectToSend.put("peso", user.getPeso());
+        objectToSend.put("altura", user.getAltura());
+        objectToSend.put("alergias", user.getAlergias());
+        objectToSend.put("prefiere", prefiere);
+        objectToSend.put("noprefiere", noprefiere);
+
+        List<RecetaSemana> recetaSemanas = recetaSemanaService.findByUserId(user);
+        for(RecetaSemana r : recetaSemanas){
+            int dia = r.getFecha().getDate();
+            int mes = r.getFecha().getMonth() +1;
+            
+            objectToSend.put("dia", dia);
+            objectToSend.put("mes", mes);
+
+            if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (r.isPrimer_plato())){
+                objectToSend.put("itemid", r.getReceta().getId());
+
+                rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGER_NAME2, RabbitMQConfig.ROUTING_KEY_DAR, objectToSend.toString());
+            }
+            if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (!r.isPrimer_plato())){
+                objectToSend.put("itemid", r.getReceta().getId());
+    
+                rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGER_NAME2, RabbitMQConfig.ROUTING_KEY_DAR, objectToSend.toString());
+            }
+        }
         modelAndView.setViewName("user/home");
         return modelAndView;
     }
