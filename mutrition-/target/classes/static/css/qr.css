@@ -1,0 +1,25 @@
+@keyframes textColorChange {
+    0% {color: #ffffff;}
+    50% {color: #ff0000;}
+    100% {color: #ffffff;}
+}
+
+.pulsate {
+    animation: textColorChange 4s infinite;
+}
+
+img {
+    width: 25%;
+}
+
+#qr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#qr > span {
+    font-size: 24px;
+    font-weight: bold;
+}

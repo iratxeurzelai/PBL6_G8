@@ -2,7 +2,6 @@ package com.example.modelo;
 
 import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,13 +12,12 @@ import java.util.Objects;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class RecetaSemana implements Serializable{  
+public class Alternativa implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long recetasemanaid;
+    private Long alternativaid;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "userid")
@@ -29,28 +27,26 @@ public class RecetaSemana implements Serializable{
     @JoinColumn(name = "recetaid")
     private Receta receta;
 
-    private Date fecha;
-    
-    public boolean primer_plato;
-    
-    public RecetaSemana(){}
-    	
+    public Date fecha;
 
-    public RecetaSemana(User user, Receta receta, Date fecha) {
+    private boolean primero;
+
+    public Alternativa(User user, Receta receta, Date fecha) {
         this.user = user;
         this.fecha = fecha;
         this.receta = receta;
     }
 
- 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof RecetaSemana)) return false;
-        RecetaSemana that = (RecetaSemana) o;
+        if (!(o instanceof Alternativa)) return false;
+        Alternativa that = (Alternativa) o;
         return Objects.equals(receta.getId(), that.receta.getId()) &&
                 Objects.equals(user.getId(), that.user.getId()) &&
                 Objects.equals(fecha, that.fecha);
+
     }
 
     @Override
@@ -58,45 +54,4 @@ public class RecetaSemana implements Serializable{
         return Objects.hash(receta.getId(), fecha);
     }
 
-
-	public Long getRecetasemanaid() {
-		return recetasemanaid;
-	}
-
-
-	public void setRecetasemanaid(Long recetasemanaid) {
-		this.recetasemanaid = recetasemanaid;
-	}
-
-
-	public User getUser() {
-		return user;
-	}
-
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
-
-	public Receta getReceta() {
-		return receta;
-	}
-
-
-	public void setReceta(Receta receta) {
-		this.receta = receta;
-	}
-
-
-	public Date getFecha() {
-		return fecha;
-	}
-
-
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
-	}
-    
-    
 }

@@ -35,11 +35,10 @@ public class ResourceAlergias {
         return res;
 	}
 	
-    @GetMapping("getAlergia/{id}")
-	public Response getRole(@PathVariable int id){
+    @GetMapping("getAlergia/{alergiaStr}")
+	public Response getRole(@PathVariable String alergia){
 		Response res;
-		
-        Alergia newAlergia= repoAlergias.findById(id);
+        Alergia newAlergia= repoAlergias.findByDescripcion(alergia);
         if (Objects.isNull(newAlergia)){
             res=Response.status(Response.Status.NOT_FOUND).build();
         }

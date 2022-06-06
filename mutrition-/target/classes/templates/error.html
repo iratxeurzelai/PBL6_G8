@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/registration.css}"/>
+    <div th:remove="tag" th:replace="fragments/head :: head"></div>
+    
+</head>
+<body>
+<form th:action="@{/login}" method="get">
+    <button class="btn btn-md btn-warning btn-block" type="Submit">Go To Login Page</button>
+</form>
+
+<div class="container">
+        <h1>Error occurred</h1>
+        <p>
+            An error has occurred. Please contact the administrator
+        </p>
+</div>
+
+</body>
+</html>

@@ -77,16 +77,13 @@ public class ResourceUser {
 	@PostMapping("/addUser")
 	public Response createUser(@RequestBody UserParser userParser){
 		User userExists=repoUser.findByEmail(userParser.getEmail());
-		
+		System.out.println("las alergias sonnn " + userParser.getAlergias());
         if(userExists==null){
 			User user=new User(userParser);
 			Set<Role> rolesList=new HashSet<>();
 			String rolesStr=userParser.getRoles();
-			
-			Role role=repoRoles.findById(Integer. parseInt(rolesStr));
-			
+			Role role=repoRoles.findByRole(rolesStr);
 			rolesList.add(role);
-			
 			user.setRoles(rolesList);
 			
 			String alergiasStr = userParser.getAlergias();
@@ -95,6 +92,7 @@ public class ResourceUser {
 			if(alergiasData.length>1){
 				for(String a:alergiasData){
 					Alergia alergia=repoAlergias.findById(Integer. parseInt(a));
+					System.out.println("el id de la alergia esss " + alergia.getId());
 					alergiasList.add(alergia);
 				}
 			} else alergiasList.add(repoAlergias.findById(Integer.parseInt(alergiasData[0])));
@@ -132,19 +130,16 @@ public class ResourceUser {
 		return ret;
 	}
 	
-	@PutMapping("/changePassword/{id}")
+	@PutMapping("/updateUserPassword/{id}")
 	public Response updateUserPassword(@RequestBody User user, @PathVariable int id) {
 		
 		User userUpdated=repoUser.findById(id);
-		//user.setPassword(userUpdated.getPassword());
-		user.setName(userUpdated.getName());
-		user.setLastname(userUpdated.getLastname());
-		user.setCuentaCorriente(userUpdated.getCuentaCorriente());
+		user.setPassword(userUpdated.getPassword());
 		user.setAltura(userUpdated.getAltura());
 		user.setPeso(userUpdated.getPeso());
 		user.setAlergias(userUpdated.getAlergias());
 		user.setSexo(userUpdated.getSexo());
-		user.setRoles(userUpdated.getRoles());
+		//user.setRoles(userUpdated.getRoles());
 		user.setEmail(userUpdated.getEmail());
 		user.setSecret(userUpdated.getSecret());
 		
@@ -173,34 +168,6 @@ public class ResourceUser {
 		user.setAlergias(userUpdated.getAlergias());
 		user.setSexo(userUpdated.getSexo());
 		//user.setRoles(userUpdated.getRoles());
-		user.setEmail(userUpdated.getEmail());
-		user.setSecret(userUpdated.getSecret());
-		
-		Response ret= null;
-		if(Objects.isNull(userUpdated)) {
-			ret=Response.status(Response.Status.NOT_FOUND).build();
-		}else {
-			user.setId(id);
-			repoUser.save(user);
-			ret= Response.ok().build();
-		}
-		
-		
-		return ret;
-	}
-	
-	@PutMapping("/updateUserDatosPer/{id}")
-	public Response updateUserDatosPer(@RequestBody User user, @PathVariable int id) {
-		System.out.println("ha entrado en con id" + repoUser.findById(id).getId());
-		User userUpdated=repoUser.findById(id);
-		user.setName(userUpdated.getName());
-		user.setLastname(userUpdated.getLastname());
-		user.setPassword(userUpdated.getPassword());
-		//user.setAltura(userUpdated.getAltura());
-		//user.setPeso(userUpdated.getPeso());
-		//user.setAlergias(userUpdated.getAlergias());
-		//user.setSexo(userUpdated.getSexo());
-		user.setRoles(userUpdated.getRoles());
 		user.setEmail(userUpdated.getEmail());
 		user.setSecret(userUpdated.getSecret());
 		
