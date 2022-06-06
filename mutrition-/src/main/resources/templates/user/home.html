@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/styleSettings.css">
+    <div th:remove="tag" th:replace="fragments/head :: head"></div>
+
+  </head>
+  <body>
+    
+    <div th:replace="fragments/headerUser :: headerUser"></div>
+
+    <div class="hero">
+      <section class="py-5 fuera">
+        <div class="container">
+          <h1 class="mb-5">Ajustes</h1>
+          <div class="bg-white shadow rounded-lg d-block d-sm-flex">
+            <div class="row">
+
+              <div class="col-sm-6">
+              <div class="card card-block">
+                <img class="card-img-top" src="images/primero.png" data-holder-rendered="true">
+                <div class="card-block">
+                  <p class="card-text"><span
+                    th:text="${primerPlato}"></span></p>
+                  <a href="#" class="btn btn-primary botonCambiarReceta">Cambiar</a>
+                </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card card-block">
+                  <img class="card-img-top" src="images/segundo.png" data-holder-rendered="true">
+                  <div class="card-block">
+                    <p class="card-text"><span
+                      th:text="${segundoPlato}"></span></p>
+                    <a href="#" class="btn btn-primary botonCambiarReceta">Cambiar</a>
+                  </div>
+                </div>
+              </div>
+            </div>     
+          </div>
+        </div>
+      </section>
+    </div>
+  
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

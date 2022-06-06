@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <!--<link rel = "icon" href = "images/logoConFondo.png"  type = "image/x-icon">-->
+  <div th:remove="tag" th:replace="fragments/head :: head"></div>
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styleSettings.css">
+</head>
+
+<body>
+
+  <div th:replace="fragments/headerUser :: headerUser"></div>
+
+  <div class="hero">
+    <section class="py-5 my-5 fuera">
+      <div class="container">
+        <h1 class="mb-5">Ajustes</h1>
+        <div class="bg-white shadow rounded-lg d-block d-sm-flex">
+          <div class="profile-tab-nav border-right">
+            <div class="p-4">
+              <div class="img-circle text-center mb-3">
+                <img src="images/fotoPerfil.png" alt="Image" class="shadow">
+              </div>
+              <h4 class="text-center">USUARIO</h4>
+            </div>
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab"
+                aria-controls="account" aria-selected="true">
+                <i class="fa fa-home text-center mr-1"></i>
+                Cuenta
+              </a>
+              <a class="nav-link" id="password-tab" data-toggle="pill" href="#password" role="tab"
+                aria-controls="password" aria-selected="false">
+                <i class="fa fa-key text-center mr-1"></i>
+                Contraseña
+              </a>
+              <a class="nav-link" id="vip-tab" data-toggle="pill" href="#vip" role="tab" aria-controls="vip"
+                aria-selected="false">
+                <i class="fa fa-star text-center mr-1"></i>
+                Hazte PREMIUM
+              </a>
+              <a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab"
+                aria-controls="application" aria-selected="false">
+                <i class="fa fa-tv text-center mr-1"></i>
+                Datos personales
+              </a>
+            </div>
+          </div>
+
+          <div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
+
+            <div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
+              <form autocomplete="off" action="#" th:action="@{/updateUserCuenta}" th:object="${user}" method="post"
+                role="form">
+                <h3 class="mb-4">Ajustes de cuenta</h3>
+
+                <div class="row">
+                  <div class="col-md-6">
+
+                    <div class="form-group">
+                      <label>Nombre</label>
+                      <input type="text" name="name" placeholder="Name" class="form-control"
+                        onFocus="if (this.value=='Nombre') this.value='';">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Apellido</label>
+                      <input type="text" name="lastname" placeholder="Lastname" class="form-control"
+                        onFocus="if (this.value=='Apellido') this.value='';">
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <button type="Submit" class="btn btn-primary">Actualizar</button>
+                  <button class="btn btn-light">Cancelar</button>
+                </div>
+              </form>
+            </div>
+
+
+            <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+              <form autocomplete="off" action="#" th:action="@{/updateUserContraseña}" th:object="${user}" method="post"
+                role="form">
+                <h3 class="mb-4">Cambio de contraseña</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Contraseña antigua</label>
+                      <input type="password" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Nueva contraseña</label>
+                      <input type="password" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Confirme la nueva contraseña</label>
+                      <input type="password" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button class="btn btn-primary">Actualizar</button>
+                  <button class="btn btn-light">Cancelar</button>
+                </div>
+              </form>
+            </div>
+
+
+            <div class="tab-pane fade" id="vip" role="tabpanel" aria-labelledby="vip-tab">
+              <form autocomplete="off" action="#" th:action="@{/updateUserVip}" th:object="${user}" method="post"
+                role="form">
+                <h3 class="mb-4">PREMIUM</h3>
+                <div class="row">
+                  <div class="col-md-9">
+                    Hazte PREMIUM y disfruta de ...........................
+                  </div>
+                  <br /><br />
+                  <div class="col-md-9">
+                    <div class="form-group">
+                      <label>Numero de cuenta</label>
+                      <input type="text" name="cuentaCorriente" class="form-control"
+                        value="ES00 0000 0000 00 0000000000"
+                        onFocus="if (this.value=='ES00 0000 0000 00 0000000000') this.value='';">
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button type="Submit" class="btn btn-primary">Aceptar</button>
+                  <button class="btn btn-light">Cancelar</button>
+                </div>
+              </form>
+            </div>
+
+
+            <div class="tab-pane fade" id="application" role="tabpanel" aria-labelledby="application-tab">
+              <form autocomplete="off" action="#" th:action="@{/updateUserDatosPer}" th:object="${user}" method="post"
+                role="form">
+                <h3 class="mb-4">Datos personales</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Sexo: </label><br>
+                    <div class="form-check form-check-inline">
+                      <label><input class="form-check-input" type="radio" id="mujerRadio" name="sexo"
+                          checked>Mujer</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label><input class="form-check-input" type="radio" id="hombreRadio" name="sexo">Hombre</label>
+                    </div>
+                    <div class="form-group">
+                      <label>Peso</label>
+                      <input type="text" name="peso" class="form-control" value="kg" size="4"
+                        onFocus="if (this.value=='kg') this.value='';">
+                    </div>
+                    <div class="form-group">
+                      <label>Altura</label>
+                      <input type="text" name="altura" class="form-control" value="cm" size="4"
+                        onFocus="if (this.value=='cm') this.value='';">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="letrak">Alergias</label><br>
+                      <th:block th:each="a : ${alergias}">
+                        <input type="checkbox" field="*{alergiasStr}" name="alergiasStr" th:value="${a.id}" th:text="${a.descripcion}">
+                        <br />
+                      </th:block>
+
+                      <!--<input type="checkbox" th:each="a : ${alergias}" field="*{alergiasStr}" name="alergiasStr" th:value="${a.id}" th:text="${a.descripcion}">-->
+                      <!--<label><input type="checkbox" id="cbox1" value="alergia1"> Alergia 1</label><br>
+                      <label><input type="checkbox" id="cbox2" value="alergia2"> Alergia 2</label><br>
+                      <label><input type="checkbox" id="cbox3" value="alergia3"> Alergia 3</label><br>
+                      <label><input type="checkbox" id="cbox4" value="alergia4"> Alergia 4</label><br>
+                      <label><input type="checkbox" id="cbox5" value="alergia5"> Alergia 5</label><br>
+                      <label><input type="checkbox" id="cbox6" value="alergia6"> Alergia 6</label><br>
+                      <label><input type="checkbox" id="cbox7" value="alergia7"> Alergia 7</label><br>
+                      <label><input type="checkbox" id="cbox8" value="alergia8"> Alergia 8</label><br>-->
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button class="btn btn-primary">Actualizar</button>
+                  <button class="btn btn-light">Cancelar</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+
+
+
+
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
