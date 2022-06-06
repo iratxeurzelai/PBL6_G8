@@ -14,7 +14,6 @@ import java.util.Objects;
 @Getter
 @Setter
 @AllArgsConstructor
-@NoArgsConstructor
 @Entity
 public class RecetaSemana implements Serializable{  
     @Id
