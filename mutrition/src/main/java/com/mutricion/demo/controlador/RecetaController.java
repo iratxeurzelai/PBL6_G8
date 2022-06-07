@@ -109,6 +109,11 @@ public class RecetaController {
             objectToSend.put("noprefiere", noprefiere);
             
             rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGER_NAME, RabbitMQConfig.ROUTING_KEY_PUESTA, objectToSend.toString());
+            try {
+                Thread.sleep(180000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         ModelAndView modelAndView = new ModelAndView();
@@ -145,11 +150,21 @@ public class RecetaController {
                 objectToSend.put("itemid", r.getReceta().getId());
 
                 rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGER_NAME2, RabbitMQConfig.ROUTING_KEY_DAR, objectToSend.toString());
+                try {
+                    Thread.sleep(180000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
             if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (!r.isPrimer_plato())){
                 objectToSend.put("itemid", r.getReceta().getId());
                 
                 rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGER_NAME2, RabbitMQConfig.ROUTING_KEY_DAR, objectToSend.toString());
+                try {
+                    Thread.sleep(180000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
         modelAndView.setViewName("userVip/indexVIP");

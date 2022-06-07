@@ -4,7 +4,7 @@ from Receta import *
 from typing import Dict, List, Optional
 from Usuario import *
 import sys,argparse
-      
+    
 #Implementaciones de la clase abstracta Constraint definida en csp.py
 #Una implementación para cada tipo de constraint que vamos a incluir
 #La funcion satisfied devuelve True si el asgnamiento es valido, y False si no.

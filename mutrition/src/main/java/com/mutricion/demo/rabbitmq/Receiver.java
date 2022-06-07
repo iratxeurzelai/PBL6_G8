@@ -101,6 +101,11 @@ public class Receiver {
             objectToSend.put("noprefiere", noprefiere);
 
             if(finde){
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGER_NAME3, RabbitMQConfig.ROUTING_KEY_RECOMENDAR, objectToSend.toString());
                 finde = false;
             }
