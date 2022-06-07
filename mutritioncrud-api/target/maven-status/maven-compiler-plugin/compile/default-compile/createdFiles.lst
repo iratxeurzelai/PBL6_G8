@@ -1,0 +1,14 @@
+com\example\CrudApplication.class
+com\example\modelo\ChangePasswordForm.class
+com\example\repositorio\AlergiaRepositorio.class
+com\example\modelo\UserParser.class
+com\example\Resource\ResourceRoles.class
+com\example\modelo\Role$RoleBuilder.class
+com\example\modelo\User.class
+com\example\modelo\Alergia.class
+com\example\modelo\Role.class
+com\example\repositorio\UserRepositorio.class
+com\example\modelo\User$UserBuilder.class
+com\example\modelo\Alergia$AlergiaBuilder.class
+com\example\repositorio\RoleRepositorio.class
+com\example\Resource\ResourceUser.class
