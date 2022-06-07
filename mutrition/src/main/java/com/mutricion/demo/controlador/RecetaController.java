@@ -141,24 +141,18 @@ public class RecetaController {
             objectToSend.put("dia", dia);
             objectToSend.put("mes", mes);
 
-            System.err.println("Dia " + dia);
-            System.err.println("LocalDate " + LocalDate.now().getDayOfMonth());
-            System.err.println("Primero " + r.isPrimer_plato());
-
             if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (r.isPrimer_plato())){
                 objectToSend.put("itemid", r.getReceta().getId());
 
-                System.err.println("Hola");
                 rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGER_NAME2, RabbitMQConfig.ROUTING_KEY_DAR, objectToSend.toString());
             }
             if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (!r.isPrimer_plato())){
                 objectToSend.put("itemid", r.getReceta().getId());
                 
-                System.err.println("HOLa2");
                 rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGER_NAME2, RabbitMQConfig.ROUTING_KEY_DAR, objectToSend.toString());
             }
         }
-        modelAndView.setViewName("userVIP/indexVIP");
+        modelAndView.setViewName("userVip/indexVIP");
         return modelAndView;
     }
 
@@ -247,7 +241,7 @@ public class RecetaController {
         modelAndView.addObject("alternativasSegundo", alternativasSegundo);
         modelAndView.addObject("alternativaPrimero", new Receta());
         modelAndView.addObject("alternativaSegundo", new Receta());
-        modelAndView.setViewName("userVIP/indexVIP");
+        modelAndView.setViewName("userVip/indexVIP");
         return modelAndView;
     }
 

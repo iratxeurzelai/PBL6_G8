@@ -31,7 +31,7 @@ def generarDieta():
 @app.post("/alternativa/{item_id}/{dia}/{mes}")
 def generarDieta(item_id: int, usuario: Usuario, dia: int, mes: int):
     alternativas = getAlternativas(usuario, int(item_id), df, recetas)
-    alt_dict = dict() 
+    alt_dict = {}
     for index,value in enumerate(alternativas):
         alt_dict[index] = value
     alt_dict["usuario"] = usuario.id

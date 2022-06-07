@@ -126,7 +126,7 @@ public class LoginController {
                 modelAndView.addObject("alternativasSegundo", alternativasSegundo);
                 modelAndView.addObject("alternativaPrimero", new Receta());
                 modelAndView.addObject("alternativaSegundo", new Receta());
-                modelAndView.setViewName("userVIP/indexVIP");
+                modelAndView.setViewName("userVip/indexVIP");
             }else{
                 session.setAttribute("role", "normal");
                 modelAndView.setViewName("user/home");
