@@ -17,10 +17,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.modelo.Alergia;
+import com.example.modelo.Preferencia;
 import com.example.modelo.Role;
 import com.example.modelo.User;
 import com.example.modelo.UserParser;
 import com.example.repositorio.AlergiaRepositorio;
+import com.example.repositorio.PreferenciasRepositorio;
 import com.example.repositorio.RoleRepositorio;
 import com.example.repositorio.UserRepositorio;
 
@@ -34,6 +36,9 @@ public class ResourceUser {
 	
 	@Autowired
 	private AlergiaRepositorio repoAlergias;
+	
+	@Autowired
+	private PreferenciasRepositorio repoPreferencia;
 
 	@GetMapping("/getUsers")
 	public Response getAllUsers(){
@@ -103,15 +108,43 @@ public class ResourceUser {
 			
 			String alergiasStr = userParser.getAlergias();
 			Set<Alergia> alergiasList=new HashSet<>();
-			String [] alergiasData=alergiasStr.split("[,]");
-			if(alergiasData.length>1){
-				for(String a:alergiasData){
-					Alergia alergia=repoAlergias.findById(Integer. parseInt(a));
-					alergiasList.add(alergia);
-				}
-			} else alergiasList.add(repoAlergias.findById(Integer.parseInt(alergiasData[0])));
+			if(!alergiasStr.equals("")) {
+				String [] alergiasData=alergiasStr.split("[,]");
+				if(alergiasData.length>1){
+					for(String a:alergiasData){
+						Alergia alergia=repoAlergias.findById(Integer. parseInt(a));
+						alergiasList.add(alergia);
+					}
+				} else alergiasList.add(repoAlergias.findById(Integer.parseInt(alergiasData[0])));
+			}
 			
 			user.setAlergias(alergiasList);
+			
+			String prefiereStr = userParser.getAlergias();
+			Set<Preferencia> prefiereList=new HashSet<>();
+			if(!prefiereStr.equals("")) {
+				String [] prefiereData=prefiereStr.split("[,]");
+				if(prefiereData.length>1){
+					for(String a:prefiereData){
+						Preferencia preferencia=repoPreferencia.findById(Integer. parseInt(a));
+						prefiereList.add(preferencia);
+					}
+				} else prefiereList.add(repoPreferencia.findById(Integer.parseInt(prefiereData[0])));
+			}
+			user.setPreferencias(prefiereList);
+			
+			String noPrefiereStr = userParser.getAlergias();
+			Set<Preferencia> noPrefiereList=new HashSet<>();
+			if(!noPrefiereStr.equals("")) {
+				String [] noPrefiereData=noPrefiereStr.split("[,]");
+				if(noPrefiereData.length>1){
+					for(String a:noPrefiereData){
+						Preferencia preferencia=repoPreferencia.findById(Integer. parseInt(a));
+						noPrefiereList.add(preferencia);
+					}
+				} else noPrefiereList.add(repoPreferencia.findById(Integer.parseInt(noPrefiereData[0])));
+			}
+			user.setNoPreferencias(noPrefiereList);
 			
             User userCreado=repoUser.save(user);
 			return Response.ok(userCreado).build();

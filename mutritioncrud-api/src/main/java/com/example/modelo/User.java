@@ -87,6 +87,17 @@ public class User implements Serializable {
 	    @ManyToMany(fetch = FetchType.EAGER)
 	    @JoinTable(name = "AlergiaID", joinColumns = @JoinColumn(name = "UserID"), inverseJoinColumns = @JoinColumn(name = "AlergiaID"))
 	    private Set<Alergia> alergias;
+	    @ManyToMany(fetch = FetchType.EAGER)
+	    @JoinTable(name = "PreferenciaID", joinColumns = @JoinColumn(name = "UserID"), inverseJoinColumns = @JoinColumn(name = "PreferenciaID"))
+	    private Set<Preferencia> prefiere;
+	    @ManyToMany(fetch = FetchType.EAGER)
+	    @JoinTable(
+	        name = "NoPrefiere", 
+	        joinColumns = { @JoinColumn(name = "UserID") }, 
+	        inverseJoinColumns = { @JoinColumn(name = "PrefiereID") }
+	    )
+	    Set<Preferencia> noprefiere;
+	    
 	    @OneToMany(mappedBy = "receta", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	    private Set<RecetaSemana> recetaSemana;
 
@@ -172,6 +183,28 @@ public class User implements Serializable {
 			this.cuentaCorriente = cuentaCorriente;
 		}
 
-		
+		public Set<Preferencia> getPreferencias() {
+			return prefiere;
+		}
 
+		public void setPreferencias(Set<Preferencia> prefiere) {
+			this.prefiere = prefiere;
+		}
+
+		public Set<Preferencia> getNoPreferencias() {
+			return noprefiere;
+		}
+
+		public void setNoPreferencias(Set<Preferencia> noprefiere) {
+			this.noprefiere = noprefiere;
+		}
+
+		public Set<RecetaSemana> getRecetaSemana() {
+			return recetaSemana;
+		}
+
+		public void setRecetaSemana(Set<RecetaSemana> recetaSemana) {
+			this.recetaSemana = recetaSemana;
+		}
+		
 }

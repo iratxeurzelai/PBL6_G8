@@ -14,6 +14,8 @@ public class UserForm {
     private String rolesStr;
     private String cuentaCorriente;
     private String alergiasStr;
+    private String preferenciaStr;
+    private String noPrefiereStr;
 
     public float getPeso() {
         return peso;
@@ -93,6 +95,29 @@ public class UserForm {
 
     public void setCuentaCorriente(String cuentaCorriente) {
         this.cuentaCorriente = cuentaCorriente;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Boolean isSexo() {
+        return this.sexo;
+    }
+
+    public String getPreferenciaStr() {
+        return this.preferenciaStr;
+    }
+
+    public void setPreferenciaStr(String preferenciaStr) {
+        this.preferenciaStr = preferenciaStr;
+    }
+
+    public String getNoPrefiereStr() {
+        return this.noPrefiereStr;
+    }
+
+    public void setNoPrefiereStr(String noPrefiereStr) {
+        this.noPrefiereStr = noPrefiereStr;
     }
 
 }

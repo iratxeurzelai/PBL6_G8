@@ -24,6 +24,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import com.google.gson.Gson;
 
 import com.mutricion.demo.modelo.Alergia;
+import com.mutricion.demo.modelo.Preferencia;
 import com.mutricion.demo.modelo.Role;
 import com.mutricion.demo.modelo.User;
 import com.mutricion.demo.modelo.UserForm;
@@ -55,15 +56,34 @@ public class UserController {
                 RestTemplate restTemplate){
             this.userService=userService;
             this.restTemplate=restTemplate;
-           
+        
             gson=new Gson();
     }
 
     @PostMapping(value = "/registration")
     public ModelAndView createNewUser(UserForm userParser, BindingResult bindingResult) throws UnsupportedEncodingException{
-       
+    
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         ModelAndView modelAndView = new ModelAndView();
+
+        String alergias;
+        if(userParser.getAlergiasStr() == null){
+            alergias = "";
+        }else{
+            alergias = userParser.getAlergiasStr();
+        }
+        String prefiere;
+        if(userParser.getPreferenciaStr() == null){
+            prefiere = "";
+        }else{
+            prefiere = userParser.getPreferenciaStr();
+        }
+        String noprefiere;
+        if(userParser.getNoPrefiereStr() == null){
+            noprefiere = "";
+        }else{
+            noprefiere = userParser.getNoPrefiereStr();
+        }
 
         JSONObject userJson=new JSONObject();
         userJson.put("password",  passwordEncoder.encode(userParser.getPassword()));//encryptar
@@ -73,10 +93,12 @@ public class UserController {
         userJson.put("sexo", userParser.getSexo());
         userJson.put("peso", userParser.getPeso());
         userJson.put("altura", userParser.getAltura());
-        userJson.put("alergias", userParser.getAlergiasStr());
+        userJson.put("alergias", alergias);
+        userJson.put("prefiere", prefiere);
+        userJson.put("noprefiere", noprefiere);
         userJson.put("cuentaCorriente", "0");
         userJson.put("roles","2");
-       
+    
         String query = userJson.toString();
         String uri = "http://localhost:1880/addUser/";
 
@@ -110,7 +132,7 @@ public class UserController {
         
         ModelAndView modelAndView = new ModelAndView();
         //get alergias
-      
+    
         String uri = "http://localhost:1880/getAlergias";
 
         String body = restTemplate.getForObject(uri, String.class);
@@ -118,33 +140,50 @@ public class UserController {
         JSONArray lista = null;
         List<Alergia> alergias=new ArrayList<>();
 
-        if(bodyObject.getString("statusType").equals("OK")){
-           lista = bodyObject.getJSONArray("entity");
-           for(int i = 0; i < lista.length(); i++) {
-               alergias.add((gson.fromJson(lista.getJSONObject(i).toString(), Alergia.class)));
-           }
+    if(bodyObject.getString("statusType").equals("OK")){
+        lista = bodyObject.getJSONArray("entity");
+        for(int i = 0; i < lista.length(); i++) {
+            alergias.add((gson.fromJson(lista.getJSONObject(i).toString(), Alergia.class)));
         }
+    }
 
-       uri = "http://localhost:1880/getRoles";
+    uri = "http://localhost:1880/getRoles";
 
-       body = restTemplate.getForObject(uri, String.class);
-       bodyObject = new JSONObject(body);
-       List<Role> roles=new ArrayList<>();
+    body = restTemplate.getForObject(uri, String.class);
+    bodyObject = new JSONObject(body);
+    List<Role> roles=new ArrayList<>();
 
-       if(bodyObject.getString("statusType").equals("OK")){
-           lista = bodyObject.getJSONArray("entity");
-           for(int i = 0; i < lista.length(); i++) {
-               roles.add((gson.fromJson(lista.getJSONObject(i).toString(), Role.class)));
-           }
-       }
-       
-       UserForm userParser = new UserForm();
-       modelAndView.addObject("user", userParser);
-     
-       modelAndView.addObject("alergias", alergias);
-       modelAndView.addObject("roles", roles);
-       modelAndView.setViewName("registrarse");
-       return modelAndView;
+    if(bodyObject.getString("statusType").equals("OK")){
+        lista = bodyObject.getJSONArray("entity");
+        for(int i = 0; i < lista.length(); i++) {
+            roles.add((gson.fromJson(lista.getJSONObject(i).toString(), Role.class)));
+        }
+    }
+    
+    uri = "http://localhost:1880/getPreferencias";
+
+    body = restTemplate.getForObject(uri, String.class);
+    bodyObject = new JSONObject(body);
+    lista = null;
+    List<Preferencia> preferencias=new ArrayList<>();
+
+    if(bodyObject.getString("statusType").equals("OK")){
+        lista = bodyObject.getJSONArray("entity");
+        for(int i = 0; i < lista.length(); i++) {
+            preferencias.add((gson.fromJson(lista.getJSONObject(i).toString(), Preferencia.class)));
+        }
+    }
+    for(Preferencia p : preferencias){
+        System.err.println("Descripcion " + p.getDescripcion());
+    }
+
+    UserForm userParser = new UserForm();
+    modelAndView.addObject("user", userParser);
+    modelAndView.addObject("preferencias", preferencias);
+    modelAndView.addObject("alergias", alergias);
+    modelAndView.addObject("roles", roles);
+    modelAndView.setViewName("registrarse");
+    return modelAndView;
     }
 
 

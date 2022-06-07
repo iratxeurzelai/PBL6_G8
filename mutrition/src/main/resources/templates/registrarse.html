@@ -96,7 +96,15 @@
                         </div>
 
                         <input type="checkbox" th:each="a : ${alergias}" th:field="*{alergiasStr}" th:value="${a.id}" th:text="${a.descripcion}">
+                        <br>
+                        <p>Prefiere</p>
 
+                        <input type="checkbox" th:each="p : ${preferencias}" th:field="*{preferenciaStr}" th:value="${p.id}" th:text="${p.descripcion}">
+                        <br>
+                        <p>No quiere</p>
+
+                        <input type="checkbox" th:each="p : ${preferencias}" th:field="*{noPrefiereStr}" th:value="${p.id}" th:text="${p.descripcion}">
+                        
                         <div class="container">
                             <ul class="ks-cboxtags">
                             <li></li>

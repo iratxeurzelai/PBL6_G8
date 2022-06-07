@@ -90,15 +90,12 @@ public class Receiver {
             primer_plato = false;
 
             JSONObject objectToSend=new JSONObject();
-            Set<String> prefiere = new HashSet<>();
-            prefiere.add("carne");
-            Set<String> noprefiere = new HashSet<>();
             objectToSend.put("id", user.getId());
             objectToSend.put("peso", user.getPeso());
             objectToSend.put("altura", user.getAltura());
             objectToSend.put("alergias", user.getAlergias());
-            objectToSend.put("prefiere", prefiere);
-            objectToSend.put("noprefiere", noprefiere);
+            objectToSend.put("prefiere", user.getPrefiere());
+            objectToSend.put("noprefiere", user.getNoprefiere());
 
             if(finde){
                 try {

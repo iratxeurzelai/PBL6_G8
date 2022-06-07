@@ -97,16 +97,13 @@ public class RecetaController {
         }
         
         for(User user:users){
-            Set<String> prefiere = new HashSet<>();
-            prefiere.add("carne");
-            Set<String> noprefiere = new HashSet<>();
             JSONObject objectToSend=new JSONObject();
             objectToSend.put("id", user.getId());
             objectToSend.put("peso", user.getPeso());
             objectToSend.put("altura", user.getAltura());
             objectToSend.put("alergias", user.getAlergias());
-            objectToSend.put("prefiere", prefiere);
-            objectToSend.put("noprefiere", noprefiere);
+            objectToSend.put("prefiere", user.getPrefiere());
+            objectToSend.put("noprefiere", user.getNoprefiere());
             
             rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGER_NAME, RabbitMQConfig.ROUTING_KEY_PUESTA, objectToSend.toString());
             try {
@@ -129,15 +126,12 @@ public class RecetaController {
 
         System.err.println("User " +user);
         JSONObject objectToSend=new JSONObject();
-        Set<String> prefiere = new HashSet<>();
-        prefiere.add("carne");
-        Set<String> noprefiere = new HashSet<>();
         objectToSend.put("id", user.getId());
         objectToSend.put("peso", user.getPeso());
         objectToSend.put("altura", user.getAltura());
         objectToSend.put("alergias", user.getAlergias());
-        objectToSend.put("prefiere", prefiere);
-        objectToSend.put("noprefiere", noprefiere);
+        objectToSend.put("prefiere", user.getPrefiere());
+        objectToSend.put("noprefiere", user.getNoprefiere());
 
         List<RecetaSemana> recetaSemanas = recetaSemanaService.findByUserId(user);
         for(RecetaSemana r : recetaSemanas){
@@ -466,15 +460,12 @@ public class RecetaController {
             }
 
             JSONObject objectToSend=new JSONObject();
-            Set<String> prefiere = new HashSet<>();
-            prefiere.add("carne");
-            Set<String> noprefiere = new HashSet<>();
             objectToSend.put("id", user.getId());
             objectToSend.put("peso", user.getPeso());
             objectToSend.put("altura", user.getAltura());
             objectToSend.put("alergias", user.getAlergias());
-            objectToSend.put("prefiere", prefiere);
-            objectToSend.put("noprefiere", noprefiere);
+            objectToSend.put("prefiere", user.getPrefiere());
+            objectToSend.put("noprefiere", user.getNoprefiere());
 
             for(RecetaSemana receta : recetas){
             

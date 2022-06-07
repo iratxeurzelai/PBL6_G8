@@ -18,6 +18,8 @@ public class UserParser {
     private float altura;
     private String roles;
     private String alergias;
+    private String preferenciaStr;
+    private String noPrefiereStr;
 
     public UserParser() {
     }
@@ -112,6 +114,20 @@ public class UserParser {
 	public void setAlergias(String alergias) {
 		this.alergias = alergias;
 	}
+    public String getPreferenciaStr() {
+        return this.preferenciaStr;
+    }
 
+    public void setPreferenciaStr(String preferenciaStr) {
+        this.preferenciaStr = preferenciaStr;
+    }
+
+    public String getNoPrefiereStr() {
+        return this.noPrefiereStr;
+    }
+
+    public void setNoPrefiereStr(String noPrefiereStr) {
+        this.noPrefiereStr = noPrefiereStr;
+    }
     
 }
