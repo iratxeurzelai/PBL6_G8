@@ -53,7 +53,7 @@
                     <p class="card-text"><span th:text="${primerPlato}"></span></p>
                     <form autocomplete="off" th:action="@{/cambiarRecetaPrimero}" th:object="${alternativaPrimero}" method="post" class="form-horizontal" role="form">
                       <select name="select-custom-20" th:field="*{title}" id="select-custom-20" data-native-menu="false" class = "btn btn-primary botonCambiarReceta">
-                        <option th:each="r : ${alternativasPrimero}"th:value="${r.receta}" th:text="${r.receta.title}">
+                        <option th:each="r : ${alternativasPrimero}"th:value="${r.receta.title}" th:text="${r.receta.title}">
                         </option>
                       </select>
                       <br>

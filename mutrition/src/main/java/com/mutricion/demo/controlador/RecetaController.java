@@ -127,6 +127,7 @@ public class RecetaController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findUserByEmail(auth.getName());
 
+        System.err.println("User " +user);
         JSONObject objectToSend=new JSONObject();
         Set<String> prefiere = new HashSet<>();
         prefiere.add("carne");
@@ -141,7 +142,12 @@ public class RecetaController {
         List<RecetaSemana> recetaSemanas = recetaSemanaService.findByUserId(user);
         for(RecetaSemana r : recetaSemanas){
             int dia = r.getFecha().getDate();
-            int mes = r.getFecha().getMonth() +1;
+            int mes = r.getFecha().getMonth()+1;
+
+            System.err.println("Dia " + dia);
+            System.err.println("Mes " + mes);
+            System.err.println("DiaLocal " + LocalDate.now().getDayOfMonth());
+            System.err.println("MesLocal " + LocalDate.now().getMonthValue());
             
             objectToSend.put("dia", dia);
             objectToSend.put("mes", mes);
@@ -167,6 +173,8 @@ public class RecetaController {
                 }
             }
         }
+        modelAndView.addObject("alternativaPrimero", new Receta());
+        modelAndView.addObject("alternativaSegundo", new Receta());
         modelAndView.setViewName("userVip/indexVIP");
         return modelAndView;
     }
@@ -240,12 +248,14 @@ public class RecetaController {
             int dia = a.getFecha().getDate();
             int mes = a.getFecha().getMonth();
 
-            if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue())){
-                if(a.isPrimero()){
-                    alternativasPrimero.add(a);
-                }
-                else{
-                    alternativasSegundo.add(a);
+            if(a.getReceta().getTitle() != primerPlato.getReceta().getTitle() && a.getReceta().getTitle() != segundoPlato.getReceta().getTitle()){
+                if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue())){
+                    if(a.isPrimero()){
+                        alternativasPrimero.add(a);
+                    }
+                    else{
+                        alternativasSegundo.add(a);
+                    }
                 }
             }
         }
@@ -275,7 +285,7 @@ public class RecetaController {
         for(RecetaSemana r : recetaSemana){
             
             int dia = r.getFecha().getDate();
-            int mes = r.getFecha().getMonth() +1;
+            int mes = r.getFecha().getMonth()+1;
             
             if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (r.isPrimer_plato())){
 
@@ -286,7 +296,46 @@ public class RecetaController {
 
         recetaACambiar.setReceta(recetaNueva);
         recetaSemanaService.saveRecetaSemana(recetaACambiar);
-        modelAndView.setViewName("user/home");
+
+        List<RecetaSemana> recetasSemana = recetaSemanaService.findByUserId(user);
+
+        for(RecetaSemana r : recetasSemana){
+            int dia = r.getFecha().getDate();
+            int mes = r.getFecha().getMonth() +1;
+
+            if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (!r.isPrimer_plato())){
+
+            segundoPlato = r;
+            }
+        }
+        
+        List<Alternativa> alternativas = alternativaService.findByUser(user);
+        List<Alternativa> alternativasPrimero = new ArrayList<>();
+        List<Alternativa> alternativasSegundo = new ArrayList<>();
+
+        for(Alternativa a:alternativas){
+            int dia = a.getFecha().getDate();
+            int mes = a.getFecha().getMonth();
+
+            if(a.getReceta().getTitle() != receta.getTitle() && segundoPlato.getReceta().getTitle() != a.getReceta().getTitle()){
+                if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue())){
+                    if(a.isPrimero()){
+                        alternativasPrimero.add(a);
+                    }
+                    else{
+                        alternativasSegundo.add(a);
+                    }
+                }
+            }
+        }
+
+        modelAndView.addObject("primerPlato", receta.getTitle());
+        modelAndView.addObject("segundoPlato", segundoPlato.getReceta().getTitle());
+        modelAndView.addObject("alternativasPrimero", alternativasPrimero);
+        modelAndView.addObject("alternativasSegundo", alternativasSegundo);
+        modelAndView.addObject("alternativaPrimero", new Receta());
+        modelAndView.addObject("alternativaSegundo", new Receta());
+        modelAndView.setViewName("userVip/indexVIP");
         return modelAndView;
     }
 
@@ -299,13 +348,14 @@ public class RecetaController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findUserByEmail(auth.getName());
 
+
         RecetaSemana recetaACambiar = null;
 
         List<RecetaSemana> recetaSemana = recetaSemanaService.findByUserId(user);
         for(RecetaSemana r : recetaSemana){
             
             int dia = r.getFecha().getDate();
-            int mes = r.getFecha().getMonth() +1;
+            int mes = r.getFecha().getMonth()+1;
             
             if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (!r.isPrimer_plato())){
 
@@ -316,7 +366,46 @@ public class RecetaController {
 
         recetaACambiar.setReceta(recetaNueva);
         recetaSemanaService.saveRecetaSemana(recetaACambiar);
-        modelAndView.setViewName("user/home");
+
+        
+        List<RecetaSemana> recetasSemana = recetaSemanaService.findByUserId(user);
+
+        for(RecetaSemana r : recetasSemana){
+            int dia = r.getFecha().getDate();
+            int mes = r.getFecha().getMonth() +1;
+            
+            if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (r.isPrimer_plato())){
+            
+            primerPlato = r;
+            }
+        }
+        
+        List<Alternativa> alternativas = alternativaService.findByUser(user);
+        List<Alternativa> alternativasPrimero = new ArrayList<>();
+        List<Alternativa> alternativasSegundo = new ArrayList<>();
+
+        for(Alternativa a:alternativas){
+            int dia = a.getFecha().getDate();
+            int mes = a.getFecha().getMonth();
+            if(a.getReceta().getTitle() != receta.getTitle() && primerPlato.getReceta().getTitle() != a.getReceta().getTitle()){
+                if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue())){
+                    if(a.isPrimero()){
+                        alternativasPrimero.add(a);
+                    }
+                    else{
+                        alternativasSegundo.add(a);
+                    }
+                }
+            }
+        }
+
+        modelAndView.addObject("primerPlato", primerPlato.getReceta().getTitle());
+        modelAndView.addObject("segundoPlato", receta.getTitle());
+        modelAndView.addObject("alternativasPrimero", alternativasPrimero);
+        modelAndView.addObject("alternativasSegundo", alternativasSegundo);
+        modelAndView.addObject("alternativaPrimero", new Receta());
+        modelAndView.addObject("alternativaSegundo", new Receta());
+        modelAndView.setViewName("userVip/indexVIP");
         return modelAndView;
     }
 
@@ -350,7 +439,7 @@ public class RecetaController {
             }
         }
 
-        modelAndView.setViewName("user/recomendacionFinde");
+        modelAndView.setViewName("userVip/recomendacionFinde");
         return modelAndView;
     }
 
