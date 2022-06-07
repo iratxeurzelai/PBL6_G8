@@ -4,6 +4,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <script src="https://use.fontawesome.com/fe459689b4.js"></script>
     <link rel="stylesheet" href="css/styleSettings.css">
     <div th:remove="tag" th:replace="fragments/head :: head"></div>
 
@@ -25,7 +26,8 @@
                 <div class="card-block">
                   <p class="card-text"><span
                     th:text="${primerPlato}"></span></p>
-                  <a href="#" class="btn btn-primary botonCambiarReceta">Cambiar</a>
+                    <button class="btn" id="green"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></button>
+                    <button class="btn" id="red"><i class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i></button>
                 </div>
                 </div>
               </div>
@@ -35,7 +37,8 @@
                   <div class="card-block">
                     <p class="card-text"><span
                       th:text="${segundoPlato}"></span></p>
-                    <a href="#" class="btn btn-primary botonCambiarReceta">Cambiar</a>
+                      <a class="btn" id="green"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></a>
+                      <a class="btn" id="red"><i class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i></a>
                   </div>
                 </div>
               </div>
@@ -50,5 +53,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/boton.js"></script>
   </body>
 </html>

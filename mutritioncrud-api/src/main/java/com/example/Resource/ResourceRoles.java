@@ -5,7 +5,7 @@ import java.util.Objects;
 
 import javax.ws.rs.core.Response;
 
-
+import com.example.modelo.RecetaSemana;
 import com.example.modelo.Role;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +35,7 @@ public class ResourceRoles {
         return res;
 	}
 	
-    @GetMapping("getRole/{roleStr}")
+    /*@GetMapping("getRole/{roleStr}")
 	public Response getRole(@PathVariable String role){
 		Response res;
         Role newRole= repoRoles.findByRole(role);
@@ -46,5 +46,5 @@ public class ResourceRoles {
             res=Response.ok().entity(newRole).build();  
         }  
         return res;
-	}
+	}*/
 }

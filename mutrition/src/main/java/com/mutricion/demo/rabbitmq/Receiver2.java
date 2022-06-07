@@ -64,6 +64,7 @@ public class Receiver2 {
 
         for(int i=0; i<5;i++){
             JSONObject recetaJSON = jsonArray.getJSONObject(String.valueOf(i));
+            System.err.println("Receta JSON " + recetaJSON + " i: " +i);
             nombre = recetaJSON.getString("name");
             System.err.println("Nombre " + nombre);
             Receta receta = recetaService.findByTitle(nombre);

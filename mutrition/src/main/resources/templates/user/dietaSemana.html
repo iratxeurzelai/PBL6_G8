@@ -17,7 +17,14 @@
       <div class="site-mobile-menu-body"></div>
     </div>
     
-    <div th:replace="fragments/headerUser :: headerUser"></div>
+    <th:block th:switch="${session.role}">
+      <th:block th:case="normal">
+        <div th:replace ="fragments/headerUser :: headerUser"></div>
+      </th:block>
+      <th:block th:case="VIP">
+        <div th:replace ="fragments/headerVIP :: headerVIP"></div>
+      </th:block>
+    </th:block>
 
     <div class="hero">
       <section class="py-5 fuera">

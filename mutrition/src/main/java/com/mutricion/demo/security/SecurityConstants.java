@@ -11,6 +11,6 @@ public class SecurityConstants {
     public static final String SIGN_UP_URL = "/createUser";
     public static final String USERNAME = "email";
     public static final String PASSWORD = "password";
-    public static final String SUCCESS_URL = "/home";
+    public static final String SUCCESS_URL = "/";
     public static final String ROLE_CLAIM = "roles";
 }

@@ -51,7 +51,7 @@ public class Receiver3 {
 
         for(int i=0; i<semana.length;i++){
             if(i == 0){
-                c.add(Calendar.DATE, 6);
+                c.add(Calendar.DATE, 8);
             }else{
                 c.add(Calendar.DATE, 1);
             }

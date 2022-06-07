@@ -60,6 +60,20 @@ public class ResourceUser {
 		}  
 		return res;
 	}
+	@GetMapping("/getRole/{id}")
+	public Response getRole(@PathVariable int id){
+		Response res;
+		User nuevoUser = repoUser.findById(id);
+        Set<Role> roles= nuevoUser.getRoles();
+		if (Objects.isNull(roles)){
+			res=Response.status(Response.Status.NOT_FOUND).build();
+			
+		}
+		else{
+			res=Response.ok().entity(roles).build();  
+		}  
+		return res;
+	}
 	@GetMapping("/login/{correo}")
 	public Response loginUser(@PathVariable String correo) {
 		Response res;
@@ -77,12 +91,13 @@ public class ResourceUser {
 	@PostMapping("/addUser")
 	public Response createUser(@RequestBody UserParser userParser){
 		User userExists=repoUser.findByEmail(userParser.getEmail());
-		System.out.println("las alergias sonnn " + userParser.getAlergias());
+		
         if(userExists==null){
 			User user=new User(userParser);
 			Set<Role> rolesList=new HashSet<>();
 			String rolesStr=userParser.getRoles();
-			Role role=repoRoles.findByRole(rolesStr);
+			Role role=repoRoles.findById(Integer.parseInt(rolesStr));
+			System.err.println("Role "+role);
 			rolesList.add(role);
 			user.setRoles(rolesList);
 			
@@ -92,7 +107,6 @@ public class ResourceUser {
 			if(alergiasData.length>1){
 				for(String a:alergiasData){
 					Alergia alergia=repoAlergias.findById(Integer. parseInt(a));
-					System.out.println("el id de la alergia esss " + alergia.getId());
 					alergiasList.add(alergia);
 				}
 			} else alergiasList.add(repoAlergias.findById(Integer.parseInt(alergiasData[0])));

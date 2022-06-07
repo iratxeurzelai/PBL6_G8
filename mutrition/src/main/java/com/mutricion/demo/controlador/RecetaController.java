@@ -141,18 +141,24 @@ public class RecetaController {
             objectToSend.put("dia", dia);
             objectToSend.put("mes", mes);
 
+            System.err.println("Dia " + dia);
+            System.err.println("LocalDate " + LocalDate.now().getDayOfMonth());
+            System.err.println("Primero " + r.isPrimer_plato());
+
             if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (r.isPrimer_plato())){
                 objectToSend.put("itemid", r.getReceta().getId());
 
+                System.err.println("Hola");
                 rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGER_NAME2, RabbitMQConfig.ROUTING_KEY_DAR, objectToSend.toString());
             }
             if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (!r.isPrimer_plato())){
                 objectToSend.put("itemid", r.getReceta().getId());
-    
+                
+                System.err.println("HOLa2");
                 rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGER_NAME2, RabbitMQConfig.ROUTING_KEY_DAR, objectToSend.toString());
             }
         }
-        modelAndView.setViewName("user/home");
+        modelAndView.setViewName("userVIP/indexVIP");
         return modelAndView;
     }
 
@@ -202,7 +208,7 @@ public class RecetaController {
         User user = userService.findUserByEmail(auth.getName());
 
         List<RecetaSemana> recetasSemana = recetaSemanaService.findByUserId(user);
-        System.err.println("Lista recetas "+recetasSemana);
+
         for(RecetaSemana receta : recetasSemana){
             int dia = receta.getFecha().getDate();
             int mes = receta.getFecha().getMonth() +1;
@@ -220,11 +226,12 @@ public class RecetaController {
         List<Alternativa> alternativas = alternativaService.findByUser(user);
         List<Alternativa> alternativasPrimero = new ArrayList<>();
         List<Alternativa> alternativasSegundo = new ArrayList<>();
+
         for(Alternativa a:alternativas){
             int dia = a.getFecha().getDate();
-            int mes = a.getFecha().getMonth() +1;
+            int mes = a.getFecha().getMonth();
 
-            if(((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()))){
+            if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue())){
                 if(a.isPrimero()){
                     alternativasPrimero.add(a);
                 }
@@ -240,7 +247,7 @@ public class RecetaController {
         modelAndView.addObject("alternativasSegundo", alternativasSegundo);
         modelAndView.addObject("alternativaPrimero", new Receta());
         modelAndView.addObject("alternativaSegundo", new Receta());
-        modelAndView.setViewName("user/indexVIP");
+        modelAndView.setViewName("userVIP/indexVIP");
         return modelAndView;
     }
 
@@ -318,17 +325,14 @@ public class RecetaController {
             DayOfWeek day = date.getDayOfWeek();
     
             int diaDeLaSemana = day.getValue();
-            if(diaDeLaSemana==0){
-                diaDeLaSemana = 7;
-            }
+
             int sabadoSemana = Math.abs((Calendar.SATURDAY-1) - diaDeLaSemana);
             int domingoSemana = Math.abs((Calendar.SUNDAY+6) - diaDeLaSemana);
             int dia = f.getFecha().getDate();
-            System.err.println("Dia " + dia);
             int mes = f.getFecha().getMonth() + 1;
             
             if((dia == LocalDate.now().getDayOfMonth()+sabadoSemana) && (mes == LocalDate.now().getMonthValue())){
-
+                System.err.println("Hola");
                 modelAndView.addObject("sabado", f.getReceta().getTitle());
             }
             if((dia == LocalDate.now().getDayOfMonth()+domingoSemana) && (mes == LocalDate.now().getMonthValue())){
@@ -360,7 +364,7 @@ public class RecetaController {
         if(bodyObject.getString("statusType").equals("OK")){
             lista = bodyObject.getJSONArray("entity");
             for(int i = 0; i < lista.length(); i++) {
-            recetas.add((gson.fromJson(lista.getJSONObject(i).toString(), RecetaSemana.class)));
+                recetas.add((gson.fromJson(lista.getJSONObject(i).toString(), RecetaSemana.class)));
             }
 
             JSONObject objectToSend=new JSONObject();
@@ -373,7 +377,7 @@ public class RecetaController {
             objectToSend.put("alergias", user.getAlergias());
             objectToSend.put("prefiere", prefiere);
             objectToSend.put("noprefiere", noprefiere);
-            
+
             for(RecetaSemana receta : recetas){
             
                 int dia = receta.getFecha().getDate();

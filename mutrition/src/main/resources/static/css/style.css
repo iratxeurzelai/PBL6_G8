@@ -74,6 +74,24 @@ a {
   width: 300px;
 }
 
+button{
+  cursor: pointer;
+  outline: 0;
+  color: #AAA;
+
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.green{
+  color: green;
+}
+
+.red{
+  color: red;
+}
 .site-navbar {
   margin-bottom: 0px;
   z-index: 1999;
