@@ -24,17 +24,17 @@ def generarDieta(usuario: Usuario):
     return solucion
 
 @app.get("/shuffle/")
-def generarDieta():
+def suffleDataset():
     random.shuffle(recetas)
     return "ok"
 
 @app.post("/alternativa/{item_id}")
-def generarDieta(item_id: int, usuario: Usuario):
+def generarAlternativa(item_id: int, usuario: Usuario):
     alternativas = getAlternativas(usuario, int(item_id), df, recetas)
     return alternativas
 
 @app.post("/recommend/")
-def generarDieta(usuario: Usuario):
+def generarRecomendacion(usuario: Usuario):
     recomendacionNames = getRecomendacionReceta(usuario.peso, usuario.altura, dfMixta, usuariosDF)
     recomendadas = {} 
     recomendadas['Sabado'] = getRecetaIdByName(recomendacionNames[0], recetas)
