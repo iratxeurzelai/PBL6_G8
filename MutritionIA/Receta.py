@@ -22,24 +22,24 @@ class Receta:
 
         #guardar las alergias para comprobarlas más facilmente
         self.alergias=[]
-        if int(huevos)==1:self.alergias.append('huevos')
-        if int(marisco)==1:self.alergias.append('marisco')
-        if int(frutos_secos)==1:self.alergias.append('frutos secos')
-        if int(lacteos)==1:self.alergias.append('lacteos')
+        if int(huevos)==1:self.alergias.append('Huevos')
+        if int(marisco)==1:self.alergias.append('Marisco')
+        if int(frutos_secos)==1:self.alergias.append('Frutos secos')
+        if int(lacteos)==1:self.alergias.append('Lacteos')
         
         #logica inversa
-        if int(vegetariano)==0:self.alergias.append('vegetariano')
+        if int(vegetariano)==0:self.alergias.append('Vegetariano')
 
         #contiene
         self.contiene=[]
-        if int(huevos)==1:self.contiene.append('huevos')
-        if int(marisco)==1:self.contiene.append('marisco')
-        if int(frutos_secos)==1:self.contiene.append('frutos secos')
-        if int(lacteos)==1:self.contiene.append('lacteos')
-        if int(carne)==1:self.contiene.append('carne')
-        if int(verduras)==1:self.contiene.append('verduras')
-        if int(legumbres)==1:self.contiene.append('legumbres')
-        if int(frutas)==1:self.contiene.append('frutas')
+        if int(huevos)==1:self.contiene.append('Huevos')
+        if int(marisco)==1:self.contiene.append('Marisco')
+        if int(frutos_secos)==1:self.contiene.append('Frutos secos')
+        if int(lacteos)==1:self.contiene.append('Lacteos')
+        if int(carne)==1:self.contiene.append('Carne')
+        if int(verduras)==1:self.contiene.append('Verduras')
+        if int(legumbres)==1:self.contiene.append('Legumbres')
+        if int(frutas)==1:self.contiene.append('Frutas')
         
     def __str__(self):
         return self.name + 'calories: ' + self.calories

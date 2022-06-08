@@ -3,8 +3,6 @@ package com.mutricion.demo.rabbitmq;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 import com.mutricion.demo.modelo.Receta;
 import com.mutricion.demo.modelo.RecetaSemana;
@@ -94,8 +92,8 @@ public class Receiver {
             objectToSend.put("peso", user.getPeso());
             objectToSend.put("altura", user.getAltura());
             objectToSend.put("alergias", user.getAlergias());
-            objectToSend.put("prefiere", user.getPrefiere());
-            objectToSend.put("noprefiere", user.getNoprefiere());
+            objectToSend.put("prefiere", user.getPreferencias());
+            objectToSend.put("noprefiere", user.getNoPreferencias());
 
             if(finde){
                 try {

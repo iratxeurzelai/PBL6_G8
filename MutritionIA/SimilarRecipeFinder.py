@@ -5,9 +5,9 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from Usuario import Usuario
 
-def revisarAlergias(alergiasUsuario: List[str], alergiasRecetas: List[str]) -> bool:
+def revisarAlergias(alergiasUsuario: List[Dict[str, str]], alergiasRecetas: List[str]) -> bool:
     for alergia in alergiasUsuario:
-            if alergiasRecetas.__contains__(alergia): return True
+            if alergiasRecetas.__contains__(alergia['descripcion']): return True
     return False
 
 def getAlternativas(usuario: Usuario, indexReceta: int, df: pd.DataFrame, recetas: List[Receta]):
@@ -27,7 +27,7 @@ def getAlternativas(usuario: Usuario, indexReceta: int, df: pd.DataFrame, receta
             pass
         elif recetas[indexAlternativa].primer_plato!=recetas[indexReceta].primer_plato: #que coincida el tipo de plato
             pass
-        elif revisarAlergias(recetas[indexAlternativa].alergias, usuario.alergias): #que no tenga alergias a esa receta
+        elif revisarAlergias(usuario.alergias, recetas[indexAlternativa].alergias): #que no tenga alergias a esa receta
             pass
         else:
             listaAlternativas.append(recetas[indexAlternativa])

@@ -153,83 +153,118 @@ public class ResourceUser {
 	}
 	
 	@PutMapping("/updateUserCuenta/{id}")
-	public Response updateUserCuenta(@RequestBody User user, @PathVariable int id) {
-		
-		User userUpdated=repoUser.findById(id);
-		user.setPassword(userUpdated.getPassword());
-		user.setAltura(userUpdated.getAltura());
-		user.setPeso(userUpdated.getPeso());
-		user.setAlergias(userUpdated.getAlergias());
-		user.setSexo(userUpdated.getSexo());
-		user.setRoles(userUpdated.getRoles());
-		user.setEmail(userUpdated.getEmail());
-		user.setSecret(userUpdated.getSecret());
-		
-		Response ret= null;
-		if(Objects.isNull(userUpdated)) {
-			ret=Response.status(Response.Status.NOT_FOUND).build();
-		}else {
-			user.setId(id);
-			repoUser.save(user);
-			ret= Response.ok().build();
-		}
-		
-		return ret;
-	}
+    public Response updateUserCuenta(@RequestBody User user, @PathVariable int id) {
+
+        User userUpdated=repoUser.findById(id);
+        user.setPassword(userUpdated.getPassword());
+        user.setAltura(userUpdated.getAltura());
+        user.setPeso(userUpdated.getPeso());
+        user.setAlergias(userUpdated.getAlergias());
+        user.setPreferencias(userUpdated.getPreferencias());
+        user.setNoPreferencias(userUpdated.getNoPreferencias());
+        user.setSexo(userUpdated.getSexo());
+        user.setRoles(userUpdated.getRoles());
+        user.setEmail(userUpdated.getEmail());
+        user.setSecret(userUpdated.getSecret());
+
+        Response ret= null;
+        if(Objects.isNull(userUpdated)) {
+            ret=Response.status(Response.Status.NOT_FOUND).build();
+        }else {
+            user.setId(id);
+            repoUser.save(user);
+            ret= Response.ok().build();
+        }
+
+        return ret;
+    }
 	
-	@PutMapping("/updateUserPassword/{id}")
-	public Response updateUserPassword(@RequestBody User user, @PathVariable int id) {
-		
-		User userUpdated=repoUser.findById(id);
-		user.setPassword(userUpdated.getPassword());
-		user.setAltura(userUpdated.getAltura());
-		user.setPeso(userUpdated.getPeso());
-		user.setAlergias(userUpdated.getAlergias());
-		user.setSexo(userUpdated.getSexo());
-		//user.setRoles(userUpdated.getRoles());
-		user.setEmail(userUpdated.getEmail());
-		user.setSecret(userUpdated.getSecret());
-		
-		Response ret= null;
-		if(Objects.isNull(userUpdated)) {
-			ret=Response.status(Response.Status.NOT_FOUND).build();
-		}else {
-			user.setId(id);
-			repoUser.save(user);
-			ret= Response.ok().build();
-		}
-		
-		
-		return ret;
-	}
+	@PutMapping("/changePassword/{id}")
+    public Response updateUserPassword(@RequestBody User user, @PathVariable int id) {
+
+        User userUpdated=repoUser.findById(id);
+        //user.setPassword(userUpdated.getPassword());
+        user.setName(userUpdated.getName());
+        user.setLastname(userUpdated.getLastname());
+        user.setCuentaCorriente(userUpdated.getCuentaCorriente());
+        user.setAltura(userUpdated.getAltura());
+        user.setPeso(userUpdated.getPeso());
+        user.setAlergias(userUpdated.getAlergias());
+        user.setPreferencias(userUpdated.getPreferencias());
+        user.setNoPreferencias(userUpdated.getNoPreferencias());
+        user.setSexo(userUpdated.getSexo());
+        user.setRoles(userUpdated.getRoles());
+        user.setEmail(userUpdated.getEmail());
+        user.setSecret(userUpdated.getSecret());
+
+        Response ret= null;
+        if(Objects.isNull(userUpdated)) {
+            ret=Response.status(Response.Status.NOT_FOUND).build();
+        }else {
+            user.setId(id);
+            repoUser.save(user);
+            ret= Response.ok().build();
+        }
+
+
+        return ret;
+    }
 	
 	@PutMapping("/updateUserVip/{id}")
-	public Response updateUserVip(@RequestBody User user, @PathVariable int id) {
-		
-		User userUpdated=repoUser.findById(id);
-		user.setName(userUpdated.getName());
-		user.setLastname(userUpdated.getLastname());
-		user.setPassword(userUpdated.getPassword());
-		user.setAltura(userUpdated.getAltura());
-		user.setPeso(userUpdated.getPeso());
-		user.setAlergias(userUpdated.getAlergias());
-		user.setSexo(userUpdated.getSexo());
-		//user.setRoles(userUpdated.getRoles());
-		user.setEmail(userUpdated.getEmail());
-		user.setSecret(userUpdated.getSecret());
-		
-		Response ret= null;
-		if(Objects.isNull(userUpdated)) {
-			ret=Response.status(Response.Status.NOT_FOUND).build();
-		}else {
-			user.setId(id);
-			repoUser.save(user);
-			ret= Response.ok().build();
-		}
-		
-		
-		return ret;
-	}
+    public Response updateUserVip(@RequestBody User user, @PathVariable int id) {
+
+        User userUpdated=repoUser.findById(id);
+        user.setName(userUpdated.getName());
+        user.setLastname(userUpdated.getLastname());
+        user.setPassword(userUpdated.getPassword());
+        user.setAltura(userUpdated.getAltura());
+        user.setPeso(userUpdated.getPeso());
+        user.setAlergias(userUpdated.getAlergias());
+        user.setPreferencias(userUpdated.getPreferencias());
+        user.setNoPreferencias(userUpdated.getNoPreferencias());
+        user.setSexo(userUpdated.getSexo());
+        //user.setRoles(userUpdated.getRoles());
+        user.setEmail(userUpdated.getEmail());
+        user.setSecret(userUpdated.getSecret());
+
+        Response ret= null;
+        if(Objects.isNull(userUpdated)) {
+            ret=Response.status(Response.Status.NOT_FOUND).build();
+        }else {
+            user.setId(id);
+            repoUser.save(user);
+            ret= Response.ok().build();
+        }
+
+
+        return ret;
+    }
+	
+	@PutMapping("/updateUserDatosPer/{id}")
+    public Response updateUserDatosPer(@RequestBody User user, @PathVariable int id) {
+        System.out.println("ha entrado en con id" + repoUser.findById(id).getId());
+        User userUpdated=repoUser.findById(id);
+        user.setName(userUpdated.getName());
+        user.setLastname(userUpdated.getLastname());
+        user.setPassword(userUpdated.getPassword());
+        user.setRoles(userUpdated.getRoles());
+        user.setEmail(userUpdated.getEmail());
+        user.setSecret(userUpdated.getSecret());
+        user.setPreferencias(userUpdated.getPreferencias());
+        user.setNoPreferencias(userUpdated.getNoPreferencias());
+
+        Response ret= null;
+        if(Objects.isNull(userUpdated)) {
+            ret=Response.status(Response.Status.NOT_FOUND).build();
+        }else {
+            user.setId(id);
+            repoUser.save(user);
+            ret= Response.ok().build();
+        }
+
+
+        return ret;
+    }
 	
 	
 	@DeleteMapping("/deleteUser/{id}")

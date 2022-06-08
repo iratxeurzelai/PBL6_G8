@@ -12,7 +12,14 @@
 
 <body>
 
-  <div th:replace="fragments/headerUser :: headerUser"></div>
+  <th:block th:switch="${session.role}">
+      <th:block th:case="normal">
+        <div th:replace ="fragments/headerUser :: headerUser"></div>
+      </th:block>
+      <th:block th:case="VIP">
+        <div th:replace ="fragments/headerVIP :: headerVIP"></div>
+      </th:block>
+    </th:block>
 
   <div class="hero">
     <section class="py-5 my-5 fuera">
@@ -62,14 +69,14 @@
 
                     <div class="form-group">
                       <label>Nombre</label>
-                      <input type="text" name="name" placeholder="Name" class="form-control"
+                      <input type="text" name="name" placeholder="Nombre" class="form-control"
                         onFocus="if (this.value=='Nombre') this.value='';">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Apellido</label>
-                      <input type="text" name="lastname" placeholder="Lastname" class="form-control"
+                      <input type="text" name="lastname" placeholder="Apellido" class="form-control"
                         onFocus="if (this.value=='Apellido') this.value='';">
                     </div>
                   </div>
@@ -77,21 +84,19 @@
 
                 <div>
                   <button type="Submit" class="btn btn-primary">Actualizar</button>
-                  <button class="btn btn-light">Cancelar</button>
                 </div>
               </form>
             </div>
 
-
             <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
-              <form autocomplete="off" action="#" th:action="@{/updateUserContraseña}" th:object="${user}" method="post"
+              <form autocomplete="off" action="#" th:action="@{/changePassword}" th:object="${passwordForm}" method="post"
                 role="form">
                 <h3 class="mb-4">Cambio de contraseña</h3>
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Contraseña antigua</label>
-                      <input type="password" class="form-control">
+                      <input type="password" name="actPassword" class="form-control">
                     </div>
                   </div>
                 </div>
@@ -99,23 +104,15 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Nueva contraseña</label>
-                      <input type="password" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Confirme la nueva contraseña</label>
-                      <input type="password" class="form-control">
+                      <input type="password" name="newPassword" class="form-control">
                     </div>
                   </div>
                 </div>
                 <div>
                   <button class="btn btn-primary">Actualizar</button>
-                  <button class="btn btn-light">Cancelar</button>
                 </div>
               </form>
             </div>
-
 
             <div class="tab-pane fade" id="vip" role="tabpanel" aria-labelledby="vip-tab">
               <form autocomplete="off" action="#" th:action="@{/updateUserVip}" th:object="${user}" method="post"
@@ -123,7 +120,7 @@
                 <h3 class="mb-4">PREMIUM</h3>
                 <div class="row">
                   <div class="col-md-9">
-                    Hazte PREMIUM y disfruta de ...........................
+                    Hazte PREMIUM y disfruta de los cambios de recetas y las recomendaciones para los fines de semana
                   </div>
                   <br /><br />
                   <div class="col-md-9">
@@ -137,7 +134,7 @@
                 </div>
                 <div>
                   <button type="Submit" class="btn btn-primary">Aceptar</button>
-                  <button class="btn btn-light">Cancelar</button>
+                  <button class="btn btn-light" th:action="@{/}" method="get">Cancelar</button>
                 </div>
               </form>
             </div>
@@ -175,22 +172,11 @@
                         <input type="checkbox" field="*{alergiasStr}" name="alergiasStr" th:value="${a.id}" th:text="${a.descripcion}">
                         <br />
                       </th:block>
-
-                      <!--<input type="checkbox" th:each="a : ${alergias}" field="*{alergiasStr}" name="alergiasStr" th:value="${a.id}" th:text="${a.descripcion}">-->
-                      <!--<label><input type="checkbox" id="cbox1" value="alergia1"> Alergia 1</label><br>
-                      <label><input type="checkbox" id="cbox2" value="alergia2"> Alergia 2</label><br>
-                      <label><input type="checkbox" id="cbox3" value="alergia3"> Alergia 3</label><br>
-                      <label><input type="checkbox" id="cbox4" value="alergia4"> Alergia 4</label><br>
-                      <label><input type="checkbox" id="cbox5" value="alergia5"> Alergia 5</label><br>
-                      <label><input type="checkbox" id="cbox6" value="alergia6"> Alergia 6</label><br>
-                      <label><input type="checkbox" id="cbox7" value="alergia7"> Alergia 7</label><br>
-                      <label><input type="checkbox" id="cbox8" value="alergia8"> Alergia 8</label><br>-->
                     </div>
                   </div>
                 </div>
                 <div>
                   <button class="btn btn-primary">Actualizar</button>
-                  <button class="btn btn-light">Cancelar</button>
                 </div>
               </form>
             </div>

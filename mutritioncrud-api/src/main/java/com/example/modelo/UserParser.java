@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 @XmlRootElement
-@XmlType(propOrder = {"password", "name", "lastname", "email", "sexo", "peso", "altura", "roles", "alergias" })
+@XmlType(propOrder = {"password", "name", "lastname", "email", "sexo", "peso", "altura", "roles", "alergias", "prefiere", "noprefiere" })
 public class UserParser {
 
     //private String username;

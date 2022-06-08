@@ -4,6 +4,7 @@
         <div th:replace="fragments/head :: head"></div>
         <title>QR Code</title>
         <link rel="stylesheet" type="text/css" th:href="@{/css/qr.css}"/>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
     </head>
 
     <body>
@@ -14,8 +15,11 @@
         <div>
             <div id="qr">
                 <img th:src="${qr}"/>
-                <span class="pulsate"> Scan this QR using Google Authenticator</span>
+                <span class="pulsate"> Escanea esta QR usando Google Authenticator</span>
             </div>
+            <form th:action="@{/login}" method="get">
+                <button class="btn login100-form-btn" type="Submit">Vuelve a la pagina del login</button>
+            </form>
         </div>
     </body>
 </html>

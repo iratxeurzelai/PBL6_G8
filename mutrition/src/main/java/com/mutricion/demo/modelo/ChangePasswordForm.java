@@ -7,12 +7,12 @@ import org.hibernate.validator.constraints.Length;
 public class ChangePasswordForm {
     private Integer id;
 
-    @Length(min = 5, message = "*Your password must have at least 5 characters")
-    @NotEmpty(message = "*Please provide your password")
+    @Length(min = 5, message = "Your password must have at least 5 characters")
+    @NotEmpty(message = "Please provide your password")
     private String actPassword;
 
-    @Length(min = 5, message = "*Your password must have at least 5 characters")
-    @NotEmpty(message = "*Please provide your password")
+    @Length(min = 5, message = "Your password must have at least 5 characters")
+    @NotEmpty(message = "Please provide your password")
     private String newPassword;
 
     public ChangePasswordForm(){}
@@ -29,7 +29,7 @@ public class ChangePasswordForm {
     }
     public void setActPassword(String actPassword) {
         this.actPassword=actPassword;
-    }    
+    }
     public String getNewPassword() {
         return this.newPassword;
     }

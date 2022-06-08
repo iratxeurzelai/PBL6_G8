@@ -126,7 +126,7 @@ class AlergiasConstraint(Constraint[str, Receta]):
 
     def satisfied(self, assignment: Dict[str, Receta]) -> bool:
         for alergia in self.alergias:
-            if assignment[self.dia].alergias.__contains__(alergia): return False
+            if assignment[self.dia].alergias.__contains__(alergia['descripcion']): return False
         return True
 
 
@@ -140,10 +140,10 @@ class PreferenciasTipoComida(Preference):
     def funcion_heuristica(self, receta: Receta) -> int:
         valor = 0
         for positivo in self.positivos:
-            if receta.contiene.__contains__(positivo):
+            if receta.contiene.__contains__(positivo['descripcion']):
                 valor+=1
         for negativo in self.negativos:
-            if receta.contiene.__contains__(negativo):
+            if receta.contiene.__contains__(negativo['descripcion']):
                 valor-=1
         return valor
 

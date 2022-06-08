@@ -18,12 +18,15 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 import com.google.gson.Gson;
-
+import com.mutricion.demo.configuracion.MessageConfig;
 import com.mutricion.demo.modelo.Alergia;
+import com.mutricion.demo.modelo.ChangePasswordForm;
 import com.mutricion.demo.modelo.Preferencia;
 import com.mutricion.demo.modelo.Role;
 import com.mutricion.demo.modelo.User;
@@ -31,6 +34,8 @@ import com.mutricion.demo.modelo.UserForm;
 import com.mutricion.demo.servicio.AlergiaService;
 import com.mutricion.demo.servicio.RoleService;
 import com.mutricion.demo.servicio.UserService;
+
+import groovyjarjarantlr4.v4.parse.ANTLRParser.id_return;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -41,7 +46,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class UserController {
 
     private UserService userService;
-    //private RoleService roleService;
+
+    MessageConfig messageConfig;
     
     private RestTemplate restTemplate;
     Gson gson;
@@ -53,10 +59,10 @@ public class UserController {
     private AlergiaService alergiaService;
     
     public UserController(UserService userService,
-                RestTemplate restTemplate){
+                RestTemplate restTemplate, MessageConfig messageConfig){
             this.userService=userService;
             this.restTemplate=restTemplate;
-        
+            this.messageConfig = messageConfig;
             gson=new Gson();
     }
 
@@ -190,43 +196,43 @@ public class UserController {
     @GetMapping(value="/settings")
     public ModelAndView configuracion(){
         ModelAndView modelAndView = new ModelAndView();
-       
+        
         String url = "http://localhost:1880/getAlergias";
 
         String body = restTemplate.getForObject(url, String.class);
         JSONObject bodyObject = new JSONObject(body);
-       
+        
         JSONArray lista = null;
         List<Alergia> alergias=new ArrayList<>();
 
         if(bodyObject.getString("statusType").equals("OK")){
-           lista = bodyObject.getJSONArray("entity");
-           for(int i = 0; i < lista.length(); i++) {
+            lista = bodyObject.getJSONArray("entity");
+            for(int i = 0; i < lista.length(); i++) {
             alergias.add((gson.fromJson(lista.getJSONObject(i).toString(), Alergia.class)));
-           }
+            }
         }
-       
+        
         modelAndView.addObject("alergias", alergias);
-       
+    
         modelAndView.setViewName("settings");
         return modelAndView;
     }
 
     @PostMapping(value = "/updateUserCuenta")
     public ModelAndView UpdateUser(UserForm userParser, BindingResult bindingResult) throws UnsupportedEncodingException{
-       
+        
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findUserByEmail(auth.getName());
 
         JSONObject userJson=new JSONObject();
-       
+        
         userJson.put("name", userParser.getName());
         userJson.put("lastname", userParser.getLastname());
         //userJson.put("email", userParser.getEmail());
         
         int id = user.getId();
-       
+        
         String query = userJson.toString();
         String uri = "http://localhost:1880/updateUserCuenta/" + id;
         
@@ -239,28 +245,28 @@ public class UserController {
         
         modelAndView.setViewName("settings");
 
-      
+        
         return modelAndView;
     }
 
     @PostMapping(value = "/updateUserVip")
-    public ModelAndView UpdateUserToVip(UserForm userParser, BindingResult bindingResult) throws UnsupportedEncodingException{
-       
+    public ModelAndView UpdateUserToVip(UserForm userParser, BindingResult bindingResult, HttpSession session) throws UnsupportedEncodingException{
+        
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findUserByEmail(auth.getName());
 
         JSONObject userJson=new JSONObject();
-       
+        
         Set<Role> roles = user.getRoles();
         Role role = roleService.buscarRoleId(1);
         roles.add(role);
-       
+        
         userJson.put("roles",roles);
         userJson.put("cuentaCorriente", userParser.getCuentaCorriente());
 
         int id = user.getId();
-       
+        
         String query = userJson.toString();
         String uri = "http://localhost:1880/updateUserVip/" + id;
         
@@ -271,21 +277,22 @@ public class UserController {
 
         restTemplate.put(uri, entity, id);
         
+        session.setAttribute("role", "VIP");
         modelAndView.setViewName("settings");
 
-      
+    
         return modelAndView;
     }
 
     @PostMapping(value = "/updateUserDatosPer")
     public ModelAndView UpdateUserDatosPersonales(UserForm userParser, BindingResult bindingResult) throws UnsupportedEncodingException{
-       
+    
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findUserByEmail(auth.getName());
 
         JSONObject userJson=new JSONObject();
-  
+
         userJson.put("sexo", userParser.getSexo());
         userJson.put("peso", userParser.getPeso());
         userJson.put("altura", userParser.getAltura());
@@ -293,18 +300,19 @@ public class UserController {
 
         String alergiasStr = userParser.getAlergiasStr();
         Set<Alergia> alergiasList=new HashSet<>();
-        String [] alergiasData=alergiasStr.split("[,]");
-        if(alergiasData.length>1){
-            for(String a:alergiasData){
-                Alergia alergia=alergiaService.buscarAlergiaId(Integer. parseInt(a));
-                alergiasList.add(alergia);
-            }
-        } else alergiasList.add(alergiaService.buscarAlergiaId(Integer.parseInt(alergiasData[0])));
-		
+        if(alergiasStr!=null){
+            String [] alergiasData=alergiasStr.split("[,]");
+            if(alergiasData.length>1){
+                for(String a:alergiasData){
+                    Alergia alergia=alergiaService.buscarAlergiaId(Integer. parseInt(a));
+                    alergiasList.add(alergia);
+                }
+            } else alergiasList.add(alergiaService.buscarAlergiaId(Integer.parseInt(alergiasData[0])));
+        }
         userJson.put("alergias", alergiasList);
         
         int id = user.getId();
-       
+        
         String query = userJson.toString();
         String uri = "http://localhost:1880/updateUserDatosPer/" + id;
         
@@ -315,9 +323,34 @@ public class UserController {
 
         restTemplate.put(uri, entity, id);
         
-       modelAndView.setViewName("settings");
+        modelAndView.setViewName("settings");
 
-      
+    
+        return modelAndView;
+    }
+
+    @PostMapping(value = "/changePassword")
+    public ModelAndView changePassword(ChangePasswordForm form, BindingResult bindingResult) throws Exception{
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user = userService.findUserByEmail(auth.getName());
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
+        if (!passwordEncoder.matches(form.getActPassword(), user.getPassword())) {
+            throw new Exception(messageConfig.getMessage("error.password.invalid"));
+        }
+        if (passwordEncoder.matches(form.getNewPassword(), user.getPassword())) {
+            throw new Exception(messageConfig.getMessage("error.password.same"));
+        }
+        user.setPassword(form.getNewPassword());
+        userService.saveUser(user);
+
+        ModelAndView modelAndView = new ModelAndView();
+
+
+        modelAndView.setViewName("settings");
+
+
         return modelAndView;
     }
 }

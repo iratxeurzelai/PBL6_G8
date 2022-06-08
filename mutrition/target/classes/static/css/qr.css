@@ -12,6 +12,12 @@ img {
     width: 25%;
 }
 
+.txt2 {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #666666;
+}
+
 #qr {
     display: flex;
     justify-content: center;

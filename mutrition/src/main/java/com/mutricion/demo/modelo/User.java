@@ -79,14 +79,14 @@ public class User implements Serializable {
     private Set<Alergia> alergias;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "PreferenciaID", joinColumns = @JoinColumn(name = "UserID"), inverseJoinColumns = @JoinColumn(name = "PreferenciaID"))
-    private Set<Preferencia> prefiere;
+    private Set<Preferencia> preferencias;
     @ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(
-	    name = "NoPrefiere", 
+	    name = "NoPrefiere",
 	    joinColumns = { @JoinColumn(name = "UserID") }, 
 	    inverseJoinColumns = { @JoinColumn(name = "PrefiereID") }
 	)
-	Set<Preferencia> noprefiere;
+	Set<Preferencia> noPreferencias;
     @OneToMany(mappedBy = "receta", fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     private Set<RecetaSemana> recetaSemana;
 }
