@@ -60,13 +60,10 @@ public class Receiver {
         boolean primer_plato = true;
         boolean finde = true;
 
-        //c.add(Calendar.DATE, 2);
         for (int i = 0; i < semana.length; i++) {
             JSONObject jsonObject = jsonArray.getJSONObject(semana[i]);
             nombre = jsonObject.getString("name");
             Receta receta = recetaService.findByTitle(nombre);
-            
-            // convert date to calendar
             
             if((j%2==0) && (i != 0)){
                 c.setTime(date);

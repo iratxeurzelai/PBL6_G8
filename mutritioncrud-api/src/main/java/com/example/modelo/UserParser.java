@@ -8,7 +8,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(propOrder = {"password", "name", "lastname", "email", "sexo", "peso", "altura", "roles", "alergias", "prefiere", "noprefiere" })
 public class UserParser {
 
-    //private String username;
     private String password;
     private String name;
     private String lastname;
@@ -25,7 +24,6 @@ public class UserParser {
     }
 
     public UserParser(String password, String name, String lastname, String email, Boolean sexo, float peso, float altura) {
-       // this.username = username;
         this.password = password;
         this.name = name;
         this.lastname =lastname;
@@ -34,14 +32,6 @@ public class UserParser {
         this.peso = peso;
         this.altura = altura;
     }
-
-	/*public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}*/
 
 	public String getPassword() {
 		return password;

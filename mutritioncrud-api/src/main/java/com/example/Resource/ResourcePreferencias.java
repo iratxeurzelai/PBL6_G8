@@ -21,9 +21,6 @@ public class ResourcePreferencias {
 	@GetMapping("/getPreferencias")
 	public Response getAllRoles(){
 		List<Preferencia> lista = repoPreferencias.findAll();
-		for(Preferencia p : lista){
-	        System.err.println("Descripcion " + p.getDescripcion());
-	    }
 		Response res;
         if (lista.isEmpty()){
             res= Response.status(Response.Status.NOT_FOUND).build();

@@ -31,18 +31,13 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
             Authentication authentication) throws IOException, ServletException {
             
         String token = jwtUtil.generateToken(authentication.getName(), (List<GrantedAuthority>) authentication.getAuthorities());
-        
-        String headerToken=SecurityConstants.TOKEN_PREFIX+token;
 
         logger.info("User: {} succesfully authenticated!", authentication.getName());
 
         System.out.println("El token es " + token);
         Cookie cookie = new Cookie("JWT", token);
         cookie.setHttpOnly(true);
-        //cookie.setSecure(true);
-       // cookie.setMaxAge((int) SecurityConstants.EXPIRATION_TIME);
         System.out.println("El cookie es " + cookie);
-        System.out.println("-------------------------");
         response.addCookie(cookie);
         response.sendRedirect(SecurityConstants.SUCCESS_URL);
     }

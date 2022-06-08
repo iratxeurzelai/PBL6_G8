@@ -18,21 +18,15 @@ import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.auth0.jwt.interfaces.Claim;
 import com.mutricion.demo.security.SecurityConstants;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
 
 public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
-
-
-    @Autowired
-    private JWTUtil jwtUtil;
 
     public JWTAuthorizationFilter(AuthenticationManager authManager) {
         super(authManager);

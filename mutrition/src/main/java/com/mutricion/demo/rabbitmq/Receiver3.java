@@ -56,11 +56,9 @@ public class Receiver3 {
                 c.add(Calendar.DATE, 1);
             }
             fecha = c.getTime();
-            System.err.println("Fecha " + fecha);
 
             int recetaid = jsonArray.getInt(semana[i]);
             Receta receta = recetaService.findById(recetaid);
-            System.err.println("RECETA "+receta);
 
             Finde finde = new Finde();
             finde.setReceta(receta);

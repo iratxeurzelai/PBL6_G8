@@ -3,7 +3,6 @@ package com.mutricion.demo.modelo;
 public class UserForm {
     private static final long serialVersionUID = 1L;
 
-    //private String username;
     private String password;
     private String name;
     private String lastname;
@@ -95,9 +94,6 @@ public class UserForm {
 
     public void setCuentaCorriente(String cuentaCorriente) {
         this.cuentaCorriente = cuentaCorriente;
-    }
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Boolean isSexo() {

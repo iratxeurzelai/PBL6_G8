@@ -17,15 +17,12 @@ public class RabbitMQSender {
     @GetMapping(value="/msg")
     public void enviarMensaje(
         @PathVariable("mensaje") byte [] bytes
-        //@RequestBody("user") int userId,
-        //@RequestBody("paciente") int pacienteId
         ) {
         
         String base64String= Base64.encodeBase64String(bytes);
 
         rabbitTemplate.convertAndSend(RabbitMQConfig.QUEUE_NAME_PUESTA, RabbitMQConfig.ROUTING_KEY_PUESTA, base64String.getBytes());
         rabbitTemplate.convertAndSend(RabbitMQConfig.QUEUE_NAME_DAR, RabbitMQConfig.ROUTING_KEY_DAR, base64String.getBytes());
-        //rabbitTemplate.addListener(channel);
     }
 
 }

@@ -57,10 +57,9 @@ public class LoginController {
             User user = userService.findUserByEmail(auth.getName());
             int id = user.getId();
             String uri = "http://localhost:1880/getRecetaSemana/"+ id;
-            System.out.println("rest :" +restTemplate);
             
             String body = restTemplate.getForObject(uri, String.class);
-            System.out.println("body: " +body);
+
             JSONObject bodyObject = new JSONObject(body);
             
             JSONArray lista = null;
@@ -135,17 +134,5 @@ public class LoginController {
             modelAndView.setViewName("login");
         }
         return modelAndView;
-    }
-
-    /*@GetMapping(value = "/home")
-    @ResponseBody
-    public ModelAndView home(@RequestParam(required = false) String msg) {
-        ModelAndView modelAndView = new ModelAndView();
-        
-        modelAndView.addObject("adminMessage", "Content Available Only for Users with Admin Role");
-        modelAndView.setViewName("user/home");
-        return modelAndView;
-    }*/
-
-    
+    }    
 }

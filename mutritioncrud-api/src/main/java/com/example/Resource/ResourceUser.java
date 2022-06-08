@@ -102,7 +102,6 @@ public class ResourceUser {
 			Set<Role> rolesList=new HashSet<>();
 			String rolesStr=userParser.getRoles();
 			Role role=repoRoles.findById(Integer.parseInt(rolesStr));
-			System.err.println("Role "+role);
 			rolesList.add(role);
 			user.setRoles(rolesList);
 			
@@ -242,7 +241,6 @@ public class ResourceUser {
 	
 	@PutMapping("/updateUserDatosPer/{id}")
     public Response updateUserDatosPer(@RequestBody User user, @PathVariable int id) {
-        System.out.println("ha entrado en con id" + repoUser.findById(id).getId());
         User userUpdated=repoUser.findById(id);
         user.setName(userUpdated.getName());
         user.setLastname(userUpdated.getLastname());

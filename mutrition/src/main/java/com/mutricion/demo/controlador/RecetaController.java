@@ -1,6 +1,7 @@
 package com.mutricion.demo.controlador;
 
 import java.io.IOException;
+import java.net.URL;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -59,6 +60,8 @@ public class RecetaController {
     private RestTemplate restTemplate;
     Gson gson;
 
+    static String URL_GET_RECETA_SEMANA = "http://localhost:1880/getRecetaSemana/";
+
     RecetaSemana primerPlato;
     RecetaSemana segundoPlato;
 
@@ -78,7 +81,7 @@ public class RecetaController {
     }
 
     @GetMapping(value = "/crearSemana")
-    public ModelAndView RecetaSemana(HttpServletRequest request) throws IOException {
+    public ModelAndView recetaSemana(HttpServletRequest request){
 
         String uri = "http://localhost:1880/getUsers";
 
@@ -117,12 +120,11 @@ public class RecetaController {
     }
 
     @GetMapping(value="/createAlternativa")
-    public ModelAndView crearAlternativa(HttpServletRequest request) throws IOException {
+    public ModelAndView crearAlternativa(HttpServletRequest request){
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findUserByEmail(auth.getName());
 
-        System.err.println("User " +user);
         JSONObject objectToSend=new JSONObject();
         objectToSend.put("id", user.getId());
         objectToSend.put("peso", user.getPeso());
@@ -131,11 +133,9 @@ public class RecetaController {
         objectToSend.put("prefiere", user.getPreferencias());
         objectToSend.put("noprefiere", user.getNoPreferencias());
 
-        //List<RecetaSemana> recetaSemanas = recetaSemanaService.findByUserId(user);
-        String uri = "http://localhost:1880/getRecetaSemana/"+ user.getId();
+        String uri = URL_GET_RECETA_SEMANA+ user.getId();
         
         String body = restTemplate.getForObject(uri, String.class);
-        System.out.println("body: " +body);
         JSONObject bodyObject = new JSONObject(body);
         
         JSONArray lista = null;
@@ -183,13 +183,13 @@ public class RecetaController {
     }
 
     @GetMapping(value = "/visualizarDietaSemana")
-    public ModelAndView VisualizarRecetaSemana(HttpServletRequest request) throws IOException {
+    public ModelAndView visualizarRecetaSemana(HttpServletRequest request){
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findUserByEmail(auth.getName());
         int id = user.getId();
 
-        String uri = "http://localhost:1880/getRecetaSemana/" + id;
+        String uri = URL_GET_RECETA_SEMANA + id;
 
         String body = restTemplate.getForObject(uri, String.class);
         
@@ -221,18 +221,15 @@ public class RecetaController {
     }
 
     @GetMapping(value = "/recetaDia")
-    public ModelAndView RecetaDia(HttpServletRequest request) throws IOException {
+    public ModelAndView recetaDia(HttpServletRequest request){
         // mostrar receta
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findUserByEmail(auth.getName());
-
-        //List<RecetaSemana> recetasSemana = recetaSemanaService.findByUserId(user);
         
-        String uri = "http://localhost:1880/getRecetaSemana/"+ user.getId();
+        String uri = URL_GET_RECETA_SEMANA+ user.getId();
         
         String body = restTemplate.getForObject(uri, String.class);
-        System.out.println("body: " +body);
         JSONObject bodyObject = new JSONObject(body);
         
         JSONArray lista = null;
@@ -245,19 +242,7 @@ public class RecetaController {
             }
         }
 
-        for(RecetaSemana receta : recetaSemana){
-            int dia = receta.getFecha().getDate();
-            int mes = receta.getFecha().getMonth() +1;
-            
-            if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (receta.isPrimer_plato())){
-            
-            primerPlato = receta;
-            }
-            if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (!receta.isPrimer_plato())){
-
-            segundoPlato = receta;
-            }
-        }
+        modelAndView = getPlatosDias(modelAndView, recetaSemana);
         
         List<Alternativa> alternativas = alternativaService.findByUser(user);
         List<Alternativa> alternativasPrimero = new ArrayList<>();
@@ -279,8 +264,6 @@ public class RecetaController {
             }
         }
 
-        modelAndView.addObject("primerPlato", primerPlato.getReceta().getTitle());
-        modelAndView.addObject("segundoPlato", segundoPlato.getReceta().getTitle());
         modelAndView.addObject("alternativasPrimero", alternativasPrimero);
         modelAndView.addObject("alternativasSegundo", alternativasSegundo);
         modelAndView.addObject("alternativaPrimero", new Receta());
@@ -300,12 +283,9 @@ public class RecetaController {
 
         RecetaSemana recetaACambiar = null;
 
-        //List<RecetaSemana> recetaSemana = recetaSemanaService.findByUserId(user);
-
-        String uri = "http://localhost:1880/getRecetaSemana/"+ user.getId();
+        String uri = URL_GET_RECETA_SEMANA+ user.getId();
         
         String body = restTemplate.getForObject(uri, String.class);
-        System.out.println("body: " +body);
         JSONObject bodyObject = new JSONObject(body);
         
         JSONArray lista = null;
@@ -325,24 +305,16 @@ public class RecetaController {
             if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (r.isPrimer_plato())){
 
             recetaACambiar = r;
-            break;
+            }
+
+            if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (!r.isPrimer_plato())){
+
+                segundoPlato = r;
             }
         }
 
         recetaACambiar.setReceta(recetaNueva);
         recetaSemanaService.saveRecetaSemana(recetaACambiar);
-
-        List<RecetaSemana> recetasSemana = recetaSemanaService.findByUserId(user);
-
-        for(RecetaSemana r : recetasSemana){
-            int dia = r.getFecha().getDate();
-            int mes = r.getFecha().getMonth() +1;
-
-            if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (!r.isPrimer_plato())){
-
-            segundoPlato = r;
-            }
-        }
         
         List<Alternativa> alternativas = alternativaService.findByUser(user);
         List<Alternativa> alternativasPrimero = new ArrayList<>();
@@ -386,11 +358,9 @@ public class RecetaController {
 
         RecetaSemana recetaACambiar = null;
 
-        //List<RecetaSemana> recetaSemana = recetaSemanaService.findByUserId(user);
-        String uri = "http://localhost:1880/getRecetaSemana/"+ user.getId();
+        String uri = URL_GET_RECETA_SEMANA+ user.getId();
         
         String body = restTemplate.getForObject(uri, String.class);
-        System.out.println("body: " +body);
         JSONObject bodyObject = new JSONObject(body);
         
         JSONArray lista = null;
@@ -409,29 +379,17 @@ public class RecetaController {
             
             if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (!r.isPrimer_plato())){
 
-            recetaACambiar = r;
-            break;
+                recetaACambiar = r;
+            }
+
+            if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (r.isPrimer_plato())){
+            
+                primerPlato = r;
             }
         }
 
         recetaACambiar.setReceta(recetaNueva);
         recetaSemanaService.saveRecetaSemana(recetaACambiar);
-
-        if(bodyObject.getString("statusType").equals("OK")){
-            lista = bodyObject.getJSONArray("entity");
-            for(int i = 0; i < lista.length(); i++) {
-                recetaSemana.add((gson.fromJson(lista.getJSONObject(i).toString(), RecetaSemana.class)));
-            }
-        }
-        for(RecetaSemana r : recetaSemana){
-            int dia = r.getFecha().getDate();
-            int mes = r.getFecha().getMonth() +1;
-            
-            if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (r.isPrimer_plato())){
-            
-            primerPlato = r;
-            }
-        }
         
         List<Alternativa> alternativas = alternativaService.findByUser(user);
         List<Alternativa> alternativasPrimero = new ArrayList<>();
@@ -463,7 +421,7 @@ public class RecetaController {
     }
 
     @GetMapping(value = "/finde")
-    public ModelAndView finde(HttpServletRequest request) throws IOException {
+    public ModelAndView finde(HttpServletRequest request){
         // mostrar receta
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -483,7 +441,6 @@ public class RecetaController {
             int mes = f.getFecha().getMonth() + 1;
             
             if((dia == LocalDate.now().getDayOfMonth()+sabadoSemana) && (mes == LocalDate.now().getMonthValue())){
-                System.err.println("Hola");
                 modelAndView.addObject("sabado", f.getReceta().getTitle());
             }
             if((dia == LocalDate.now().getDayOfMonth()+domingoSemana) && (mes == LocalDate.now().getMonthValue())){
@@ -496,15 +453,33 @@ public class RecetaController {
         return modelAndView;
     }
 
+    public ModelAndView getPlatosDias(ModelAndView modelAndView, List<RecetaSemana> recetaSemana){
+        for(RecetaSemana receta : recetaSemana){
+            
+            int dia = receta.getFecha().getDate();
+            int mes = receta.getFecha().getMonth() +1;
+            
+            if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (receta.isPrimer_plato())){
+
+            modelAndView.addObject("primerPlato", receta.getReceta().getTitle());
+            }
+            if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (!receta.isPrimer_plato())){
+
+            modelAndView.addObject("segundoPlato", receta.getReceta().getTitle());
+            }
+        }
+        return modelAndView;
+    }
+
     @GetMapping(value = "/home")
-    public ModelAndView home(HttpServletRequest request) throws IOException {
+    public ModelAndView home(HttpServletRequest request){
         // mostrar receta
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findUserByEmail(auth.getName());
         int id = user.getId();
 
-        String uri = "http://localhost:1880/getRecetaSemana/" + id;
+        String uri = URL_GET_RECETA_SEMANA + id;
 
         String body = restTemplate.getForObject(uri, String.class);
         
@@ -526,20 +501,7 @@ public class RecetaController {
             objectToSend.put("prefiere", user.getPreferencias());
             objectToSend.put("noprefiere", user.getNoPreferencias());
 
-            for(RecetaSemana receta : recetas){
-            
-                int dia = receta.getFecha().getDate();
-                int mes = receta.getFecha().getMonth() +1;
-                
-                if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (receta.isPrimer_plato())){
-
-                modelAndView.addObject("primerPlato", receta.getReceta().getTitle());
-                }
-                if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (!receta.isPrimer_plato())){
-
-                modelAndView.addObject("segundoPlato", receta.getReceta().getTitle());
-                }
-            }
+            modelAndView = getPlatosDias(modelAndView, recetas);
         }
         
         modelAndView.setViewName("user/home");
@@ -547,14 +509,14 @@ public class RecetaController {
     }
 
     @GetMapping(value = "/historial")
-    public ModelAndView historial(HttpServletRequest request) throws IOException {
+    public ModelAndView historial(HttpServletRequest request){
         // mostrar receta
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findUserByEmail(auth.getName());
         int id = user.getId();
 
-        String uri = "http://localhost:1880/getRecetaSemana/" + id;
+        String uri = URL_GET_RECETA_SEMANA + id;
 
         String body = restTemplate.getForObject(uri, String.class);
         

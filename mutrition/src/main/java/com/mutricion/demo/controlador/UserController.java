@@ -35,8 +35,6 @@ import com.mutricion.demo.servicio.AlergiaService;
 import com.mutricion.demo.servicio.RoleService;
 import com.mutricion.demo.servicio.UserService;
 
-import groovyjarjarantlr4.v4.parse.ANTLRParser.id_return;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.client.RestTemplate;
@@ -143,7 +141,7 @@ public class UserController {
 
         String body = restTemplate.getForObject(uri, String.class);
         JSONObject bodyObject = new JSONObject(body);
-        JSONArray lista = null;
+        JSONArray lista;
         List<Alergia> alergias=new ArrayList<>();
 
     if(bodyObject.getString("statusType").equals("OK")){
@@ -170,7 +168,6 @@ public class UserController {
 
     body = restTemplate.getForObject(uri, String.class);
     bodyObject = new JSONObject(body);
-    lista = null;
     List<Preferencia> preferencias=new ArrayList<>();
 
     if(bodyObject.getString("statusType").equals("OK")){
@@ -178,9 +175,6 @@ public class UserController {
         for(int i = 0; i < lista.length(); i++) {
             preferencias.add((gson.fromJson(lista.getJSONObject(i).toString(), Preferencia.class)));
         }
-    }
-    for(Preferencia p : preferencias){
-        System.err.println("Descripcion " + p.getDescripcion());
     }
 
     UserForm userParser = new UserForm();
@@ -202,7 +196,7 @@ public class UserController {
         String body = restTemplate.getForObject(url, String.class);
         JSONObject bodyObject = new JSONObject(body);
         
-        JSONArray lista = null;
+        JSONArray lista;
         List<Alergia> alergias=new ArrayList<>();
 
         if(bodyObject.getString("statusType").equals("OK")){
@@ -219,7 +213,7 @@ public class UserController {
     }
 
     @PostMapping(value = "/updateUserCuenta")
-    public ModelAndView UpdateUser(UserForm userParser, BindingResult bindingResult) throws UnsupportedEncodingException{
+    public ModelAndView updateUser(UserForm userParser, BindingResult bindingResult) throws UnsupportedEncodingException{
         
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -250,7 +244,7 @@ public class UserController {
     }
 
     @PostMapping(value = "/updateUserVip")
-    public ModelAndView UpdateUserToVip(UserForm userParser, BindingResult bindingResult, HttpSession session) throws UnsupportedEncodingException{
+    public ModelAndView updateUserToVip(UserForm userParser, BindingResult bindingResult, HttpSession session) throws UnsupportedEncodingException{
         
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -285,7 +279,7 @@ public class UserController {
     }
 
     @PostMapping(value = "/updateUserDatosPer")
-    public ModelAndView UpdateUserDatosPersonales(UserForm userParser, BindingResult bindingResult) throws UnsupportedEncodingException{
+    public ModelAndView updateUserDatosPersonales(UserForm userParser, BindingResult bindingResult) throws UnsupportedEncodingException{
     
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();

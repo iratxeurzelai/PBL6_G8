@@ -57,16 +57,12 @@ public class Receiver2 {
         c.setTime(fecha);
         fecha.setDate(dia);
         fecha.setMonth(mes);
-        System.err.println("Fecha " + fecha);
 
-        System.err.println("Body " + body);
         String nombre;
 
         for(int i=0; i<5;i++){
             JSONObject recetaJSON = jsonArray.getJSONObject(String.valueOf(i));
-            System.err.println("Receta JSON " + recetaJSON + " i: " +i);
             nombre = recetaJSON.getString("name");
-            System.err.println("Nombre " + nombre);
             Receta receta = recetaService.findByTitle(nombre);
 
             Alternativa alternativa = new Alternativa();
