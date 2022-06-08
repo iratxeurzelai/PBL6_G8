@@ -252,7 +252,7 @@ public class RecetaController {
             int dia = a.getFecha().getDate();
             int mes = a.getFecha().getMonth();
 
-            if(a.getReceta().getTitle() != primerPlato.getReceta().getTitle() && a.getReceta().getTitle() != segundoPlato.getReceta().getTitle()){
+            if(!(a.getReceta().getTitle().equals(primerPlato.getReceta().getTitle())) && !(a.getReceta().getTitle().equals(segundoPlato.getReceta().getTitle()))){
                 if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue())){
                     if(a.isPrimero()){
                         alternativasPrimero.add(a);
@@ -324,7 +324,7 @@ public class RecetaController {
             int dia = a.getFecha().getDate();
             int mes = a.getFecha().getMonth();
 
-            if(a.getReceta().getTitle() != receta.getTitle() && segundoPlato.getReceta().getTitle() != a.getReceta().getTitle()){
+            if(!(a.getReceta().getTitle().equals(receta.getTitle()) && !(segundoPlato.getReceta().getTitle().equals(a.getReceta().getTitle())))){
                 if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue())){
                     if(a.isPrimero()){
                         alternativasPrimero.add(a);
@@ -398,7 +398,7 @@ public class RecetaController {
         for(Alternativa a:alternativas){
             int dia = a.getFecha().getDate();
             int mes = a.getFecha().getMonth();
-            if(a.getReceta().getTitle() != receta.getTitle() && primerPlato.getReceta().getTitle() != a.getReceta().getTitle()){
+            if(!(a.getReceta().getTitle().equals(receta.getTitle()) && !(primerPlato.getReceta().getTitle().equals(a.getReceta().getTitle())))){
                 if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue())){
                     if(a.isPrimero()){
                         alternativasPrimero.add(a);
