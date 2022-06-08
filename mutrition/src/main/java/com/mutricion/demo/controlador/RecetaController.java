@@ -62,8 +62,8 @@ public class RecetaController {
 
     static String URL_GET_RECETA_SEMANA = "http://localhost:1880/getRecetaSemana/";
 
-    RecetaSemana primerPlato;
-    RecetaSemana segundoPlato;
+    static RecetaSemana primerPlato;
+    static RecetaSemana segundoPlato;
 
     public RecetaController(UserService userService,
             RestTemplate restTemplate){
@@ -232,7 +232,7 @@ public class RecetaController {
         String body = restTemplate.getForObject(uri, String.class);
         JSONObject bodyObject = new JSONObject(body);
         
-        JSONArray lista = null;
+        JSONArray lista;
         List<RecetaSemana> recetaSemana=new ArrayList<>();
 
         if(bodyObject.getString("statusType").equals("OK")){
@@ -461,10 +461,12 @@ public class RecetaController {
             
             if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (receta.isPrimer_plato())){
 
+            primerPlato = receta;
             modelAndView.addObject("primerPlato", receta.getReceta().getTitle());
             }
             if((dia == LocalDate.now().getDayOfMonth()) && (mes == LocalDate.now().getMonthValue()) && (!receta.isPrimer_plato())){
-
+            
+            segundoPlato = receta;
             modelAndView.addObject("segundoPlato", receta.getReceta().getTitle());
             }
         }
