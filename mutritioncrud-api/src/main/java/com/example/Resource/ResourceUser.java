@@ -21,6 +21,7 @@ import com.example.modelo.Preferencia;
 import com.example.modelo.Role;
 import com.example.modelo.User;
 import com.example.modelo.UserParser;
+import com.example.modelo.UserRequestModel;
 import com.example.repositorio.AlergiaRepositorio;
 import com.example.repositorio.PreferenciasRepositorio;
 import com.example.repositorio.RoleRepositorio;
@@ -152,8 +153,9 @@ public class ResourceUser {
 	}
 	
 	@PutMapping("/updateUserCuenta/{id}")
-    public Response updateUserCuenta(@RequestBody User user, @PathVariable int id) {
+    public Response updateUserCuenta(@RequestBody UserRequestModel userDTO, @PathVariable int id) {
 
+		User user = new User(userDTO);
         User userUpdated=repoUser.findById(id);
         user.setPassword(userUpdated.getPassword());
         user.setAltura(userUpdated.getAltura());
@@ -179,8 +181,9 @@ public class ResourceUser {
     }
 	
 	@PutMapping("/changePassword/{id}")
-    public Response updateUserPassword(@RequestBody User user, @PathVariable int id) {
-
+    public Response updateUserPassword(@RequestBody UserRequestModel userDTO, @PathVariable int id) {
+		
+		User user = new User(userDTO);
         User userUpdated=repoUser.findById(id);
         user.setName(userUpdated.getName());
         user.setLastname(userUpdated.getLastname());
@@ -209,8 +212,9 @@ public class ResourceUser {
     }
 	
 	@PutMapping("/updateUserVip/{id}")
-    public Response updateUserVip(@RequestBody User user, @PathVariable int id) {
+    public Response updateUserVip(@RequestBody UserRequestModel userDTO, @PathVariable int id) {
 
+		User user = new User(userDTO);
         User userUpdated=repoUser.findById(id);
         user.setName(userUpdated.getName());
         user.setLastname(userUpdated.getLastname());
@@ -238,8 +242,10 @@ public class ResourceUser {
     }
 	
 	@PutMapping("/updateUserDatosPer/{id}")
-    public Response updateUserDatosPer(@RequestBody User user, @PathVariable int id) {
-        User userUpdated=repoUser.findById(id);
+    public Response updateUserDatosPer(@RequestBody UserRequestModel userDTO, @PathVariable int id) {
+        
+		User user = new User(userDTO);
+		User userUpdated=repoUser.findById(id);
         user.setName(userUpdated.getName());
         user.setLastname(userUpdated.getLastname());
         user.setPassword(userUpdated.getPassword());

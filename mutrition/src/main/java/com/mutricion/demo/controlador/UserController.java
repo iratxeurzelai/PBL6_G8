@@ -186,11 +186,7 @@ public class UserController {
     return modelAndView;
     }
 
-
-    @GetMapping(value="/settings")
-    public ModelAndView configuracion(){
-        ModelAndView modelAndView = new ModelAndView();
-        
+    public List<Alergia> getAlergias(){
         String url = "http://localhost:1880/getAlergias";
 
         String body = restTemplate.getForObject(url, String.class);
@@ -205,8 +201,15 @@ public class UserController {
             alergias.add((gson.fromJson(lista.getJSONObject(i).toString(), Alergia.class)));
             }
         }
+        return alergias;
+    }
+
+
+    @GetMapping(value="/settings")
+    public ModelAndView configuracion(){
+        ModelAndView modelAndView = new ModelAndView();
         
-        modelAndView.addObject("alergias", alergias);
+        modelAndView.addObject("alergias", getAlergias());
     
         modelAndView.setViewName("settings");
         return modelAndView;
@@ -223,7 +226,6 @@ public class UserController {
         
         userJson.put("name", userParser.getName());
         userJson.put("lastname", userParser.getLastname());
-        //userJson.put("email", userParser.getEmail());
         
         int id = user.getId();
         
@@ -237,9 +239,9 @@ public class UserController {
 
         restTemplate.put(uri, entity, id);
         
+        modelAndView.addObject("alergias", getAlergias());
         modelAndView.setViewName("settings");
 
-        
         return modelAndView;
     }
 
@@ -271,9 +273,9 @@ public class UserController {
 
         restTemplate.put(uri, entity, id);
         
+        modelAndView.addObject("alergias", getAlergias());
         session.setAttribute("role", "VIP");
         modelAndView.setViewName("settings");
-
     
         return modelAndView;
     }
@@ -317,8 +319,8 @@ public class UserController {
 
         restTemplate.put(uri, entity, id);
         
+        modelAndView.addObject("alergias", getAlergias());
         modelAndView.setViewName("settings");
-
     
         return modelAndView;
     }
@@ -341,9 +343,8 @@ public class UserController {
 
         ModelAndView modelAndView = new ModelAndView();
 
-
+        modelAndView.addObject("alergias", getAlergias());
         modelAndView.setViewName("settings");
-
 
         return modelAndView;
     }

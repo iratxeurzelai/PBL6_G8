@@ -44,7 +44,6 @@ public class User implements Serializable {
 
 	    public User (UserParser parser){
 	        super();
-	        //this.username = parser.getUsername();
 	        this.password = parser.getPassword();
 	        this.name=parser.getName();
 	        this.lastname = parser.getLastname();
@@ -53,6 +52,25 @@ public class User implements Serializable {
 	        this.peso = parser.getPeso();
 	        this.altura = parser.getAltura();
 	        this.secret = Base32.random();
+	    }
+	    
+	    public User (UserRequestModel user){
+	        super();
+	        this.password = user.getPassword();
+	        this.name=user.getName();
+	        this.lastname = user.getLastname();
+	        this.email=user.getEmail();
+	        this.sexo=user.getSexo();
+	        this.peso = user.getPeso();
+	        this.altura = user.getAltura();
+	        this.secret = user.getSecret();
+	        this.alergias = user.getAlergias();
+	        this.prefiere = user.getPrefiere();
+	        this.noprefiere = user.getNoprefiere();
+	        this.recetaSemana = user.getRecetaSemana();
+	        this.roles = user.getRoles();
+	        this.cuentaCorriente = user.getCuentaCorriente();
+	        this.id = user.getId();
 	    }
 
 	    @Id
@@ -205,6 +223,22 @@ public class User implements Serializable {
 
 		public void setRecetaSemana(Set<RecetaSemana> recetaSemana) {
 			this.recetaSemana = recetaSemana;
+		}
+
+		public Set<Preferencia> getPrefiere() {
+			return prefiere;
+		}
+
+		public void setPrefiere(Set<Preferencia> prefiere) {
+			this.prefiere = prefiere;
+		}
+
+		public Set<Preferencia> getNoprefiere() {
+			return noprefiere;
+		}
+
+		public void setNoprefiere(Set<Preferencia> noprefiere) {
+			this.noprefiere = noprefiere;
 		}
 		
 }
