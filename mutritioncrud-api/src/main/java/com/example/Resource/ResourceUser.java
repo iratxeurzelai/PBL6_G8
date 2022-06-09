@@ -182,7 +182,6 @@ public class ResourceUser {
     public Response updateUserPassword(@RequestBody User user, @PathVariable int id) {
 
         User userUpdated=repoUser.findById(id);
-        //user.setPassword(userUpdated.getPassword());
         user.setName(userUpdated.getName());
         user.setLastname(userUpdated.getLastname());
         user.setCuentaCorriente(userUpdated.getCuentaCorriente());
@@ -222,7 +221,6 @@ public class ResourceUser {
         user.setPreferencias(userUpdated.getPreferencias());
         user.setNoPreferencias(userUpdated.getNoPreferencias());
         user.setSexo(userUpdated.getSexo());
-        //user.setRoles(userUpdated.getRoles());
         user.setEmail(userUpdated.getEmail());
         user.setSecret(userUpdated.getSecret());
 

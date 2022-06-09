@@ -26,7 +26,12 @@ public class Receta implements Serializable{
     private static final long serialVersionUID = 1L;
 
     public Receta(){
+    }
 
+    public Receta(RecetaRequestModel recetaRequestModel){
+        this.id = recetaRequestModel.getId();
+        this.title = recetaRequestModel.getTitle();
+        this.recetaSemana = recetaRequestModel.getRecetaSemana();
     }
 
     @Id

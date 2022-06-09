@@ -16,6 +16,7 @@ import com.mutricion.demo.modelo.User;
 import com.mutricion.demo.modelo.Alternativa;
 import com.mutricion.demo.modelo.Finde;
 import com.mutricion.demo.modelo.Receta;
+import com.mutricion.demo.modelo.RecetaRequestModel;
 import com.mutricion.demo.modelo.RecetaSemana;
 import com.mutricion.demo.rabbitmq.RabbitMQConfig;
 import com.mutricion.demo.servicio.AlternativaService;
@@ -273,7 +274,7 @@ public class RecetaController {
     }
 
     @PostMapping(value="/cambiarRecetaPrimero")
-    public ModelAndView cambiarRecetaPrimero(@Valid Receta receta){
+    public ModelAndView cambiarRecetaPrimero(@Valid RecetaRequestModel receta){
         ModelAndView modelAndView = new ModelAndView();
 
         Receta recetaNueva = recetaService.findByTitle(receta.getTitle());
@@ -340,16 +341,17 @@ public class RecetaController {
         modelAndView.addObject("segundoPlato", segundoPlato.getReceta().getTitle());
         modelAndView.addObject("alternativasPrimero", alternativasPrimero);
         modelAndView.addObject("alternativasSegundo", alternativasSegundo);
-        modelAndView.addObject("alternativaPrimero", new Receta());
-        modelAndView.addObject("alternativaSegundo", new Receta());
+        modelAndView.addObject("alternativaPrimero", new RecetaRequestModel());
+        modelAndView.addObject("alternativaSegundo", new RecetaRequestModel());
         modelAndView.setViewName("userVip/indexVIP");
         return modelAndView;
     }
 
     @PostMapping(value="/cambiarRecetaSegundo")
-    public ModelAndView cambiarRecetaSegundo(@Valid Receta receta){
+    public ModelAndView cambiarRecetaSegundo(@Valid RecetaRequestModel recetaDTO){
         ModelAndView modelAndView = new ModelAndView();
 
+        Receta receta = new Receta(recetaDTO);
         Receta recetaNueva = recetaService.findByTitle(receta.getTitle());
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
