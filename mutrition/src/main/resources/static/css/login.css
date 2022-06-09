@@ -115,8 +115,12 @@ iframe {
   font-size: 17px;
   line-height: 1.5;
   color: #666666;
+}
+
+.formRegistration{
+  display: block;
   margin-top: auto;
-  margin-left: 35%;
+  margin-left: 45%;
 }
 
 
