@@ -1,20 +1,17 @@
 <!doctype html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+    xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<!--<link rel = "icon" href = "images/logoConFondo.png"  type = "image/x-icon">-->
 	<div th:remove="tag" th:replace="fragments/head :: head"></div>
 	<link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
 </head>
 <body>
-	
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="../static/images/logoConFondo.png" width="150" height="120">
-					
+					<img th:src="@{/images/logoConFondo.png}" class="mt-4" width="300" alt="Logo" />
 				</div>
 
 				<form  th:action="@{/login}" method="POST" class="login100-form validate-form">
@@ -57,21 +54,8 @@
 				<form th:action="@{/registrarse}" method="get">
 					<button class="txt2" type="Submit">Registrarse</button>
 				</form>
-
-				<!--<form th:action="@{/registrarse}" method="get">
-					<button class="txt2" type="Submit">Registrarse</button>
-				</form>-->
-
-				<!--<div class="text-center p-t-136">
-						<a th:href="@{/registrarse}" method="get"  class="txt2">
-							Registrarse
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
-				</div>-->
-				
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>

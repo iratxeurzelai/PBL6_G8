@@ -24,12 +24,12 @@ def generarDieta(usuario: Usuario):
     return solucion
 
 @app.get("/shuffle/")
-def generarDieta():
+def cambiarRecetasAleatorio():
     random.shuffle(recetas)
     return "ok"
 
 @app.post("/alternativa/{item_id}/{dia}/{mes}")
-def generarDieta(item_id: int, usuario: Usuario, dia: int, mes: int):
+def generarAlternativas(item_id: int, usuario: Usuario, dia: int, mes: int):
     alternativas = getAlternativas(usuario, int(item_id), df, recetas)
     alt_dict = {}
     for index,value in enumerate(alternativas):
@@ -40,7 +40,7 @@ def generarDieta(item_id: int, usuario: Usuario, dia: int, mes: int):
     return alt_dict
 
 @app.post("/recommend/")
-def generarDieta(usuario: Usuario):
+def generarRecomendaciones(usuario: Usuario):
     recomendacionNames = getRecomendacionReceta(usuario.peso, usuario.altura, dfMixta, usuariosDF)
     recomendadas = {} 
     recomendadas['Sabado'] = getRecetaIdByName(recomendacionNames[0], recetas)

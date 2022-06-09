@@ -31,9 +31,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
-
-    // add app config
-
+    
     @Autowired
     private CustomWebAuthenticationDetailsSource authenticationDetailsSource;
 

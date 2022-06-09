@@ -129,6 +129,21 @@ class AlergiasConstraint(Constraint[str, Receta]):
             if assignment[self.dia].alergias.__contains__(alergia['descripcion']): return False
         return True
 
+class MaxComidasConstraint(Constraint[str, Receta]):
+    def __init__(self, dias: List[str]) -> None:
+        super().__init__(dias)
+        self.dias: str = dias
+
+    def satisfied(self, assignment: Dict[str, Receta]) -> bool:
+        carne = 0
+        huevos = 0
+        for dia in self.dias:
+           if assignment[dia].contiene.__contains__('Carne'): carne+=1
+           if assignment[dia].contiene.__contains__('Huevos'): huevos+=1
+        if carne > 5 : return False
+        if huevos > 5 : return False
+        return True
+
 
 #Preferencias
 
@@ -197,6 +212,8 @@ def calcularDietaSemana(recetas, usuario: Usuario):
         for j in range (i+1, len(variables)):
             csp.add_constraint(NoRepetirComidaConstraint(variables[i], variables[j]))
 
+    #constraint max comidas
+    csp.add_constraint(variables)
     #preferencias
     csp.add_preference(PreferenciasTipoComida(usuario.prefiere, usuario.noprefiere))
     #calcular una solucion
