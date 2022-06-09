@@ -213,7 +213,7 @@ def calcularDietaSemana(recetas, usuario: Usuario):
             csp.add_constraint(NoRepetirComidaConstraint(variables[i], variables[j]))
 
     #constraint max comidas
-    csp.add_constraint(variables)
+    #csp.add_constraint(MaxComidasConstraint(variables))
     #preferencias
     csp.add_preference(PreferenciasTipoComida(usuario.prefiere, usuario.noprefiere))
     #calcular una solucion

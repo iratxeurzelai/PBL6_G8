@@ -7,12 +7,10 @@
 	<link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
 </head>
 <body>
+	
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<div class="login100-pic js-tilt" data-tilt>
-					<img th:src="@{/images/logoConFondo.png}" class="mt-4" width="300" alt="Logo" />
-				</div>
 
 				<form  th:action="@{/login}" method="POST" class="login100-form validate-form">
 					<span class="login100-form-title">
@@ -49,10 +47,10 @@
 							Login
 						</button>
 					</div>
-				</form>
 
-				<form th:action="@{/registrarse}" method="get">
-					<button class="txt2" type="Submit">Registrarse</button>
+					<form th:action="@{/registrarse}" method="get">
+						<button class="txt2" type="Submit">Registrarse</button>
+					</form>
 				</form>
 			</div>
 		</div>

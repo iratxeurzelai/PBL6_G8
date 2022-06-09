@@ -115,6 +115,8 @@ iframe {
   font-size: 17px;
   line-height: 1.5;
   color: #666666;
+  margin-top: auto;
+  margin-left: 35%;
 }
 
 
@@ -180,6 +182,7 @@ iframe {
 .login100-form {
   width: 290px;
   margin-bottom: 70px;
+  margin-left: 30vh;
 }
 
 .login100-form-title {
