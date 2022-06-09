@@ -97,17 +97,18 @@
                         <div class="row row-space">
                             
                             <div class="col-2">
-                                <p>Alergias</p>
+                                <H2>Alergias</H2>
                                 <input type="checkbox" th:each="a : ${alergias}" th:field="*{alergiasStr}" th:value="${a.id}" th:text="${a.descripcion}">
                             </div>
                             
                             <div class="col-2">
-                                <p>Prefiero</p>
+                                <H2>Prefiero</H2>
                                 <input type="checkbox" th:each="p : ${preferencias}" th:field="*{preferenciaStr}" th:value="${p.id}" th:text="${p.descripcion}">
                             </div>
                             
                             <div class="col-2">
-                                <p>No quiero</p>
+                                <br>
+                                <H2>No quiero</H2>
                                 <input type="checkbox" th:each="p : ${preferencias}" th:field="*{noPrefiereStr}" th:value="${p.id}" th:text="${p.descripcion}">
                             </div>
                             
